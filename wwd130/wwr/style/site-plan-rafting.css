@@ -16,7 +16,7 @@ Fonts are separated by a & */
   --paragraph-font: "Lora", Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #181616;   /* headlines on white */
+  --headline-color-on-white: #404647;   /* headlines on white */
   --headline-color-on-color: #2c3351;   /* headlines on color */
   --paragraph-color-on-white: #2c3351;  /* body on white */
   --paragraph-color-on-color: #2c3351;  /* body on color */
