@@ -16,15 +16,15 @@ Fonts are separated by a & */
   --paragraph-font: "Lora", Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #ffff;  /* headlines on a white background */ 
-  --headline-color-on-color: #9498b1; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #879cb0; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #849cb0; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #EDBFC6  ;
-  --nav-link-color: #949494;
-  --nav-background-color: #EDBFC6;
-  --nav-hover-link-color: #949494;
-  --nav-hover-background-color: #EDBFC6;
+  --headline-color-on-white: #181616;  /* headlines on a white background */ 
+  --headline-color-on-color: #2C3351; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #2C3351; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #2C3351; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #181616  ;
+  --nav-link-color: ##404647;
+  --nav-background-color: ##404647;
+  --nav-hover-link-color: ##404647;
+  --nav-hover-background-color: ##404647;
 }
 
 
