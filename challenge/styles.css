@@ -1,6 +1,6 @@
 main {
     text-align: center;
-    width: 50;
+    width: 50%;
     margin: auto;
 }
 
@@ -18,8 +18,8 @@ h1{
     margin: 30px auto;
     width: 80%;
 }
-h1 :hover{
-    color:black;
+h1:hover {
+    color: black;
 }
 h2{
     display: inline;
@@ -36,11 +36,13 @@ h2{
 }
 .rules{
     display: block;
-    font-size: medium;
+    width: 60%;
+    font-size: 1.2em;
     color:black;
-    border-radius: 10pk;
-    margin: 0 auto;
-    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    text-align: left;
+    line-height: 1.6em;
 }
 .quote{
     display: block;
@@ -48,11 +50,11 @@ h2{
     color:white;
     text-align: center;
 }
-.footer{
+.footer {
     display: block;
     font-size: xx-small;
-    color:black
-    text-align:center;
+    color: black;
+    text-align: center;
 }
 img {
   display: block;
