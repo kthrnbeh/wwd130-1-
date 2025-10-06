@@ -14,30 +14,61 @@ main section{
 }
 body{
     background-color: aliceblue;
+    color:#9498b1;
+
 }
 header
 {
     background-color: white;
+    color:#879cb0;
+
 }
 nav a:hover{
     background-color: black;
+    color:#ffffff;
+
 }
 .book, .join
 {
     background-color: white;
+    color:#879cb0;
 }
 .book:hover, .join:hover{
     background-color: aliceblue;
+    color:#879cb0;
 }
 
 #background
 {
     background-color: antiquewhite;
+    color:#edbfc6;
 }
 .msg
 {
     background-color: white;
+    color: #98b6b6;
 }
 footer{
     background-color: whitesmoke;
+    color:#98b6b6
 }
+
+.icon {
+    width: 80px;
+}
+
+#hero-img {
+    width: 100%;
+}
+nav a
+.book, .join
+footer a{
+    text-decoration: none;
+}
+footer p {
+    font-size: 1.2em;
+}   
+footer p a:hover {
+    text-decoration: underline;
+}    
+    
