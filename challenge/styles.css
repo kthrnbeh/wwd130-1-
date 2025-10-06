@@ -3,10 +3,13 @@ main, h1,p {
     width: 80%;
     margin: auto;
 }
+
+
 body{
     background-color: blue;
     text-align: center;
 }
+
 h1{
     font-size: 30em;
     color:white;
