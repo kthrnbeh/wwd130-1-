@@ -1,74 +1,85 @@
+
 #content{
-    max-width: 1600px;
-    margin:0 auto;
-    text-align: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
 }
-nav a
-#hero-msg h1, #hero-msg h4
-.button-box
+
+
+nav a,
+#hero-msg h1,
+#hero-msg h4,
+.button-box,
 main section{
-    text-align: center;
+  text-align: center;
 }
-#background {
-    height: 725px;
+
+
+#background{
+  height: 725px;
+  background-color: antiquewhite;
+  color: #edbfc6;
 }
+
+
 body{
-    background-color: aliceblue;
-    color:#9498b1;
-
+  background-color: aliceblue;
+  color: #9498b1;
 }
-header
-{
-    background-color: white;
-    color:#879cb0;
 
+header{
+  background-color: white;
+  color: #879cb0;
+}
+
+
+nav a{
+  color: #879cb0;
+  text-decoration: none;
+  padding: 10px 16px;
+  display: inline-block;
 }
 nav a:hover{
-    background-color: black;
-    color:#ffffff;
-
+  background-color: black;
+  color: #ffffff;
 }
-.book, .join
-{
-    background-color: white;
-    color:#879cb0;
+
+
+.book, .join{
+  background-color: white;
+  color: #879cb0;
+  padding: 10px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease;
 }
 .book:hover, .join:hover{
-    background-color: aliceblue;
-    color:#879cb0;
+  background-color: aliceblue;
+  color: #879cb0;
 }
 
-#background
-{
-    background-color: antiquewhite;
-    color:#edbfc6;
+
+.msg{
+  background-color: white;
+  color: #98b6b6;
 }
-.msg
-{
-    background-color: white;
-    color: #98b6b6;
-}
+
+
 footer{
-    background-color: whitesmoke;
-    color:#98b6b6
+  background-color: whitesmoke;
+  color: #98b6b6;
 }
-
-.icon {
-    width: 80px;
-}
-
-#hero-img {
-    width: 100%;
-}
-nav a
-.book, .join
 footer a{
-    text-decoration: none;
+  text-decoration: none;
 }
-footer p {
-    font-size: 1.2em;
-}   
-footer p a:hover {
-    text-decoration: underline;
-}    
-    
+footer p{
+  font-size: 1.2em;
+}
+footer p a:hover{
+  text-decoration: underline;
+}
+
+
+.icon{ width: 80px; }
+#hero-img{ width: 100%; height: auto; }
