@@ -10,6 +10,8 @@
 
 img {
     width: 80%;
+    display: block;
+    margin: 0 auto;
 }
 
 p {
@@ -21,4 +23,10 @@ a {
 }
 * {
     border: 2px solid blue;
+}
+h1 {
+    text-align: center;
+}
+nav, footer {
+    text-align: center;
 }
