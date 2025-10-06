@@ -16,9 +16,10 @@ img {
 }
 
 
-a {
-    font-size: 1.5em;
+nav a {
+  font-size: 1.5em;
 }
+
 
 h1 {
     text-align: center;
