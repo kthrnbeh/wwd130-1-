@@ -1,0 +1,43 @@
+#content{
+    max-width: 1600px;
+    margin:0 auto;
+    text-align: center;
+}
+nav a
+#hero-msg h1, #hero-msg h4
+.button-box
+main section{
+    text-align: center;
+}
+#background {
+    height: 725px;
+}
+body{
+    background-color: aliceblue;
+}
+header
+{
+    background-color: white;
+}
+nav a:hover{
+    background-color: black;
+}
+.book, .join
+{
+    background-color: white;
+}
+.book:hover, .join:hover{
+    background-color: aliceblue;
+}
+
+#background
+{
+    background-color: antiquewhite;
+}
+.msg
+{
+    background-color: white;
+}
+footer{
+    background-color: whitesmoke;
+}
