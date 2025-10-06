@@ -1,6 +1,6 @@
-main, h1,p {
+main {
     text-align: center;
-    width: 80%;
+    width: 50;
     margin: auto;
 }
 
@@ -8,22 +8,40 @@ main, h1,p {
 body{
     background-color: blue;
     text-align: center;
+    color:white
 }
 
 h1{
-    font-size: 30em;
+    font-size: 2.5em;
     color:white;
-
+    margin: 30px auto;
+    width: 80%;
+}
+h1 :hover{
+    color:black;
+}
+h2{
+    font-size: medium;
+    color: white;
+    margin:20px auto;
+    width: 60%;
 }
 .rules{
-    font-size: small;
+    font-size: medium;
     color:black;
 }
 .quote{
-    font-size: medium;
+    font-size: large;
     color:white;
 }
 .footer{
     font-size: xx-small;
     color:black
+}
+img {
+  display: block;
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 3px solid white;
 }
