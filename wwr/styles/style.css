@@ -1,7 +1,4 @@
-body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
-}
+
 .home-title {
     font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
     font-size: 2em;
@@ -20,6 +17,8 @@ nav a,
 main section {
 text-align: center;
 }
+nav a {  padding: 35px;
+}
 
 #background {
 height: 725px;
@@ -30,6 +29,10 @@ color: #edbfc6;
 body {
 background-color: aliceblue;
 color: #9498b1;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 22px;
+margin: 0;
+padding: 0;
 }
 
 header {
@@ -44,9 +47,13 @@ color: #879cb0;
 .logo {
 width: 80px;
 }
+#logo_link {
+     padding-top: 5px;
+}
 
 .icon {
 width: 80px;
+padding-top: 10px;
 }
 
 #hero-img {
@@ -76,6 +83,7 @@ display: inline-block;
 text-decoration: none;
 transition: background-color .2s ease, color .2s ease;
 font-size: 18px;
+padding: 15px 30px;
 }
 
 .book:hover,
@@ -88,20 +96,27 @@ color: #879cb0;
 background-color: white;
 color: #98b6b6;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+line-height: 1.5em;
+padding: 35px;
 }
 .msg p{
-    font-size: .8em;
+font-size: .8em;
+padding-bottom: 15px;
 }
 
 .msg h2,
 .msg p {
 color: #98b6b6;
 }
+h2 {
+    margin: 0;
+}
 
 footer {
 background-color: whitesmoke;
 color: #98b6b6;
 text-align: center;
+padding: 25px 50px;
 }
 
 footer p {
@@ -115,4 +130,7 @@ color: #98b6b6;
 
 footer p a:hover {
 text-decoration: underline;
+}
+footer .social img  { 
+padding-top: 15px;
 }
