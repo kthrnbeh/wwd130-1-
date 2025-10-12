@@ -1,3 +1,7 @@
+main section img {
+    box-sizing: border-box;
+}
+
 body {
   background-color: aliceblue;
   color: #9498b1;
@@ -102,6 +106,9 @@ main section {
 .rapids-card {
   margin: 200px 0;
 }
+.card-img{
+    border: 10px solid black;
+}
 
 .book,
 .join {
@@ -114,6 +121,7 @@ main section {
   transition: background-color .2s ease, color .2s ease;
   font-size: 18px;
   margin-top: 50px;
+  border-radius: 5px;
 }
 
 .book:hover,
