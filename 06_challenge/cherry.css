@@ -22,11 +22,5 @@ h2 {
     position: relative;
     z-index: 1; /* Brings to front */
 }
-.grid-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 10px;
-}
-.grid-container h2 {
-  justify-self: start;  /* pushes the <h2> to the left inside the grid cell */
-}
+
+
