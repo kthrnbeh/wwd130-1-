@@ -41,7 +41,7 @@ main{
     grid-row: 2 / 3;        
     text-align: center;     
     z-index: 1;
-    font-family: 'times new roman', times, serif;
+    font-family: 'Arial', times, serif;
     font-size: 2rem;
     color: rgb(138, 14, 39);
 }
