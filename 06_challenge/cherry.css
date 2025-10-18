@@ -14,10 +14,10 @@ h1 {
     z-index: 1; /* Brings to front */
     
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.cherry {
+  width: 70%;               
+  max-width: 410px;
+  justify-self: right;
 }
 h2 {
     font-family: 'Arial Black', Gadget, sans-serif;
