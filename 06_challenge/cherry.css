@@ -28,8 +28,8 @@ main{
 .cherry {
   grid-column: 1 / 2;
   grid-row:  1 / 2;
-  width: 90%;               
-  max-width: 450px;
+  width: 70%;               
+  max-width: 350px;
   justify-self: end;
   align-self: center;
   display: block;
