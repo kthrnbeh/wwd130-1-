@@ -11,10 +11,10 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  align-items: center;
   position: relative;
   width: 60%;
   max-width: 900px;
+  align-items: end;
 }
  h1 { 
     grid-column: 1 / 3;
