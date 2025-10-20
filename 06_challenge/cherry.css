@@ -25,6 +25,7 @@ main {
     height: 100%;
     /* --- FIX: Set to the BOTTOM layer --- */
     z-index: 0;
+    align-self:end;
 }
 
 h1 {
