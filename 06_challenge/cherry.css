@@ -32,19 +32,18 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 5rem;
     text-align: center;
-    z-index: 2;          /* LAYER 2: On top of everything */
+    z-index: 1;          /* LAYER 2: On top of everything */
 }
 
 .cherry {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 1 / 2;  /* Left column */
+    grid-row: 2 / 3;     /* Bottom row */
+    justify-self: end;   /* Pushed to the right edge */
     width: 90%;
     max-width: 300px;
-    justify-self: end;    /* Correct: Horizontally aligns to the right */
-    align-self: start;     /* Correct: Vertically aligns to the top */
-    display: flex;        /* Added for consistency */
     margin-right: -50px;
-    z-index: 1;
+    align-items: top; /* Creates the overlap */
+    z-index: 1;          /* LAYER 1: In the middle */
 }
 
 h2 {
