@@ -36,8 +36,7 @@ h1 {
     max-width: 300px;
     justify-self: end;  /* Push to the right edge */
     display: block;
-    margin-right: -50px; /* Overlap effect */
-    /* Layer 1: Middle */
+    margin-right: -90px; 
     z-index: 1;
 }
 
