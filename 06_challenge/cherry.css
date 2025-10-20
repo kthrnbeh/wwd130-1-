@@ -27,11 +27,11 @@ main{
 }
 .cherry {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row:  1 / 2;
   width: 90%;               
   max-width: 250px;
   justify-self: end;
-  align-self: top;
+  align-self: start;
   display: block;
   margin-right: -40px;
   z-index: 1; 
