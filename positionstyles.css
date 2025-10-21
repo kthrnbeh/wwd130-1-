@@ -132,30 +132,46 @@
 }
 /* Activity 4 styles */ 
 .content4 {
-  /* This is the parent of the activity 4 boxes. */
+  .content4 {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
+  height: 400px; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
 }
 .red4 {
   width: 300px; 
-  height: 400px; 
+  height: 400px; /*changed*/
   background-color: red; 
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  z-index: 2;
+
 } 
 .green4 {
-  width: 100px; 
-  height: 100px; 
+  width: 400px; 
+  height: 150px; 
   background-color: green; 
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  z-index: 0;
+  
 } 
 .yellow4 {
-  width: 100px; 
-  height: 100px; 
+  width: 400px; 
+  height: 150px; 
   background-color: gold; 
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  z-index: 1;
 } 
 .blue4 {
-  width: 100px; 
-  height: 100px; 
-  background-color: blue; 
+  width: 400px; 
+  height: 150px; 
+  background-color: blue;
+  grid-column: 4 / 4;
+  grid-row: 4 / 4; 
+  z-index: 1;
 } 
 /* Activity 5 styles */ 
 .content5 {
