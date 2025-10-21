@@ -187,11 +187,17 @@
 .content5 {
   /* This is the parent of the activity 5 boxes. */
   height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
 }
 .red5 { 
-  width: 100px; 
-  height: 100px; 
+   height: 100px; 
   background-color: red; 
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 2;
 } 
 .green5 { 
   width: 100px; 
@@ -206,9 +212,11 @@
 
 } 
 .blue5 {
-  width: 100px; 
-  height: 100px; 
+ height: 100px; 
   background-color: blue; 
+  grid-column: 1 / -1;
+  grid-row: 3;
+  z-index: 2;
 } 
 /* Activity 6 styles */ 
 .content6 {
