@@ -82,48 +82,49 @@
   grid-row: 4 / span 4;
   z-index: 4;
 }
-/* Activity 3 styles */ 
 .content3 {
   /* This is the parent of the activity 3 boxes. */
   display: grid;
-  
+  /* Create two equal-width columns */
+  grid-template-columns: 1fr 1fr;
+  /* Create three rows: header, content, footer */
+  grid-template-rows: auto 1fr auto;
+  /* This creates the white space between the boxes */
+  gap: 20px;
+  width: 100%;
 }
+
 .red3 {
-  width: 900%; 
   height: 100px; 
   background-color: red; 
-  grid-column: 1 / span 4;
-  grid-row:  1/ span 4;
-  z-index: 4;
+  /* Span the full width of the first row */
+  grid-column: 1 / -1;
+  grid-row: 1;
 } 
+
 .green3 {
-  width: 300px; 
-  height: 300px; 
+  height: 300px;
   background-color: green;
-  grid-column: 1 / span 2;
-  grid-row: 1/ span 2;
-  z-index: 2;
-  align-items: baseline;
-  justify-items: baseline;
-  margin-left: 30px;
+  /* Place in the first column, second row */
+  grid-column: 1;
+  grid-row: 2;
 } 
+
 .yellow3 {
-  width: 300px; 
-  height: 300px; 
+  height: 300px;
   background-color: gold; 
-  grid-column: 4 / span 4;
-  grid-row: 4/ span 4;
-  z-index: 2;
+  /* Place in the second column, second row */
+  grid-column: 2;
+  grid-row: 2;
 } 
+
 .blue3 {
-  width: 900%;
   height: 100px; 
   background-color: blue; 
-  align-items: baseline;
-  grid-column: 4 / span 4;
-  grid-row: 4 / span 4;
-  z-index: 5;
-} 
+  /* Span the full width of the third row */
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
 /* Activity 4 styles */ 
 .content4 {
   /* This is the parent of the activity 4 boxes. */
