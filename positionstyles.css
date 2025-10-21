@@ -246,9 +246,10 @@
   width: 200px; 
   height: 200px; 
   background-color: green; 
-  z-index: 2;
+  z-index: 3;
   grid-column: 1;
   grid-row: 4;
+  transform: translateY(-110px) translateX(10px);
 } 
 .yellow6 {
   width: 200px; 
@@ -257,7 +258,7 @@
   z-index:2;
   grid-column: 2.3;
   grid-row: 2.8/ span 2;
-  transform: translateY(-50px) translateX(40);
+  transform: translateY(-80px) translateX(40);
 } 
 .blue6 {
   width: 400px; 
@@ -266,7 +267,7 @@
   z-index: 1;
   grid-column: 1;
   grid-row: 2.9;
-  transform: translateX(89px);
+  transform: translateY(-1px) translateX(98px);
 } 
 
 
