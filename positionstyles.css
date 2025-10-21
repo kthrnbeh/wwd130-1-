@@ -48,11 +48,7 @@
   height: 100px; 
   background-color: red; 
   border-radius: 2px;
-  
-  /* --- Grid Placement --- */
-  /* Start at column line 1 and span 4 tracks (4 * 50px = 200px) */
   grid-column: 1 / span 4;
-  /* Start at row line 1 and span 4 tracks */
   grid-row: 1 / span 4;
   z-index: 1;
 } 
@@ -62,12 +58,9 @@
   height:100px; 
   background-color: green; 
   border-radius: 3px; 
-
-  /* --- Grid Placement --- */
-  /* Start one track over and one track down from red */
   grid-column: 2 / span 4;
   grid-row: 2 / span 4;
-  z-index: 2; /* Higher z-index to appear on top */
+  z-index: 2; 
 } 
 
 .yellow2 {
@@ -75,9 +68,6 @@
   height: 100px; 
   background-color: gold; 
   border-radius: 2px; 
-
-  /* --- Grid Placement --- */
-  /* Start one track over and one track down from green */
   grid-column: 3 / span 4;
   grid-row: 3 / span 4;
   z-index: 3;
@@ -88,9 +78,6 @@
   height: 100px; 
   background-color: blue; 
   border-radius: 3px; 
-
-  /* --- Grid Placement --- */
-  /* Start one track over and one track down from yellow */
   grid-column: 4 / span 4;
   grid-row: 4 / span 4;
   z-index: 4;
