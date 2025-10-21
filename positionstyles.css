@@ -37,51 +37,64 @@
 .content2 {
   /* This is the parent of the activity 2 boxes. */
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
+  /* Create a more detailed grid to place items on. 
+     Each track is 50px wide. */
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
 }
+
 .red2 {
-  width: 200px; 
-  height: 200px; 
+  width:  100px; 
+  height: 100px; 
   background-color: red; 
-  grid-column: 1/2;
-  border-radius: 2px; 
-  z-index: 0; 
-  transform: translateY(8px);
+  border-radius: 2px;
+  
+  /* --- Grid Placement --- */
+  /* Start at column line 1 and span 4 tracks (4 * 50px = 200px) */
+  grid-column: 1 / span 4;
+  /* Start at row line 1 and span 4 tracks */
+  grid-row: 1 / span 4;
+  z-index: 1;
 } 
+
 .green2 { 
-  width: 200px ; 
-  height:200px; 
+  width: 100px; 
+  height:100px; 
   background-color: green; 
-  grid-column: 2/3;
   border-radius: 3px; 
-  z-index: 1; 
-  transform: translateY(75px) translateX(25px);
-  margin-top: 50px;
-  margin-left: 20px;
+
+  /* --- Grid Placement --- */
+  /* Start one track over and one track down from red */
+  grid-column: 2 / span 4;
+  grid-row: 2 / span 4;
+  z-index: 2; /* Higher z-index to appear on top */
 } 
+
 .yellow2 {
-  width: 200px; 
-  height: 200px; 
+  width: 100px; 
+  height: 100px; 
   background-color: gold; 
-  grid-column: 2/3;
-  border-radius: 3px; 
-  z-index: 3; 
-  transform: translateY(-75px) translateX(115px);
-  margin-top: 50px;
-  margin-left: 20px;
+  border-radius: 2px; 
+
+  /* --- Grid Placement --- */
+  /* Start one track over and one track down from green */
+  grid-column: 3 / span 4;
+  grid-row: 3 / span 4;
+  z-index: 3;
 } 
 
 .blue2 {
-  width: 200px; 
-  height: 200px; 
+  width: 100px; 
+  height: 100px; 
   background-color: blue; 
-  grid-column: 3/3;
   border-radius: 3px; 
-  z-index: 4; 
-  transform: translateY(10px) translateX(200px);
-  margin-top: 50px;
-  margin-left: 20px;
-} 
+
+  /* --- Grid Placement --- */
+  /* Start one track over and one track down from yellow */
+  grid-column: 4 / span 4;
+  grid-row: 4 / span 4;
+  z-index: 4;
+}
 /* Activity 3 styles */ 
 .content3 {
   /* This is the parent of the activity 3 boxes. */
