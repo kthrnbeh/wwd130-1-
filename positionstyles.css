@@ -209,6 +209,9 @@
   align-content: center;
   justify-items: stretch;
   text-align: left;
+  text-size-adjust: auto;
+  line-height:  18px;
+  font-size: medium;
 }
 
 .green5 {
