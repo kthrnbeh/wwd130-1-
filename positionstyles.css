@@ -182,54 +182,43 @@
   margin: 0;
 }
 
-
-/* Activity 5 styles */ 
 .content5 {
-  /* This is the parent of the activity 5 boxes. */
-  height: 400px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr auto;
   width: 100%;
 }
+
 .red5 { 
-   height: 100px; 
+  height: 150px; 
   background-color: red; 
-  grid-column: 1 / -1;
-  grid-row: 1;
-  z-index: 2;
-} 
-.green5 { 
-  width: 300px; 
-  height: 200px; 
-  background-color: green; 
-  float:left;
-  grid-column: 1/1;
-  grid-row: 2;
-  z-index: 1;
+  width: 100%;
+  z-index: 0
+}
 
-} 
-.yellow5 {
-   width: 500px;
-  height: 500px;
-  background-color: gold; 
-  /* Place in the second column, second row */
-  grid-column: 1/ span3;
-  grid-row: 2/4;
-  z-index: 0 ;
-  padding: 10px;
-  float: left;
-  
-
-} 
 .blue5 {
- height: 100px; 
+  height: 150px; 
   background-color: blue; 
-  grid-column: 1 / -1;
-  grid-row: 3;
-  z-index: 2;
+  width: 100%;
+  z-index: 0
+}
 
-} 
+
+.yellow5 {
+  background-color: gold;
+  padding: 15px; 
+  z-index: 2;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: stretch;
+}
+
+.green5 {
+  width: 250px;
+  height: 250px;
+  background-color: green;
+  float: left; 
+  z-index: 1;
+}
+
+
 /* Activity 6 styles */ 
 .content6 {
   /* This is the parent of the activity 6 boxes. */
