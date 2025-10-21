@@ -208,6 +208,7 @@
   overflow-wrap: break-word;
   align-content: center;
   justify-items: stretch;
+  text-align: left;
 }
 
 .green5 {
@@ -216,6 +217,7 @@
   background-color: green;
   float: left; 
   white-space: nowrap;
+  margin-right: 15px;
   z-index: 1;
 }
 
