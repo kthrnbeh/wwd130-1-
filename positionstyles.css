@@ -183,48 +183,41 @@
 }
 
 
-/* Activity 5 styles */ 
+/* Activity 5 styles */
 .content5 {
-  /* This is the parent of the activity 5 boxes. */
-  height: 400px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* A simple 3-row layout for header, main, and footer */
   grid-template-rows: auto 1fr auto;
-  width: 100%;
+  height: 400px;
 }
-.red5 { 
-   height: 100px; 
-  background-color: red; 
-  grid-column: 1 / -1;
-  grid-row: 1;
-  z-index: 2;
-} 
-.green5 { 
-  width: 300px; 
-  height: 200px; 
-  background-color: green; 
-  margin-right: 15px;
-  float:left;
 
-} 
+.red5 {
+  height: 100px;
+  background-color: red;
+  grid-row: 1; /* Places it in the first row */
+}
+
 .yellow5 {
-   width: 900px;
-  background-color: gold; 
-  /* Place in the second column, second row */
-  grid-column: 1 / -1;
-  grid-row: 2;
-  z-index: 1 ;
-  padding: 10px;
+  background-color: gold;
+  grid-row: 2; /* Places it in the second row */
+  padding: 15px; /* Add some space for the text */
+  overflow: auto; /* Good practice for containing floats */
+}
 
-} 
+.green5 {
+  width: 300px;
+  height: 200px;
+  background-color: green;
+  float: left; /* This makes the text in .yellow5 wrap around it */
+  margin-right: 15px; /* Adds space between the box and the text */
+  margin-bottom: 5px; /* Adds a little space below */
+}
+
 .blue5 {
- height: 100px; 
-  background-color: blue; 
-  grid-column: 1 / -1;
-  grid-row: 3;
-  z-index: 2;
-
-} 
+  height: 100px;
+  background-color: blue;
+  grid-row: 3; /* Places it in the third row */
+}
 /* Activity 6 styles */ 
 .content6 {
   /* This is the parent of the activity 6 boxes. */
