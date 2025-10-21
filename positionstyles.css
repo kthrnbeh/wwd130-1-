@@ -90,7 +90,6 @@
   /* Create three rows: header, content, footer */
   grid-template-rows: auto 1fr auto;
   /* This creates the white space between the boxes */
-  gap: 20px;
   width: 100%;
 }
 
@@ -100,6 +99,7 @@
   /* Span the full width of the first row */
   grid-column: 1 / -1;
   grid-row: 1;
+  z-index: 2;
 } 
 
 .green3 {
@@ -108,6 +108,8 @@
   /* Place in the first column, second row */
   grid-column: 1;
   grid-row: 2;
+  z-index: 1;
+  margin-right: 40px;
 } 
 
 .yellow3 {
@@ -116,6 +118,8 @@
   /* Place in the second column, second row */
   grid-column: 2;
   grid-row: 2;
+  z-index: 1 ;
+  margin-left: 20px;
 } 
 
 .blue3 {
@@ -124,6 +128,7 @@
   /* Span the full width of the third row */
   grid-column: 1 / -1;
   grid-row: 3;
+  z-index: 2;
 }
 /* Activity 4 styles */ 
 .content4 {
