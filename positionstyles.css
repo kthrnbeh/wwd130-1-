@@ -132,47 +132,40 @@
 }
 /* Activity 4 styles */ 
 .content4 {
-  .content4 {
   display: grid;
-  height: 400px; 
-  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-}
-.red4 {
-  width: 300px; 
-  height: 400px; /*changed*/
-  background-color: red; 
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
-  z-index: 2;
 
-} 
-.green4 {
-  width: 400px; 
-  height: 150px; 
-  background-color: green; 
-  grid-column: 1 / 4;
+/* Red left column spanning all rows */
+.red4 {
+  background-color: red;
+  grid-column: 1 / 2;
   grid-row: 1 / 4;
-  z-index: 0;
-  
-} 
+}
+
+/* Green top-right */
+.green4 {
+  background-color: green;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Yellow middle-right */
 .yellow4 {
-  width: 400px; 
-  height: 150px; 
-  background-color: gold; 
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-  z-index: 1;
-} 
+  background-color: gold;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Blue bottom-right */
 .blue4 {
-  width: 400px; 
-  height: 150px; 
   background-color: blue;
-  grid-column: 4 / 4;
-  grid-row: 4 / 4; 
-  z-index: 1;
-} 
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
 /* Activity 5 styles */ 
 .content5 {
   /* This is the parent of the activity 5 boxes. */
