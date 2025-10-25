@@ -25,6 +25,7 @@ body {
   margin-right: auto;
   grid-column: 2/7;
   grid-row:5/8 ;
+  box-shadow: 5px 5px 10px #6f7364;
 }
 
 h2 {
@@ -130,6 +131,7 @@ main section {
   padding: 35px;
   grid-column: 6/10;
   grid-row:6/7;
+  box-shadow: 5px 5px 10px #6f7364;
 }
 
 .msg h2,
@@ -154,6 +156,10 @@ main section {
 }
 .card-img, .mountains {
     width: 100%;
+}
+.card-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
 }
 .rivers-card{
   grid-column: 2/4;
