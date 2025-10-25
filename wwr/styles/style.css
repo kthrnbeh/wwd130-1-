@@ -62,7 +62,10 @@ nav {
     display: flex;
     justify-content: space-around;
 }
-
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
 #hero-img {
   width: 100%;
   height: auto;
