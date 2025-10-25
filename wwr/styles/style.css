@@ -144,6 +144,9 @@ main section {
 .card-img{
     border: 10px solid black;
 }
+.card-img, .mountains {
+    width: 100%;
+}
 
 .book,
 .join {
