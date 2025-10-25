@@ -84,7 +84,10 @@ nav {
 #hero-msg h4 {
     color: white;
 }
-
+#home-grid{
+  display:grid
+  grid-template-columns(repeat 10,1fr);
+}
 #background {
   height: 725px;
   background-color: antiquewhite;
