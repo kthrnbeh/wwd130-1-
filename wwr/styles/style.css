@@ -87,8 +87,8 @@ nav {
     color: white;
 }
 #home-grid{
-  display:grid
-  grid-template-columns(repeat 10,1fr);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
 }
 #background {
   height: 725px;
