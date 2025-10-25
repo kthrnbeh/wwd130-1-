@@ -56,6 +56,10 @@ nav a:hover {
   background-color: black;
   color: #ffffff;
 }
+nav {
+    display: flex;
+    justify-content: space-around;
+}
 
 #hero-img {
   width: 100%;
