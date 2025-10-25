@@ -94,7 +94,11 @@ nav {
 #background {
   height: 725px;
   background-color: antiquewhite;
-  color: #edbfc6;
+  color: #d3a6ac;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no repeat;
+  border-radius: 700;
   grid-column: 1/11;
   grid-row:4/9;
 }
