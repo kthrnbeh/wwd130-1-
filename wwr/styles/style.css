@@ -78,6 +78,9 @@ nav {
   grid-column: 2/3;
   grid-row: 1/2;
 }
+#hero-msg h4 {
+    color: white;
+}
 
 #background {
   height: 725px;
