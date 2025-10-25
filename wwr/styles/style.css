@@ -128,6 +128,8 @@ main section {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   line-height: 1.5em;
   padding: 35px;
+  grid-column: 6/10;
+  grid-row:6/7;
 }
 
 .msg h2,
