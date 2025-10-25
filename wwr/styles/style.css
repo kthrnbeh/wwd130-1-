@@ -125,8 +125,9 @@ main section {
 
 .msg {
   background-color: white;
-  color: #98b6b6;
+  color: #374040;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
   line-height: 1.5em;
   padding: 35px;
   grid-column: 6/10;
@@ -136,11 +137,11 @@ main section {
 
 .msg h2,
 .msg p {
-  color: #98b6b6;
+  color: #576464;
 }
 
 .msg p {
-  font-size: .8em;
+  font-size: 1.2em;
   padding-bottom: 15px;
 }
 
