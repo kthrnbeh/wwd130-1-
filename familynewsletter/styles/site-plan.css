@@ -18,12 +18,12 @@ Fonts are separated by a | */
   --headline-color-on-white: #083c61;  /* headlines on a white background */ 
   --headline-color-on-color: #083c61; /* headlines on a colored background */ 
   --paragraph-color-on-white: #388484; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #388484; /* paragraph text on a colored background */ 
+  --paragraph-color-on-color: #99a1a1; /* paragraph text on a colored background */ 
   --paragraph-background-color: #388484  ;
   --nav-link-color: #ea7044;
-  --nav-background-color: #ea7044;
-  --nav-hover-link-color: #ea7044;
-  --nav-hover-background-color:#ea7044;
+  --nav-background-color: #e3ddda;
+  --nav-hover-link-color: #4452ea;
+  --nav-hover-background-color:#e4d6d1;
 }
 
 
@@ -104,25 +104,27 @@ nav {
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
-}
-nav  {
-  list-style-type: none;
-  display: flex;
-
+  display: flex;            
+  gap: 0.5rem;
+  justify-content: center;
 }
 nav a {
-  padding:1em;
+  display: inline-block;
   min-width: 120px;
   text-decoration: none;
-  padding: 10px;
-
+  padding: 0.5em 1rem;
+  color: var(--nav-link-color);
+  border-radius: 6px; 
+  transition: background-color .2s ease, color .2s ease;
 }
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
 }
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
+  outline: none;
 }
 
 .sitemap {
