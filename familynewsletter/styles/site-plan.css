@@ -21,9 +21,9 @@
   --paragraph-background-color: #388484;
 
   /* NAV (high contrast + visible hover) */
-  --nav-background-color: #ea7044;          /* orange bar */
+  --nav-background-color: #083c61;          /* orange bar */
   --nav-link-color: #ffffff;                 /* white text */
-  --nav-hover-background-color: #083c61;     /* dark blue hover */
+  --nav-hover-background-color: #ea7044;;     /* dark blue hover */
   --nav-hover-link-color: #ffffff;           /* white text on hover */
 }
 
