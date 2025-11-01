@@ -20,9 +20,9 @@ Fonts are separated by a | */
   --paragraph-color-on-white: #388484; /* paragraph text on a white background */ 
   --paragraph-color-on-color: #99a1a1; /* paragraph text on a colored background */ 
   --paragraph-background-color: #388484  ;
-  --nav-link-color: #ea7044;
+  --nav-link-color: #083c61;
   --nav-background-color: #e3ddda;
-  --nav-hover-link-color: #4452ea;
+  --nav-hover-link-color: #ea7044;
   --nav-hover-background-color:#e4d6d1;
 }
 
