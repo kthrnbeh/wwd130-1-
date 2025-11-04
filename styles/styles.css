@@ -167,12 +167,12 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
-img {
+.img {
   display: block;
   margin: 0 auto;
   max-width: 300px;
 }
-img {
+.img {
   display: block;
   margin: 1rem auto;
   max-width: 100%;
