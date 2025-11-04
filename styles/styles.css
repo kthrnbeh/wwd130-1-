@@ -21,10 +21,11 @@ Fonts are separated by a & */
   --paragraph-color-on-white: #2c3351;  /* body on white */
   --paragraph-color-on-color: #2c3351;  /* body on color */
   --paragraph-background-color: #A7A9B8;
-  --nav-link-color: #A7A9B8;
-  --nav-background-color: #404647;
-  --nav-hover-link-color: #404647;
-  --nav-hover-background-color: #404647;
+  --nav-background-color: #404647;      /* dark bar (keep) */
+  --nav-link-color: #ffffff;             /* white text = high contrast */
+  --nav-hover-background-color: #879cb0; /* your Accent 1 for hover */
+  --nav-hover-link-color: #2c3351;       /* dark text on light hover */
+
 }
 
 
