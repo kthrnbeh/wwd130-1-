@@ -175,35 +175,16 @@ nav a:focus-visible {
   border-top: 1px solid;
   border-right: 1px solid;
 }
-.img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-  width: 250px;         /* consistent image width */
-  height: auto;         /* keeps proportions */
-  border-radius: 8px;   /* optional rounded corners */
-}
-.image-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.image-row img {
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-}
-img {
-  display: block;
-  margin: 0 auto;
-}
 
 .family-name h2{
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.soccer{
-  width: 110px;
-  height: 110px
-  
+/* Centers and resizes all images */
+img {
+  display: block;
+  margin: 1rem auto;
+  width: 250px;      /* control size */
+  height: auto;      /* keeps proportions */
+  max-width: 100%;   /* prevents overflow on small screens */
 }
+
