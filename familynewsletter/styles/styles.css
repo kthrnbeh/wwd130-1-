@@ -36,10 +36,6 @@ body {
   font-size: 18px;
   text-align: center;
 }
-img {
-  display: block;
-  margin: 0 auto;
-}
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
@@ -191,4 +187,34 @@ img {
   height: auto;      /* keeps proportions */
   max-width: 100%;   /* prevents overflow on small screens */
 }
+header{
+    background-color: #333;
+    color:white;
+    position:relative;
+    height:400px;
+    align-items: center;
+}
+body{
+    margin:0;
+    text-align: center;
+    background-color: #555555;
+}
 
+.one,.two,.three{
+ width: 150px;
+ height:150px;
+ border-radius: 50%;
+ object-fit: cover;
+ margin: 0 20px;
+ border:5px solid white;
+
+}
+.footer{
+    background-color: #555555;
+    padding: 30px 0;
+    align-items:center;
+    display:flex;
+    justify-content: center;
+    
+
+}
