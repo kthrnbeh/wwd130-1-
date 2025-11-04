@@ -1,7 +1,7 @@
 /* ---------- General ---------- */
 body {
   background-color: #e7f3f8;
-  color: #a3cdea#1f2937;
+  color: #a3cdea;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
 
 /* ---------- Header Layout ---------- */
 header {
-  background-color: #ffffff;
+  background-color: #b1baba;
   padding: 1.5rem 2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -68,7 +68,7 @@ nav a:hover {
   font-style: italic;
   font-size: 1rem;
   margin-top: 1rem;
-  color: #475569;
+  color: #383e46;
   text-align: center;
 }
 
@@ -78,14 +78,20 @@ nav a:hover {
   margin: auto;
   line-height: 1.6;
 }
-img {
+image-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 1rem auto;
-  width: 120px;      /* control size */
-  height: auto;      /* keeps proportions */
-  border-radius: 8px;
+  justify-content: center;  /* centers the whole row */
+  align-items: center;      /* aligns vertically on the same line */
+  gap: 1rem;                /* space between each image */
+  flex-wrap: nowrap;        /* keeps them all on the same line */
+}
+
+.image-row img {
+  height: 100px;            /* makes them uniform height */
+  width: auto;              /* keeps proportions correct */
+  object-fit: contain;      /* ensures even scaling */
+}
+.audience{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:#0f172a;
 }
