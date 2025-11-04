@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #a3cdea;
+  --secondary-color: #b1baba; 
+  --accent1-color: #fe9b77;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: Lato, ANYTHING, sans-serif;
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #b1baba;  /* headlines on a white background */ 
+  --headline-color-on-color: #b1baba; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #a3cdea; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #388484  ;
+  --nav-link-color: #083c61;
+  --nav-background-color: #e3ddda;
+  --nav-hover-link-color: #ea7044;
+  --nav-hover-background-color:#e4d6d1;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;            
+  gap: 0.5rem;
+  justify-content: Center;
+}
+img {
+  display: block;
+  margin: 1rem auto;
+  width: 250px;      /* control size */
+  height: auto;      /* keeps proportions */
+  max-width: 100%;   /* prevents overflow on small screens */
+}
