@@ -1,0 +1,91 @@
+/* ---------- General ---------- */
+body {
+  background-color: #e7f3f8;
+  color: #a3cdea#1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Header Layout ---------- */
+header {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Flex container: logo left, nav right */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo and title group */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Smaller logo */
+#logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Title */
+.family-name {
+  font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* ---------- Nav Styling ---------- */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #0f172a;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #a2cbd7;
+  color: white;
+}
+
+/* ---------- Text Sections ---------- */
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #475569;
+  text-align: center;
+}
+
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  width: 120px;      /* control size */
+  height: auto;      /* keeps proportions */
+  border-radius: 8px;
+}
