@@ -187,7 +187,7 @@ h2 {
 img {
   display: block;
   margin: 1rem auto;
-  width: 250px;      /* control size */
+  width: 150px;      /* control size */
   height: auto;      /* keeps proportions */
   max-width: 100%;   /* prevents overflow on small screens */
 }
