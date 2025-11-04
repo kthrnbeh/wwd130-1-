@@ -110,3 +110,22 @@ nav a:hover {
   margin: 1rem auto;         /* no auto-centering -> stays left */
   border-radius: 8px;     /* optional polish */
 }
+.date{
+ font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #383e46;
+  text-align: left;
+}
+.life-updates{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0f172a;
+    text-spacing-trim: space-all;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #383e46;
+    text-align: left;
+    padding: 0;
+    margin: 1rem auto;
+}
