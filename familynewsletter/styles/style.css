@@ -108,7 +108,7 @@ nav a:hover {
   align-items: left;      /* aligns vertically on the same line */
   gap: 1rem; 
   margin: 1rem auto;
-  width:60px;               /* space between each image */
+  max-width:60px;               /* space between each image */
   flex-wrap: nowrap; 
 
 }
