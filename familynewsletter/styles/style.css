@@ -63,7 +63,7 @@ nav a:hover {
   color: white;
 }
 
-image-row {
+.image-row {
   display: flex;
   justify-content: center;  /* centers the whole row */
   align-items: center;      /* aligns vertically on the same line */
@@ -74,10 +74,11 @@ image-row {
 }
 
 .image-row img {
-  height: 100px;            /* makes them uniform height */
-  width: auto;              /* keeps proportions correct */
-  object-fit: contain;      /* ensures even scaling */
-  
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  display: inline-block;     /* lets them center nicely */
 }
 .quote {
   font-style: italic;
