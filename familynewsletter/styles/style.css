@@ -102,3 +102,13 @@ nav a:hover {
     margin: 1rem auto;   /* centers the block itself on the page */
     line-height: 1.6; 
 }
+.family-photo{
+  display: flex;
+  justify-content: center;  /* centers the whole row */
+  align-items: center;      /* aligns vertically on the same line */
+  gap: 1rem; 
+  margin: 1rem auto;
+  width:60px;               /* space between each image */
+  flex-wrap: nowrap; 
+
+}
