@@ -180,3 +180,14 @@ nav a:hover {
   height: auto;         /* keeps proportions */
   border-radius: 8px;   /* optional rounded corners */
 }
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.image-row img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+}
