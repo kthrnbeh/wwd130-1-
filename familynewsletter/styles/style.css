@@ -63,26 +63,13 @@ nav a:hover {
   color: white;
 }
 
-/* ---------- Text Sections ---------- */
-.quote {
-  font-style: italic;
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: #383e46;
-  text-align: center;
-}
-
-.intro {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-}
 image-row {
   display: flex;
   justify-content: center;  /* centers the whole row */
   align-items: center;      /* aligns vertically on the same line */
-  gap: 1rem;                /* space between each image */
+  gap: 1rem; 
+  margin: 1rem auto;
+  width:100%;               /* space between each image */
   flex-wrap: nowrap;        /* keeps them all on the same line */
 }
 
@@ -90,6 +77,20 @@ image-row {
   height: 100px;            /* makes them uniform height */
   width: auto;              /* keeps proportions correct */
   object-fit: contain;      /* ensures even scaling */
+  
+}
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #383e46;
+  text-align: center;
+}
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
 }
 .audience{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
