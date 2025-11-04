@@ -104,8 +104,8 @@ nav a:hover {
 }
 .family-photo{
   display: flex;
-  justify-content: center;  /* centers the whole row */
-  align-items: center;      /* aligns vertically on the same line */
+  justify-content: left;  /* centers the whole row */
+  align-items: left;      /* aligns vertically on the same line */
   gap: 1rem; 
   margin: 1rem auto;
   width:60px;               /* space between each image */
