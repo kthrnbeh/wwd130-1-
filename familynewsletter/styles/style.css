@@ -95,4 +95,8 @@ image-row {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:#0f172a;
     word-spacing: large;
+    text-align: left;
+    max-width: 800px;    /* keeps it from stretching too wide */
+    margin: 1rem auto;   /* centers the block itself on the page */
+    line-height: 1.6; 
 }
