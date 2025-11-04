@@ -1,34 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <title>Family Newsletter</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magistri Family Newsletter</title>
+
+  <!-- (Optional) Friendly system font stack -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/option-a.css">
 </head>
 <body>
-    <a id="logo_link" href="home.html">
-            <img class="logo" src="images/magistri-logo.png" alt="Dry Oar Logo">
-        </a>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Updates</a>
-      <a href="#">Photos</a>
-    </nav>
-    <h3> Magistri Family Newsletter</h3>
-    <p></p>
-    <p>Images for the Home page</p>
-    <img src="images/home-h.svg" alt="Family at the park">
-    <img src="images/monthly-collage.png" alt="Monthly photo collage">
-    <footer>
+  <!-- Top masthead with brand + nav -->
+  <header class="header">
+    <div class="container inner">
+      <div class="brand">Magistri Family Newsletter</div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#" class="active">Home</a>
+        <a href="#updates">Updates</a>
+        <a href="#photos">Photos</a>
+        <a href="#events">Events</a>
+      </nav>
     </div>
-    </footer>
-   </div> 
-</body>
-</html>
-    
+  </header>
+
+  <main class="container">
+    <!-- Hero section -->
+    <section class="hero" id="home" aria-labelledby="home-title">
+      <div class="wrap">
+        <div>
+          <h1 id="home-title">November Highlights</h1>
+          <p class="lead">
+            Little wins, big smiles, and a very full calendar. Here’s what our crew has been up to this month!
+          </p>
+        </div>
+
+        <!-- Replace with your actual image file -->
+        <img
+          src="images/family-hero.jpg"
+          alt="Our family enjoying a fall afternoon"
+          class="hero-img"
+        />
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section class="section" id="updates" aria-labelledby="updates-title">
+      <h2 id="updates-title">Latest Updates</h2>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>School & Sports</h3>
+          <p>Jonah started indoor soccer; Ella is learning the violin. Report cards soon!</p>
+        </article>
+
+        <article class="card">
+          <h3>Home & Projects</h3>
+          <p>Backsplash is done and the backyard fire pit is officially open for s’mores.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Photos -->
+    <section class="section" id="photos" aria-labelledby="photos-title">
+      <h2 id="photos-title">Photo Board</h2>
+
+      <div class="card">
+        <div class="photo-strip">
+          <!-- Replace these with your images -->
+          <img src="images/p1.jpg" alt="Pumpkin patch">
+          <img src="images/p2.jpg" alt="Soccer game">
+          <img src="images/p3.jpg" alt="Kitchen backsplash">
+          <img src="images/p4.jpg" alt="Family walk at sunset">
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section" id="events" aria-labelledby="events-title">
+      <h2 id="events-title">Upcoming Events</h2>
+
+      <div class="events">
+        <div class="event">
+          <strong>Nov 10 — Grandma’s Birthday</strong>
+          Potluck at 6pm, bring a side.
+        </div>
+        <div class="event">
+          <strong>Nov 23 — Turkey Trot</strong>
+          5K at the park. Walkers welcome!
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Magistri Family • Made with love</div>
+  </footer>
 </body>
 </html>
