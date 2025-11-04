@@ -1,6 +1,6 @@
 :root{
-  --bg:#f7fafc; --text:#0f172a; --muted:#475569;
-  --brand-1:#a2cbd7; --brand-2:#10252b; --brand-3:#7fdcf0; --accent:#dc9645;
+  --bg:#f7fafc; --text:#0f172a; --muted:#b1baba;
+  --brand-1:#a2cbd7; --brand-2:#10252b; --brand-3:#b1baba; --accent:#fe9b77;
   --card:#ffffff; --border:#e5e7eb; --shadow:0 10px 30px rgba(2,6,23,.08); --radius:16px;
 }
 
