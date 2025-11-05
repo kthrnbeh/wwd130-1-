@@ -151,5 +151,7 @@ nav a:hover {
   height: auto;          /* keep proportions */
   border-radius: 8px;    /* optional rounding */
   object-fit: cover;     /* ensures neat cropping if needed */
+  display: block;
+  margin: 0;             /* reset auto-centering */
 }
 
