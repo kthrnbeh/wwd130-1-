@@ -139,15 +139,15 @@ nav a:hover {
 }
 .pictures-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
   gap: 1rem;                             /* space between images */
   max-width: 900px;                      /* limit total width */
   margin: 2rem auto;                     /* center the grid */
   justify-items: center;                 /* centers each image */
 }
 .pictures{
-  width: 300%;           /* makes each image fill its grid cell */
-  max-width: 250px;      /* controls image size */
+  width: 100%;           /* makes each image fill its grid cell */
+  max-width: 450px;      /* controls image size */
   height: auto;          /* keep proportions */
   border-radius: 8px;    /* optional rounding */
   object-fit: cover;     /* ensures neat cropping if needed */
