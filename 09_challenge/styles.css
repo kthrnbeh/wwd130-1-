@@ -17,7 +17,7 @@ h2 {
   color: #222;
 }
 
-p {
+.paragraph {
   color: #666;
   line-height: 1.4;
 }
@@ -25,4 +25,8 @@ p {
   width: 100%;
   height: auto;
   display: block;
+}
+.date{
+    color:rgb(157, 157, 241)
+    font-family 
 }
