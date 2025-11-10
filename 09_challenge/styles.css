@@ -42,6 +42,10 @@ body{
   display: grid;                        /* optional: stack number over label */
   place-items: center;                  /* centers both lines horizontally */
 }
+.stat{
+  display: inline-flex;
+  align-items: flex-start;     /* lets the unit sit higher */
+}
 .num{
   font-size: 1.35rem;
   font-weight: 800;
@@ -50,9 +54,10 @@ body{
 }
 .letter{
   font-size: 0.75rem;         /* smaller than number */
-  vertical-align: super;      /* moves it slightly upward */
   margin-left: 1px;           /* tiny gap between number and letter */
   font-weight: 600;           /* optional: make it semi-bold */
+  vertical-align: text-top; /* or try baseline, super, etc. */
+  font-size: 0.8rem;
 }
 .label{
   font-size: 0.72rem;
