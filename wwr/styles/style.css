@@ -271,6 +271,16 @@ footer .social img {
     }
 }
 /* Dates/Rates page */
+.river-card,
+.rafting-card,
+.cabin-card {
+  margin: 200px 0;
+}
+.card-img{
+    border: 10px solid black;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
 .card-img:hover {
     opacity: .6;
     transform: scale(1.1);
