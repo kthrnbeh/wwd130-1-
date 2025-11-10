@@ -48,6 +48,12 @@ body{
   line-height: 1.1;
   font-variant-numeric: tabular-nums;  /* aligns numbers nicely */
 }
+.letter{
+  font-size: 0.75rem;         /* smaller than number */
+  vertical-align: super;      /* moves it slightly upward */
+  margin-left: 1px;           /* tiny gap between number and letter */
+  font-weight: 600;           /* optional: make it semi-bold */
+}
 .label{
   font-size: 0.72rem;
   letter-spacing: 0.04em;
