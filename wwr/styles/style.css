@@ -390,84 +390,125 @@ footer .social img {
   color: white;
 }
 
-/* Contact page */
-/* =========================================
-   CONTACT PAGE STYLES
-   ========================================= */
+/* ────────────────────────────────────────────────────────────────
+   CONTACT PAGE ONLY
+   Two floating cards over the hero image (form left, talk right)
+   ──────────────────────────────────────────────────────────────── */
 
-/* --- Keeps the hero image section in place --- */
-#hero {
-  position: relative;  /* Allows elements inside (like the card) to be placed relative to this container */
-  margin-bottom: 24px; /* Adds space between the image and next section */
+/* Undo your global "center all main sections" just for this page,
+   but keep the heading centered. */
+.page-contact main section { text-align: initial; }
+.page-contact #hero-msg { text-align: center; }
+
+/* 1) Make the hero a positioning context so children can overlay it. */
+.page-contact .contact-hero { position: relative; }
+
+/* 2) Background image fills the width.
+      Slightly darken so white cards are readable. */
+.page-contact #hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85);
 }
 
-/* --- Centers and spaces out the page title section --- */
-#hero-msg {
-  margin: 24px auto 8px; /* Space above and below the header text */
-  text-align: center;    /* Center-aligns the “Contact Us” text */
+/* 3) Overlay grid:
+      - Absolutely positioned centered block that holds BOTH cards
+      - Max width prevents it from spanning edge-to-edge on huge screens
+      - Two columns: flexible form column + fixed talk column
+      - Gap adds the “padding between them” you requested */
+.page-contact .contact-overlay {
+  position: absolute;
+  top: 14%;                        /* vertical placement over the photo */
+  left: 50%;                       /* start from the center … */
+  transform: translateX(-50%);     /* … and truly center it */
+  width: min(1100px, calc(100% - 48px)); /* responsive max with side gutters */
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) 320px; /* form | talk */
+  gap: 20px;                       /* space BETWEEN the two cards */
+  z-index: 5;                      /* ensure above the image */
 }
 
-/* --- Main container for contact card --- */
-.contact-section {
-  /* Keeps layout width manageable and centered on page */
-  max-width: 1100px;
-  margin: 0 auto 48px;   /* Centers the container horizontally and adds space below */
-  padding: 0 16px;
-
-  /* Sets layout to flexbox so content (card, form, etc.) can be aligned horizontally */
-  display: flex;
-  align-items: flex-start; /* Aligns items to the top */
-  justify-content: flex-end; /* Keeps the card to the left side */
+/* 4) Base “card” look shared by form + talk cards. */
+.page-contact .card {
+  background: #fff;                /* white card surface */
+  border: 1px solid #e5e7eb;       /* subtle border */
+  border-radius: 12px;             /* soft corners */
+  box-shadow: 0 12px 28px rgba(0,0,0,.18); /* lift off the image */
+  padding: 20px;                   /* internal breathing room */
+  color: #374151;                  /* readable gray text */
 }
 
-/* --- White box with contact info --- */
-.contact-card {
-  /* Removes absolute positioning (prevents overlapping other content) */
-  position: static;
+.page-contact .card h2 {
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+  color: #879cb0;                  /* matches your brand */
+}
 
-  /* Background and border give the card the “paper” look */
-  background-color: white;
-  border: 2px solid #ccc;
+/* 5) FORM styles — simple, readable, accessible. */
+.page-contact .contact-form {
+  display: grid;
+  gap: .9rem;                      /* vertical spacing between fields */
+}
+
+.page-contact .contact-form .row {
+  display: grid;                   /* first/last name side-by-side */
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+}
+
+.page-contact .contact-form label {
+  display: block;
+  font-weight: 600;
+  font-size: .92rem;
+  margin-bottom: .35rem;
+}
+
+.page-contact .contact-form input,
+.page-contact .contact-form textarea,
+.page-contact .contact-form select {
+  width: 100%;
+  padding: .7rem .85rem;           /* target ~44px height for touch */
+  border: 1px solid #d1d5db;
   border-radius: 10px;
-
-  /* Inner spacing and width */
-  padding: 20px;
-  width: 320px; /* Fixed width for consistent card size */
-
-  /* Visual effects */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  color: #7a7f93;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-  /* Adds a little breathing room between sections */
-  margin-top: 40px;
+  background: #fff;
+  font: inherit;
 }
 
-/* --- Styles for the heading in the contact card --- */
-.contact-card h2 {
-  margin: 0 0 8px;   /* Removes top margin and adds space below */
-  color: #879cb0;    /* Matches your brand color */
-}
+.page-contact .contact-form textarea { resize: vertical; }
 
-/* --- Styles for links (email + phone) --- */
-.contact-card a {
-  color: #879cb0;          /* Makes links match theme */
-  text-decoration: none;   /* Removes underlines */
-  font-weight: bold;
+.page-contact .contact-form button {
+  border: 0;
+  background: #879cb0;             /* brand button */
+  color: #fff;
+  font-weight: 700;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .2s ease;
 }
+.page-contact .contact-form button:hover { background: #6f849a; }
 
-.contact-card a:hover {
-  text-decoration: underline; /* Underline links on hover for clarity */
-}
+/* 6) TALK card extras: softer supporting text + links. */
+.page-contact .talk-card .muted { color: #6b7280; margin: .25rem 0 .5rem; }
+.page-contact .talk-card .link { color:#879cb0; text-decoration:none; font-weight:700; }
+.page-contact .talk-card .link:hover { text-decoration: underline; }
+.page-contact .talk-card a[href^="tel:"],
+.page-contact .talk-card a[href^="mailto:"] { color:#879cb0; text-decoration:none; font-weight:700; }
+.page-contact .talk-card a:hover { text-decoration: underline; }
+.page-contact .talk-card hr { border:0; border-top:1px solid #e5e7eb; margin: .75rem 0; }
 
-/* --- Responsive: on smaller screens, center the card --- */
-@media (max-width: 700px) {
-  .contact-section {
-    justify-content: center; /* Centers the card horizontally on mobile */
+/* 7) RESPONSIVE behavior:
+      - On tablets/phones we drop the overlay and stack below the image
+      - One-column grid so form sits above talk card
+      - Remove image darkening for better contrast on small screens */
+@media (max-width: 900px) {
+  .page-contact .contact-overlay {
+    position: static;          /* no overlay; flows below image */
+    transform: none;
+    width: auto;
+    margin: 12px;              /* page side padding */
+    grid-template-columns: 1fr;/* stack: form then talk */
   }
-
-  .contact-card {
-    width: 90%; /* Makes card take up most of mobile screen width */
-  }
+  .page-contact #hero-img { filter: none; }
 }
-

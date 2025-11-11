@@ -9,7 +9,8 @@
   <!-- Link to your shared CSS file -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body>
+<body class="page-contact">
+
   <!-- CONTENT WRAPPER -->
   <div id="content">
 
@@ -29,42 +30,73 @@
         <a href="contactus.html" aria-current="page">Contact Us</a>
       </nav>
     </header>
+  <body class="page-contact">
+  ...
+  <main>
+    <!-- CONTACT HERO (background image + overlay cards) -->
+<section id="hero" class="contact-hero">
+  <div id="hero-box">
+    <img id="hero-img" src="images/men.jpg" alt="Rafting group celebrating">
+  </div>
 
-    <!-- MAIN CONTENT AREA -->
-    <main>
+  <!-- Overlay container that holds the two cards (form left, talk right) -->
+  <div class="contact-overlay">
+    <!-- LEFT: form card -->
+    <section class="card form-card">
+      <h2>Get in touch</h2>
 
-      <!-- HERO MESSAGE (page title + short description) -->
-      <section id="hero-msg">
-        <h1 class="home-title">Contact Us</h1>
-        <h4>Page detailing how to best contact the company to book a trip or ask questions.</h4>
-      </section>
-
-      <!-- HERO IMAGE (the large background image under your title) -->
-      <section id="hero">
-        <div id="hero-box">
-          <!-- Image showing rafting or guides -->
-          <img id="hero-img" src="images/men.jpg" alt="Guests talking with our river guides">
+      <form class="contact-form" action="#" method="post" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" required>
+          </div>
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" required>
+          </div>
         </div>
-      </section>
 
-      <!-- CONTACT INFO SECTION -->
-      <!-- This section holds your contact card — the white box with email and phone -->
-      <section class="contact-section">
-        <div class="contact-card">
-          <!-- Title of the contact card -->
-          <h2>Talk to Us</h2>
-
-          <!-- Email link (clicking opens user’s email app) -->
-          <p><a href="mailto:DryOar@hotmail.com">DryOar@hotmail.com</a></p>
-
-          <!-- Phone link (clicking dials the number on mobile) -->
-          <p>Call us at <a href="tel:+18888519453">1-888-851-9453</a></p>
-
-          <!-- Optional business hours or notes -->
-          <p>Available Mon–Fri, 8am–6pm ET</p>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" required>
         </div>
-      </section>
-    </main>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Select a country</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Philippines</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- RIGHT: talk-with-us card -->
+    <aside class="card talk-card" aria-label="Talk with us">
+      <h2>Talk with us</h2>
+      <p>Give us a call at <a href="tel:+18888519453">1-888-851-9453</a></p>
+      <p class="muted">Available Mon–Fri, 8am–6pm ET</p>
+      <hr>
+      <p>Email: <a href="mailto:DryOar@hotmail.com">DryOar@hotmail.com</a></p>
+      <a class="link" href="#">Visit Help Center →</a>
+    </aside>
+  </div>
+</section>
+
+  </main>
+  ...
+</body>
+
 
     <!-- FOOTER SECTION -->
     <!-- Appears at the bottom of the page with navigation and social icons -->
