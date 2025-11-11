@@ -279,14 +279,10 @@ footer .social img {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
 }
-.river-card,
-.rafting-card,
-.cabin-card {
-  margin: 200px 0;
-}
-.card-img {
-  width: 200px;
-  height: 150px;
+
+.card-imgs {
+  width: 400px;
+  height: 350px;
   object-fit: cover; /* crop images nicely */
   border-radius: 5px;
 }
@@ -295,7 +291,10 @@ footer .social img {
 .trip-body {
   flex: 1;
 }
-
+.info{
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
 .trip-title {
   font-size: 1.5em;
   margin-bottom: 0.5em;
