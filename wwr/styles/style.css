@@ -389,16 +389,31 @@ footer .social img {
   background-color: #879cb0;
   color: white;
 }
-/* contact page*/
+
+/* Contact page */
+#hero {
+  position: relative; /* keeps the card inside the hero area */
+}
+
 .contact-card {
+  position: absolute;
+  top: 200px;          /* distance from top of page — adjust this number to move it higher or lower */
+  left: 60px;          /* distance from the left edge */
   background-color: white;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: left;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  color: #7a7f93;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  z-index: 5;          /* ensures it stays above the background image */
+}
+
+.contact-card h2 {
+  margin-top: 0;
+  color: #879cb0;
 }
 
 .contact-card a {
@@ -409,3 +424,4 @@ footer .social img {
 .contact-card a:hover {
   text-decoration: underline;
 }
+
