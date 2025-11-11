@@ -277,9 +277,21 @@ footer .social img {
   gap: 20px;
   margin-bottom: 40px;
   border-bottom: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow:2px 2px 8px#ffffff;
   padding-bottom: 20px;
-}
 
+}
+.trip-card:hover {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+.trip-title{
+  font-size: medium;
+   margin-bottom: 0.5em;
+   border: 2px 3px solid #333 
+}
 .card-imgs {
   width: 400px;
   height: 350px;
