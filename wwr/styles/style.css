@@ -391,37 +391,83 @@ footer .social img {
 }
 
 /* Contact page */
+/* =========================================
+   CONTACT PAGE STYLES
+   ========================================= */
+
+/* --- Keeps the hero image section in place --- */
 #hero {
-  position: relative; /* keeps the card inside the hero area */
+  position: relative;  /* Allows elements inside (like the card) to be placed relative to this container */
+  margin-bottom: 24px; /* Adds space between the image and next section */
 }
 
+/* --- Centers and spaces out the page title section --- */
+#hero-msg {
+  margin: 24px auto 8px; /* Space above and below the header text */
+  text-align: center;    /* Center-aligns the “Contact Us” text */
+}
+
+/* --- Main container for contact card --- */
+.contact-section {
+  /* Keeps layout width manageable and centered on page */
+  max-width: 1100px;
+  margin: 0 auto 48px;   /* Centers the container horizontally and adds space below */
+  padding: 0 16px;
+
+  /* Sets layout to flexbox so content (card, form, etc.) can be aligned horizontally */
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: flex-end; /* Keeps the card to the left side */
+}
+
+/* --- White box with contact info --- */
 .contact-card {
-  position: absolute;
-  top: 200px;          /* distance from top of page — adjust this number to move it higher or lower */
-  left: 60px;          /* distance from the left edge */
+  /* Removes absolute positioning (prevents overlapping other content) */
+  position: static;
+
+  /* Background and border give the card the “paper” look */
   background-color: white;
   border: 2px solid #ccc;
   border-radius: 10px;
+
+  /* Inner spacing and width */
   padding: 20px;
-  width: 320px;
-  text-align: left;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: 320px; /* Fixed width for consistent card size */
+
+  /* Visual effects */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
   color: #7a7f93;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  z-index: 5;          /* ensures it stays above the background image */
+
+  /* Adds a little breathing room between sections */
+  margin-top: 40px;
 }
 
+/* --- Styles for the heading in the contact card --- */
 .contact-card h2 {
-  margin-top: 0;
-  color: #879cb0;
+  margin: 0 0 8px;   /* Removes top margin and adds space below */
+  color: #879cb0;    /* Matches your brand color */
 }
 
+/* --- Styles for links (email + phone) --- */
 .contact-card a {
-  color: #879cb0;
-  text-decoration: none;
+  color: #879cb0;          /* Makes links match theme */
+  text-decoration: none;   /* Removes underlines */
+  font-weight: bold;
 }
 
 .contact-card a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover for clarity */
+}
+
+/* --- Responsive: on smaller screens, center the card --- */
+@media (max-width: 700px) {
+  .contact-section {
+    justify-content: center; /* Centers the card horizontally on mobile */
+  }
+
+  .contact-card {
+    width: 90%; /* Makes card take up most of mobile screen width */
+  }
 }
 
