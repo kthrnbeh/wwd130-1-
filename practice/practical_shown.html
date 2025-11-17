@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HTML — Everything Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50%' x='50%' font-size='48' text-anchor='middle'>🌐</text></svg>"> -->
+  <style>
+    :root { --gap: 18px; --pad: 14px; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.55; margin: 0; color: #111; background:#f7f7fb; }
+    header, footer { background: #0f172a; color: #fff; padding: 18px 22px; }
+    header h1 { margin: 0; font-size: 1.4rem; }
+    main { padding: 24px; }
+    .hint { color:#475569; font-size: .95rem; margin-bottom: 10px;}
+    .section { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+    .section h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    details { margin-top: 10px; }
+    summary { cursor: pointer; color:#0f766e; font-weight: 600; }
+    .demo { border: 1px dashed #cbd5e1; padding: var(--pad); border-radius: 8px; background: #fafafa; }
+    pre { background: #0b1020; color: #e2e8f0; padding: var(--pad); border-radius: 8px; overflow:auto; font-family: var(--mono); font-size: .9rem; }
+    code { font-family: var(--mono); }
+    .grid { display: grid; gap: var(--gap); }
+    .two { grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size: .8rem; }
+    .note { font-size:.9rem; color:#374151; }
+    .btn { padding:8px 12px; border:1px solid #334155; border-radius:6px; background:#0ea5e9; color:#fff; cursor:pointer; }
+    .btn:active { transform: translateY(1px); }
+    .box { border:1px solid #94a3b8; padding:10px; border-radius:8px; }
+    .kbd { font-family: var(--mono); background:#e2e8f0; border-radius:4px; padding:0 6px; }
+    iframe { width: 100%; max-width: 520px; height: 140px; border:1px solid #e5e7eb; border-radius:6px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border:1px solid #cbd5e1; padding:8px; text-align:left; }
+    caption { caption-side: top; font-weight: 600; margin-bottom: 6px; }
+  </style>
+  <noscript><div class="section"><b>Note:</b> Some examples (dialog, template, canvas) need JavaScript enabled.</div></noscript>
+</head>
+<body>
+  <header>
+    <h1>HTML — Everything Demo <span class="badge">copy this entire file</span></h1>
+    <nav>
+      <a href="#structure" style="color:#93c5fd;">Structure</a> ·
+      <a href="#text" style="color:#93c5fd;">Text</a> ·
+      <a href="#links" style="color:#93c5fd;">Links</a> ·
+      <a href="#media" style="color:#93c5fd;">Media</a> ·
+      <a href="#layout" style="color:#93c5fd;">Layout</a> ·
+      <a href="#lists" style="color:#93c5fd;">Lists</a> ·
+      <a href="#forms" style="color:#93c5fd;">Forms</a> ·
+      <a href="#tables" style="color:#93c5fd;">Tables</a> ·
+      <a href="#script-meta" style="color:#93c5fd;">Script/Meta</a> ·
+      <a href="#semantic" style="color:#93c5fd;">Semantic</a> ·
+      <a href="#html5" style="color:#93c5fd;">HTML5+</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="hint">
+      Tip: each block shows a live <b>Demo</b>. Open the <span class="kbd">► View Source</span> to see the exact HTML used—
+      it’s generated automatically from the demo so it always matches.
+    </p>
+
+    <!-- 1. BASIC STRUCTURE -->
+    <section id="structure" class="section">
+      <h2>1) Basic Structure</h2>
+      <div class="demo">
+        <p>This very page demonstrates: <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;body&gt;</code>.</p>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 2. TEXT -->
+    <section id="text" class="section">
+      <h2>2) Text Formatting & Content</h2>
+      <div class="demo grid two">
+        <div class="box">
+          <h1>Heading H1</h1>
+          <h2>Heading H2</h2>
+          <h3>Heading H3</h3>
+          <h4>Heading H4</h4>
+          <h5>Heading H5</h5>
+          <h6>Heading H6</h6>
+          <p>Paragraph with <b>bold</b>, <strong>strong (semantic)</strong>, <i>italic</i>, <em>emphasis (semantic)</em>, <u>underline</u>, <mark>highlight</mark>, <small>small</small>.</p>
+          <p>Line one<br>Line two (via <code>&lt;br&gt;</code>)</p>
+          <hr>
+          <blockquote>Blockquote — longer quoted section.</blockquote>
+          <p><q>Short inline quote</q> inside a paragraph.</p>
+          <p>Math: E = mc<sup>2</sup>; Water: H<sub>2</sub>O.</p>
+          <p><code>Inline code</code> and a code block:</p>
+          <pre><code>const x = 42;
+function hello() { return "hi"; }</code></pre>
+        </div>
+        <div class="box">
+          <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+          <p>Time: <time datetime="2025-11-11">Nov 11, 2025</time></p>
+          <address>
+            Site Owner<br>
+            123 Web Way<br>
+            Internet City
+          </address>
+        </div>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 3. LINKS & NAV -->
+    <section id="links" class="section">
+      <h2>3) Links & Navigation</h2>
+      <div class="demo">
+        <nav>
+          <a href="#structure">Structure</a> |
+          <a href="#forms">Forms</a> |
+          <a href="https://example.com" target="_blank" rel="noopener">External Link</a>
+        </nav>
+        <p>Anchor example: <a href="#tables">jump to Tables section</a>.</p>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 4. MEDIA -->
+    <section id="media" class="section">
+      <h2>4) Media & Visuals</h2>
+      <div class="demo grid two">
+        <div class="box">
+          <figure>
+            <!-- tiny inline SVG as a data URL for offline demo -->
+            <img alt="Inline SVG placeholder" width="160" height="120"
+                 src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'><rect width='160' height='120' fill='%23eef2ff'/><circle cx='80' cy='60' r='35' fill='%2390cdf4'/><text x='80' y='65' font-size='14' text-anchor='middle' fill='%23000'>IMG</text></svg>">
+            <figcaption>Figure 1: Inline SVG as an image.</figcaption>
+          </figure>
+          <svg width="160" height="120" role="img" aria-label="SVG shapes">
+            <rect x="5" y="5" width="60" height="40" fill="none" stroke="black"></rect>
+            <circle cx="110" cy="30" r="20" fill="none" stroke="black"></circle>
+            <line x1="5" y1="80" x2="155" y2="80" stroke="black"></line>
+          </svg>
+        </div>
+        <div class="box">
+          <video controls width="240">
+            <!-- Replace with your own file(s) to play -->
+            <!-- <source src="video.mp4" type="video/mp4"> -->
+            Your browser supports <code>&lt;video&gt;</code>, add a source to play.
+          </video>
+          <br><br>
+          <audio controls>
+            <!-- Replace with your own file(s) to play -->
+            <!-- <source src="audio.mp3" type="audio/mpeg"> -->
+            Add an audio source file to play.
+          </audio>
+          <br><br>
+          <canvas id="demoCanvas" width="240" height="120" class="box"></canvas>
+          <p class="note">Canvas will be drawn via JS.</p>
+          <iframe srcdoc="<p>This is an iframe via <b>srcdoc</b>.</p>"></iframe>
+        </div>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 5. LAYOUT -->
+    <section id="layout" class="section">
+      <h2>5) Layout & Structure</h2>
+      <div class="demo">
+        <header>Header area</header>
+        <main>
+          <section>
+            <h3>Section Title</h3>
+            <article>
+              <h4>Article Title</h4>
+              <p>Independent, self-contained content.</p>
+            </article>
+          </section>
+          <aside class="box">Aside / sidebar information.</aside>
+        </main>
+        <footer>Footer area</footer>
+        <div>Generic block container (div). Inside it a <span>span (inline container)</span>.</div>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 6. LISTS -->
+    <section id="lists" class="section">
+      <h2>6) Lists</h2>
+      <div class="demo grid two">
+        <div class="box">
+          <h4>Unordered</h4>
+          <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+          </ul>
+          <h4>Ordered</h4>
+          <ol>
+            <li>First</li>
+            <li>Second</li>
+          </ol>
+        </div>
+        <div class="box">
+          <h4>Definitions</h4>
+          <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+          </dl>
+        </div>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 7. FORMS -->
+    <section id="forms" class="section">
+      <h2>7) Forms & Inputs</h2>
+      <div class="demo">
+        <form oninput="statusOut.value = nameInput.value ? 'Typing: ' + nameInput.value : 'Ready'">
+          <fieldset>
+            <legend>Contact</legend>
+
+            <label for="nameInput">Name:</label>
+            <input id="nameInput" name="name" type="text" placeholder="Your name"> <br><br>
+
+            <label>Password:</label>
+            <input type="password" placeholder="secret"> <br><br>
+
+            <label>Email:</label>
+            <input type="email" placeholder="you@example.com"> <br><br>
+
+            <label>Number:</label>
+            <input type="number" min="0" max="10" step="1" value="3"> <br><br>
+
+            <label>Date:</label>
+            <input type="date"> <br><br>
+
+            <label>Color:</label>
+            <input type="color" value="#0ea5e9"> <br><br>
+
+            <label>Range:</label>
+            <input type="range" min="0" max="100" value="50"> <br><br>
+
+            <label>File:</label>
+            <input type="file"> <br><br>
+
+            <label><input type="checkbox" checked> Subscribe</label> &nbsp;
+            <label><input type="radio" name="opt" checked> A</label>
+            <label><input type="radio" name="opt"> B</label> <br><br>
+
+            <label for="msg">Message:</label><br>
+            <textarea id="msg" rows="3" cols="40"></textarea> <br><br>
+
+            <label for="colorSel">Favorite color:</label>
+            <select id="colorSel">
+              <option>Red</option>
+              <option>Green</option>
+              <option>Blue</option>
+            </select> <br><br>
+
+            <button type="submit" class="btn">Send</button>
+            <output name="statusOut">Ready</output>
+          </fieldset>
+        </form>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 8. TABLES -->
+    <section id="tables" class="section">
+      <h2>8) Tables</h2>
+      <div class="demo">
+        <table>
+          <caption>Monthly Sales</caption>
+          <thead>
+            <tr><th>Month</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Jan</td><td>$1,000</td></tr>
+            <tr><td>Feb</td><td>$1,200</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td>Total</td><td>$2,200</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 9. SCRIPT & META -->
+    <section id="script-meta" class="section">
+      <h2>9) Scripting & Metadata</h2>
+      <div class="demo">
+        <div class="box demo-box">Styled by &lt;style&gt; in &lt;head&gt;.</div>
+        <p class="note">&lt;meta&gt; lives in &lt;head&gt; and doesn't render visually. &lt;link&gt; above can load CSS or icons.</p>
+        <noscript>This appears if JavaScript is disabled.</noscript>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 10. SEMANTIC -->
+    <section id="semantic" class="section">
+      <h2>10) Semantic & Accessibility</h2>
+      <div class="demo">
+        <main>Primary content region (only one &lt;main&gt; per page).</main>
+        <aside class="box">Complementary content (aside).</aside>
+        <nav>Navigation landmark.</nav>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+
+    <!-- 11. MODERN HTML5 -->
+    <section id="html5" class="section">
+      <h2>11) Modern HTML5+</h2>
+      <div class="demo grid two">
+        <div class="box">
+          <details>
+            <summary>More info (details/summary)</summary>
+            <p>This content can be expanded/collapsed.</p>
+          </details>
+          <p>Progress: <progress value="60" max="100"></progress></p>
+          <p>Meter: <meter value="0.7" min="0" max="1">70%</meter></p>
+        </div>
+        <div class="box">
+          <dialog id="demoDialog">
+            <p>Hello from &lt;dialog&gt;!</p>
+            <form method="dialog">
+              <button>Close</button>
+            </form>
+          </dialog>
+          <button class="btn" onclick="document.getElementById('demoDialog').showModal()">Open Dialog</button>
+          <button class="btn" onclick="document.getElementById('demoDialog').close()">Close Dialog</button>
+          <hr>
+          <template id="tmpl">
+            <p>Cloned from &lt;template&gt; at <time></time></p>
+          </template>
+          <button class="btn" onclick="cloneTemplate()">Clone Template</button>
+          <div id="templateOutput" class="box" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <details><summary>► View Source</summary><pre class="src"></pre></details>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Demo page showing many HTML tags. Edit freely in VS Code.</p>
+  </footer>
+
+  <script>
+    // Auto-generate "View Source" blocks by cloning & escaping the .demo innerHTML
+    function escapeHtml(str) {
+      return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+    }
+    document.querySelectorAll('.section').forEach(sec => {
+      const demo = sec.querySelector('.demo');
+      const pre = sec.querySelector('pre.src');
+      if (demo && pre) {
+        pre.textContent = '<div class="demo">\\n' + escapeHtml(demo.innerHTML.trim()) + '\\n</div>';
+      }
+    });
+
+    // Canvas example
+    const ctx = document.getElementById('demoCanvas').getContext('2d');
+    ctx.fillStyle = '#bae6fd';
+    ctx.fillRect(10, 10, 80, 50);
+    ctx.strokeStyle = '#0ea5e9';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(10, 10, 80, 50);
+    ctx.beginPath();
+    ctx.arc(150, 60, 25, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Template example
+    function cloneTemplate() {
+      const t = document.getElementById('tmpl');
+      const frag = t.content.cloneNode(true);
+      const timeEl = frag.querySelector('time');
+      if (timeEl) timeEl.textContent = new Date().toLocaleTimeString();
+      document.getElementById('templateOutput').appendChild(frag);
+    }
+    window.cloneTemplate = cloneTemplate;
+  </script>
+</body>
+</html>
