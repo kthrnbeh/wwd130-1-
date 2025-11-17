@@ -530,6 +530,16 @@ footer .social img {
   font-weight: 500;   /* slightly bolder for action link */
   letter-spacing: 0.2px;
 }
+/* FORM CARD — All text inside */
+.page-contact .form-card,
+.page-contact .form-card label,
+.page-contact .form-card input,
+.page-contact .form-card textarea,
+.page-contact .form-card select,
+.page-contact .form-card button {
+  font-family: "Inter", sans-serif;
+}
+
 
 #feedback {
     background-color: antiquewhite;
