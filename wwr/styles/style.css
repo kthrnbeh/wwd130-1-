@@ -394,6 +394,7 @@ footer .social img {
    CONTACT PAGE ONLY
    Two floating cards over the hero image (form left, talk right)
    ──────────────────────────────────────────────────────────────── */
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 /* Undo your global "center all main sections" just for this page,
    but keep the heading centered. */
@@ -511,6 +512,23 @@ footer .social img {
     grid-template-columns: 1fr;/* stack: form then talk */
   }
   .page-contact #hero-img { filter: none; }
+}
+.page-contact .talk-card h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;  /* clean bold heading */
+  letter-spacing: 0.5px;
+}
+.page-contact .talk-card p,
+.page-contact .talk-card a,
+.page-contact .talk-card .muted {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+}
+/* optional — make "Visit Help Center →" look more modern */
+.page-contact .talk-card .link {
+  font-weight: 500;   /* slightly bolder for action link */
+  letter-spacing: 0.2px;
 }
 
 #feedback {
