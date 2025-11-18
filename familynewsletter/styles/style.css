@@ -104,7 +104,7 @@ nav a:hover {
 }
 .family-photo {
   display: block;         /* not flex */
-  width: 520px;           /* ↓ adjust size here */
+  width: 620px;           /* ↓ adjust size here */
   max-width: 100%;        /* responsive on small screens */
   height: auto;
   margin: 1rem auto;         /* no auto-centering -> stays left */
