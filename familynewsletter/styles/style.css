@@ -92,6 +92,12 @@ nav a:hover {
   color: #383e46;
   text-align: left;
 }
+h1, h2, h3 {
+  color: #0f172a;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 
 /* ---------- Shared image row (Home + Photos) ---------- */
 
