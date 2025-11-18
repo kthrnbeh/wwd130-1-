@@ -223,6 +223,7 @@ h3{
   color: #0f172a;
   font-style: italic; 
   font-size: 3rem;
+  white-space: nowrap;
   text-align: left;
   font-display: block;
   margin: 1rem 0 1rem 3rem;  /* top | right | bottom | left */
