@@ -36,8 +36,8 @@ header {
 
 /* Smaller logo */
 .logo {
-  height: 1px;
-  width: auto;
+  height: .1px;
+  width: .1px;
 }
 
 /* Title */
