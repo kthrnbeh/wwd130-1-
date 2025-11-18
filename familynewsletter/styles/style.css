@@ -80,9 +80,11 @@ nav a:hover {
 .quote {
   font-style: italic;
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: -0.6rem;
   color: #383e46;
   text-align: center;
+  font-size: medium;
+
 }
 
 .date {
@@ -92,12 +94,26 @@ nav a:hover {
   color: #383e46;
   text-align: left;
 }
-h1, h2, h3 {
-  color: #0f172a;
+h1,
+h2,
+h3,
+.family-intro,
+.latest-updates,
+.photo-gallery,
+.audience {
+  color: #070d17;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+.family-intro {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
 
 /* ---------- Shared image row (Home + Photos) ---------- */
 
@@ -127,21 +143,13 @@ h1, h2, h3 {
 
 .family-photo {
   display: block;
-  width: 620px;            /* main hero image width */
+  width: 720px;            /* main hero image width */
   max-width: 100%;         /* responsive on small screens */
   height: auto;
-  margin: 1rem auto;
+  margin: 1rem auto 1rem;
   border-radius: 8px;      /* optional polish */
 }
 
-.audience {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #0f172a;
-  text-align: left;
-  max-width: 800px;
-  margin: 1rem auto;
-  line-height: 1.6;
-}
 
 /* (You can add .family-intro, .latest-updates, .photo-gallery styles here later if needed) */
 
