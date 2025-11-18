@@ -1,5 +1,0 @@
-# Don’t track giant video files
-familynewsletter/images/*.mp4
-familynewsletter/images/*.MOV
-familynewsletter/images/*.avi
-familynewsletter/images/*.mkv
