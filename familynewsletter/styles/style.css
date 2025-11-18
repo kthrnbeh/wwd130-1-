@@ -371,6 +371,7 @@ main.photo-gallery {
 .gallery-intro h1 {
   font-size: 2.5rem;
   margin: 0 0 0.5rem 0;
+  text-align: center;
 }
 
 .gallery-intro p {
@@ -378,6 +379,7 @@ main.photo-gallery {
   line-height: 1.5;
   margin: 0;
   color: #05080f;
+  text-align: center;
 }
 
 /* ----- Month 4-photo grid ----- */
