@@ -34,11 +34,13 @@ header {
   gap: 1rem;
 }
 
-/* Smaller logo */
-.logo {
-  height: .1px;
-  width: .1px;
+/* Logo image */
+#logo {
+  height: 75px;     /* try 60–80px until it looks right */
+  width: auto;      /* keeps the proportions */
+  display: block;   /* cleaner layout */
 }
+
 
 /* Title */
 .family-name {
