@@ -336,15 +336,171 @@ h3{
 /* ====== GRID LAYOUT FOR THE PHOTOS PAGE ====== */
 
 /* Turn the photo-gallery main into a grid container */
+/* ===========================
+   PHOTOS PAGE STYLES
+   File: Photos.html
+   =========================== */
+
+/* Main grid layout matching the wireframe */
 main.photo-gallery {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0f172a;
-  font-style: italic; 
-  font-size: 3rem;
-  white-space: nowrap;
-  text-align: left;
-  font-display: block;
-  margin: 1rem 0 1rem 3rem;  /* top | right | bottom | left */
-  padding: 0;                /* centers each image */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+
+  display: grid;
+  grid-template-columns: 2fr 3fr;   /* left column smaller, right bigger */
+  column-gap: 3rem;
+  row-gap: 2rem;
+
+  grid-template-areas:
+    "intro intro"
+    "month photo-month"
+    "family photo-month"
+    "sneak behind";
 }
 
+/* attach sections to grid areas */
+.gallery-intro   { grid-area: intro; }
+.month-section   { grid-area: month; }
+.photo-of-month  { grid-area: photo-month; }
+.family-moment   { grid-area: family; }
+.looking-ahead   { grid-area: sneak; }
+.behind-lense    { grid-area: behind; }
+
+/* ----- Title + intro text ----- */
+.gallery-intro h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.gallery-intro p {
+  max-width: 430px;
+  line-height: 1.5;
+  margin: 0;
+  color: #05080f;
+}
+
+/* ----- Month 4-photo grid ----- */
+.month-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+
+.month-grid figure {
+  margin: 0;
+  background-color: #e6e6e6;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.month-grid img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  background-color: #d3d3d3;
+}
+
+.month-grid figcaption {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  color: #070d17;
+}
+
+/* ----- Photo of the Month (big box) ----- */
+.photo-of-month h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.featured-photo {
+  border: 2px solid #999;
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+}
+
+.featured-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  background-color: #d3d3d3;
+}
+
+.featured-photo .caption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* ----- Family Moment ----- */
+.family-moment h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.family-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.family-row img.special-moment {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  background-color: #d3d3d3;
+  border: 1px solid #ccc;
+}
+
+.family-row p {
+  margin: 0;
+  max-width: 260px;
+  color: #05080f;
+}
+
+/* ----- Looking Ahead (Next Month Sneak Peek) ----- */
+.looking-ahead h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.looking-ahead p {
+  margin: 0;
+  color: #05080f;
+}
+
+/* ----- Behind the Lens text (right bottom) ----- */
+.behind-lense h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.behind-lense p {
+  line-height: 1.5;
+  color: #05080f;
+}
+
+/* ----- Responsive: stack on small screens ----- */
+@media (max-width: 768px) {
+  main.photo-gallery {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "month"
+      "photo-month"
+      "family"
+      "sneak"
+      "behind";
+  }
+}
