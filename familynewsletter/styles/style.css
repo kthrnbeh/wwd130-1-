@@ -1,4 +1,9 @@
-/* ---------- General ---------- */
+/* ===========================
+   GLOBAL / SHARED STYLES
+   Used on: ALL pages
+   =========================== */
+
+/* ---- Page base ---- */
 body {
   background-color: #e7f3f8;
   color: #a3cdea;
@@ -7,7 +12,7 @@ body {
   padding: 0;
 }
 
-/* ---------- Header Layout ---------- */
+/* ---------- Header Layout (all pages) ---------- */
 header {
   background-color: #b1baba;
   padding: 1.5rem 2rem;
@@ -43,7 +48,7 @@ header {
   margin: 0;
 }
 
-/* ---------- Nav Styling ---------- */
+/* ---------- Nav Styling (all pages) ---------- */
 nav {
   display: flex;
   gap: 1rem;
@@ -63,14 +68,41 @@ nav a:hover {
   color: white;
 }
 
+/* ---------- Shared text blocks (used on multiple pages) ---------- */
+
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #383e46;
+  text-align: center;
+}
+
+.date {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #383e46;
+  text-align: left;
+}
+
+/* ---------- Shared image row (Home + Photos) ---------- */
+
 .image-row {
   display: flex;
-  justify-content: center;  /* centers the whole row */
-  align-items: center;      /* aligns vertically on the same line */
+  justify-content: center;   /* centers the whole row */
+  align-items: center;       /* aligns vertically on the same line */
   gap: 1rem; 
   margin: 1rem auto;
-  width:100%;               /* space between each image */
-  flex-wrap: nowrap;        /* keeps them all on the same line */
+  width: 100%;               /* space between each image */
+  flex-wrap: nowrap;         /* keeps them all on the same line */
 }
 
 .image-row img {
@@ -80,78 +112,88 @@ nav a:hover {
   margin: 0;
   display: inline-block;     /* lets them center nicely */
 }
-.quote {
+
+
+/* ===========================
+   HOME PAGE STYLES
+   File: Home.html
+   =========================== */
+
+.family-photo {
+  display: block;
+  width: 620px;            /* main hero image width */
+  max-width: 100%;         /* responsive on small screens */
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;      /* optional polish */
+}
+
+.audience {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0f172a;
+  text-align: left;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+/* (You can add .family-intro, .latest-updates, .photo-gallery styles here later if needed) */
+
+
+/* ===========================
+   UPDATES PAGE STYLES
+   File: Updates.html
+   =========================== */
+
+.animals {
+  display: block;
+  width: 120px;            /* size of the animals image */
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+.life-updates {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f172a;
   font-style: italic;
   font-size: 1rem;
   margin-top: 1rem;
-  color: #383e46;
-  text-align: center;
-}
-.intro {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-}
-.audience{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:#0f172a;
-    word-spacing: large;
-    text-align: left;
-    max-width: 800px;    /* keeps it from stretching too wide */
-    margin: 1rem auto;   /* centers the block itself on the page */
-    line-height: 1.6; 
-}
-.family-photo {
-  display: block;         /* not flex */
-  width: 620px;           /* ↓ adjust size here */
-  max-width: 100%;        /* responsive on small screens */
-  height: auto;
-  margin: 1rem auto;         /* no auto-centering -> stays left */
-  border-radius: 8px;     /* optional polish */
-}
-.date{
- font-style: italic;
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: #383e46;
   text-align: left;
+  padding: 0;
+  margin: 1rem auto;
 }
-.life-updates{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #0f172a;
-    text-spacing-trim: space-all;
-    font-style: italic;
-    font-size: 1rem;
-    margin-top: 1rem;
-    color: #383e46;
-    text-align: left;
-    padding: 0;
-    margin: 1rem auto;
-}
-.animals{
-  display: block;         /* not flex */
-  width: 120px;           /* ↓ adjust size here */
-  max-width: 100%;        /* responsive on small screens */
-  height: auto;
-  margin: 1rem auto;         /* no auto-centering -> stays left */
-  border-radius: 8px;     /* optional polish */
-}
-.pictures-grid{
+
+
+/* ===========================
+   PHOTOS PAGE STYLES
+   File: Photos.html
+   =========================== */
+
+.pictures-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   gap: 1rem;                             /* space between images */
   max-width: 900px;                      /* limit total width */
   margin: 2rem auto;                     /* center the grid */
   justify-items: center;                 /* centers each image */
 }
-.pictures{
-  width: 100%;           /* makes each image fill its grid cell */
-  max-width: 450px;      /* controls image size */
-  height: auto;          /* keep proportions */
-  border-radius: 8px;    /* optional rounding */
-  object-fit: cover;     /* ensures neat cropping if needed */
+
+.pictures {
+  width: 100%;          /* makes each image fill its grid cell */
+  max-width: 450px;     /* controls image size */
+  height: auto;         /* keep proportions */
+  border-radius: 8px;   /* optional rounding */
+  object-fit: cover;    /* neat cropping if needed */
   display: block;
-  margin: 0;             /* reset auto-centering */
+  margin: 0;
 }
 
+/* Optional: title text at top of Photos page */
+.photo-updates {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0f172a;
+  text-align: left;
+  margin: 0.5rem 0 1rem;
+}
