@@ -479,7 +479,7 @@ main.photo-gallery {
 /* ----- Looking Ahead (Next Month Sneak Peek) ----- */
 .looking-ahead h2 {
   font-size: 1.4rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.22rem;
   text-align: left;
 }
 
@@ -491,7 +491,7 @@ main.photo-gallery {
 /* ----- Behind the Lens text (right bottom) ----- */
 .behind-lense h2 {
   font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: .2rem;
   text-align: left;
 }
 
