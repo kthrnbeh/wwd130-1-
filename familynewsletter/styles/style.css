@@ -382,86 +382,58 @@ main.photo-gallery {
   text-align: center;
 }
 
-/* ----- Month 4-photo grid ----- */
+/* ----- Month 4-photo grid (October) ----- */
 .month-section h2 {
-  font-size: .2rem;
+  font-size: 1.5rem;          /* readable heading */
   margin-bottom: 0.75rem;
   text-align: left;
 }
 
+/* 2x2 grid */
 .month-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 1.5rem;
+  gap: 1.5rem 2rem;
 }
 
+/* wrapper for each image + caption */
 .month-grid figure {
   margin: 0;
-  background-color: #e6e6e6;
-  padding: 0.5rem;
   text-align: center;
-  border: 1px solid #ccc;
+  background: none;
+  padding: 0;
+  border: none;
 }
 
-.month-grid img {
-  border: 3px solid #a5a5a5;   /* wireframe medium-gray border */
-  padding: .5rem;             /* space between border + image */
-  background-color: white;     /* matches wireframe */
-  width: 100%;
-  height: 350px;               /* same proportions as wireframe box */
-  box-sizing: border-box;
+/* square frame around the picture */
+.square-frame {
+  width: 220px;                     /* size of square */
+  height: 220px;
+  margin: 0 auto;
+  border: 2px solid #a5a5a5;        /* border ONLY around image */
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-   max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;         /* FULL image visible */
-  display: block;
-
+  overflow: hidden;                 /* keeps corners clean */
 }
 
+/* image inside the square */
+.square-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                /* fills square nicely */
+  display: block;
+}
+
+/* caption below the square */
 .month-grid figcaption {
   font-size: 0.85rem;
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   color: #070d17;
-}
-
-/* ----- Photo of the Month (big box) ----- */
-.photo-of-month h2 {
-  text-align: right;
-  margin-bottom: 0.5rem;
-}
-
-/* PHOTO OF THE MONTH — EXACT WIREFRAME STYLE */
-.featured-photo {
-  border: 3px solid #a5a5a5;   /* wireframe medium-gray border */
-  padding: 1.5rem;             /* space between border + image */
-  background-color: white;     /* matches wireframe */
-  width: 100%;
-  height: 350px;               /* same proportions as wireframe box */
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Keep full image, never crop */
-.featured-photo img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;         /* FULL image visible */
-  display: block;
-}
-
-/* Caption INSIDE the border (wireframe style) */
-.featured-photo .caption {
-  margin-top: 0.8rem;
-  font-size: 1rem;
-  text-align: left;
-  width: 100%;
-  color: black;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
