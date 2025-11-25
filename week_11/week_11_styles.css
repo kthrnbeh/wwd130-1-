@@ -6,3 +6,15 @@ section {
 .block1{
   border: 2px solid black;
 }
+section:nth-of-type(1) p {
+  text-align: left;
+}
+section:nth-of-type(2) p {
+  text-align: right;
+}
+section:nth-of-type(3) p {
+  text-align: center;
+}
+section:nth-of-type(4) p {
+  text-align: right;
+}
