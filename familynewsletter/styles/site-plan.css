@@ -7,8 +7,9 @@ Fonts are separated by a | */
   /* change the values below to your colors from your palette */
   --primary-color: #a3cdea;
   --secondary-color: #b1baba; 
-  --accent1-color: #fe9b77;
-  --accent2-color: white;
+  --accent1-color: #a2cbd7;
+  --accent2-color:   #e7f3f8;
+;
 
   /* change the values below to your chosen font(s) */
   --heading-font: Lato, ANYTHING, sans-serif;
