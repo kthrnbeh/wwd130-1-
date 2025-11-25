@@ -1,8 +1,9 @@
 section {
   width: 50%;
-  border: 1px solid;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
 }
-
 .block1{
   border: 2px solid black;
 }
