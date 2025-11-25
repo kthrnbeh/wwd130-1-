@@ -513,3 +513,31 @@ main.photo-gallery {
       "behind";
   }
 }
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;     /* <-- center EVERYTHING */
+  align-items: center;
+  gap: 20px;                   /* <-- spacing between text and icons */
+}
+
+
+/* footer text */
+.footer-text {
+  font-size: 14px;
+}
+
+/* icon styling */
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
