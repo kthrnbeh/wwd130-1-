@@ -1,0 +1,1282 @@
+/* ---------- BASIC PAGE STYLE ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4ff;
+  margin: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #0044cc;
+}
+
+/* ---------- 1. COLORS & BACKGROUNDS ---------- */
+.color-box {
+  background-color: lightcoral;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+}
+
+.image-box {
+  background-image: url("https://picsum.photos/300/150");
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ---------- 2. TEXT & FONTS ---------- */
+.fancy-text {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: #0066cc;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px #999;
+}
+
+/* ---------- 3. BOX MODEL ---------- */
+.box-model {
+  width: 200px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #0044cc;
+  border-radius: 10px;
+  background-color: #eaf1ff;
+  text-align: center;
+}
+
+/* ---------- 4. POSITIONING ---------- */
+.position-example {
+  position: relative;
+  left: 50px;
+  top: 10px;
+  background-color: lightgreen;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ---------- 5. FLEXBOX ---------- */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d9e8ff;
+  padding: 10px;
+}
+
+.flex-item {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ---------- 6. GRID LAYOUT ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+.grid-item {
+  background-color: #99ccff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* ---------- 7. TRANSFORMS & ANIMATIONS ---------- */
+.animated-box {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  transition: transform 0.5s ease, background-color 0.5s;
+}
+
+.animated-box:hover {
+  transform: scale(1.2) rotate(5deg);
+  background-color: darkorange;
+}
+
+/* ---------- 8. PSEUDO-CLASSES & ELEMENTS ---------- */
+.pseudo-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pseudo-btn:hover {
+  background-color: #0066ff;
+}
+
+.pseudo-btn::after {
+  content: " ← cool hover!";
+  color: yellow;
+}
+
+/* ---------- 9. MEDIA QUERY (Responsive) ---------- */
+.responsive-box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: lightpink;
+  }
+}
+/* -------------------------------------------------
+   BASIC PAGE STYLE
+   - Sets default font, background, and text color
+   ------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;    /* Main font for the page */
+  background-color: #f0f4ff;         /* Light blue page background */
+  margin: 20px;                      /* Space around the entire page */
+  color: #333;                       /* Default text color (dark gray) */
+}
+
+/* Main heading and section headings */
+h1,
+h2 {
+  text-align: center;                /* Center the headings */
+  color: #0044cc;                    /* Dark blue heading color */
+}
+
+/* A small intro text under the main title */
+.page-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  color: #555;
+}
+
+/* Small explanatory text under each section heading */
+.section-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* -------------------------------------------------
+   1. COLORS & BACKGROUNDS
+   - Solid color, gradient, and background image
+   ------------------------------------------------- */
+
+/* Solid background color */
+.color-box {
+  background-color: lightcoral;      /* Solid red-ish background */
+  color: white;                      /* White text so it's readable */
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Gradient background using linear-gradient */
+.gradient-box {
+  background-image: linear-gradient(
+    to right,
+    #ff9a9e,
+    #fad0c4
+  );                                 /* Smooth gradient left → right */
+  color: #333;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Background image with cover */
+.image-box {
+  background-image: url("https://picsum.photos/300/150"); /* Demo image */
+  background-size: cover;       /* Image covers the whole box */
+  background-position: center;  /* Center the image content */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* -------------------------------------------------
+   2. TEXT & FONTS
+   - Font family, size, weight, transform, spacing
+   ------------------------------------------------- */
+
+.fancy-text {
+  font-family: "Georgia", serif;     /* Different font */
+  font-size: 20px;                   /* Bigger text */
+  font-style: italic;                /* Italic text */
+  font-weight: bold;                 /* Bold text */
+  color: #0066cc;                    /* Blue color */
+  text-align: center;                /* Center text */
+  text-decoration: underline;        /* Underline */
+  text-shadow: 2px 2px 5px #999;     /* Shadow behind the text */
+}
+
+.text-bold {
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-italic {
+  font-style: italic;
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;         /* Forces uppercase letters */
+  text-align: center;
+}
+
+.text-spaced {
+  letter-spacing: 2px;               /* Extra space between letters */
+  line-height: 1.8;                  /* Extra space between lines */
+  text-align: center;
+}
+
+/* -------------------------------------------------
+   3. BOX MODEL
+   - margin, padding, border, border-radius, overflow
+   ------------------------------------------------- */
+
+/* Outer demo box showing margin, padding, and border */
+.box-model {
+  width: 260px;                      /* Content box width */
+  margin: 20px auto;                 /* Center horizontally with auto */
+  padding: 20px;                     /* Space inside the border */
+  border: 3px solid #0044cc;         /* Blue border */
+  border-radius: 10px;               /* Rounded corners */
+  background-color: #eaf1ff;         /* Light background */
+  text-align: center;
+}
+
+/* Inner box to show content area inside padding */
+.box-inner {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px dashed #0044cc;
+}
+
+/* Box to demonstrate overflow scrolling */
+.overflow-box {
+  width: 80%;
+  max-width: 400px;
+  height: 100px;                     /* Fixed height */
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #999;
+  border-radius: 8px;
+  overflow: auto;                    /* Add a scrollbar if content is too tall */
+  background-color: #ffffff;
+}
+
+/* -------------------------------------------------
+   4. POSITIONING
+   - relative and absolute
+   ------------------------------------------------- */
+
+/* Container row to place examples side by side */
+.position-row {
+  display: flex;                     /* Put children in a row */
+  justify-content: center;
+  gap: 20px;                         /* Space between the two boxes */
+  flex-wrap: wrap;                   /* Allow wrapping on small screens */
+  margin-top: 10px;
+}
+
+/* This box is moved relative to its normal position */
+.position-relative {
+  position: relative;                /* Turn on relative positioning */
+  left: 30px;                        /* Shift right 30px */
+  top: 10px;                         /* Shift down 10px */
+  background-color: lightgreen;
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Parent container for an absolutely positioned element inside */
+.position-container {
+  position: relative;                /* Reference point for absolute child */
+  background-color: #ffe0b2;
+  width: 260px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* This box is placed absolutely inside position-container */
+.position-absolute {
+  position: absolute;                /* Remove from normal flow */
+  top: -15px;                        /* Move up from the top of parent */
+  right: -15px;                      /* Move to the right outside edge */
+  background-color: #ff7043;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;              /* Pill shape */
+  font-size: 0.8rem;
+}
+
+/* -------------------------------------------------
+   5. FLEXBOX
+   - Horizontal layout, spacing, and centering
+   ------------------------------------------------- */
+
+/* Basic row of items using flexbox */
+.flex-container {
+  display: flex;                     /* Enables flex layout */
+  justify-content: space-around;     /* Space items evenly across the row */
+  background-color: #d9e8ff;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+/* Individual flex items */
+.flex-item {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;                           /* Let items grow/shrink evenly */
+  margin: 0 5px;
+}
+
+/* Perfect centering with flex */
+.flex-center-demo {
+  display: flex;                     /* Use flexbox */
+  justify-content: center;           /* Center horizontally */
+  align-items: center;               /* Center vertically */
+  height: 120px;                     /* Fixed height so you can see centering */
+  background-color: #c8e6c9;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* -------------------------------------------------
+   6. GRID LAYOUT
+   - Basic 2-column grid and auto-fit grid
+   ------------------------------------------------- */
+
+/* Simple 2-column grid */
+.grid-container {
+  display: grid;                     /* Enable grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 10px;                         /* Space between grid items */
+  margin: 20px;
+}
+
+.grid-item {
+  background-color: #99ccff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Auto-fit grid: cards wrap and adjust based on screen size */
+.grid-autofit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px;
+}
+
+.grid-card {
+  background-color: #bbdefb;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* -------------------------------------------------
+   7. TRANSFORMS & ANIMATIONS
+   - transition, transform, keyframes
+   ------------------------------------------------- */
+
+.animation-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Basic animated box */
+.animated-box {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  width: 200px;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease,  /* Smoothly animate the transform */
+              background-color 0.5s;/* Smoothly animate color change */
+}
+
+/* On hover, scale and slightly rotate the box */
+.animated-box:hover {
+  transform: scale(1.2) rotate(5deg); /* Make the box grow & tilt */
+  background-color: darkorange;
+}
+
+/* A second box that continually pulses using keyframes */
+.pulse-box {
+  animation: pulse 1.5s infinite;      /* Use the custom keyframe animation below */
+}
+
+/* Define keyframes for the pulse animation */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* -------------------------------------------------
+   8. PSEUDO-CLASSES & PSEUDO-ELEMENTS
+   ------------------------------------------------- */
+
+/* Basic button styling */
+.pseudo-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;                   /* Show pointer cursor on hover */
+}
+
+/* :hover pseudo-class for button */
+.pseudo-btn:hover {
+  background-color: #0066ff;
+}
+
+/* ::after pseudo-element adds extra text when button is rendered */
+.pseudo-btn::after {
+  content: " ← cool hover!";         /* Extra text that is not in HTML */
+  color: yellow;
+}
+
+/* Badge text with ::before and ::after */
+.badge-text {
+  text-align: center;
+}
+
+.badge {
+  position: relative;
+}
+
+/* Add content before the badge text */
+.badge::before {
+  content: "★ ";                     /* Star icon before text */
+  color: #ff9800;
+}
+
+/* Add content after the badge text */
+.badge::after {
+  content: "  (CSS ::after text)";   /* Extra explanation */
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Link demo: :hover, :active, and :focus */
+.link-demo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link-demo a {
+  color: #0044cc;
+  text-decoration: none;
+}
+
+.link-demo a:hover {
+  text-decoration: underline;
+}
+
+.link-demo a:active {
+  color: red;                        /* Clicked state */
+}
+
+.link-demo a:focus {
+  outline: 2px dashed #0044cc;       /* Keyboard focus outline */
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------
+   9. MEDIA QUERY (Responsive)
+   - Change styles under a certain width
+   ------------------------------------------------- */
+
+.responsive-box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* When screen width is 600px or smaller */
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: lightpink;     /* Change background color on small screens */
+  }
+
+  /* Optional: make sections more compact on very small screens */
+  body {
+    margin: 10px;
+  }
+}
+
+/* -------------------------------------------------
+   10. IMAGES & object-fit
+   ------------------------------------------------- */
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.image-demo {
+  width: 200px;
+  text-align: center;
+}
+
+.image-demo img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Each uses a different object-fit value */
+.image-cover img {
+  object-fit: cover;                 /* Fill the box, cropping if needed */
+}
+
+.image-contain img {
+  object-fit: contain;               /* Fit entirely inside box, may leave gaps */
+  background-color: #eee;
+}
+
+.image-fill img {
+  object-fit: fill;                  /* Stretches to fill both width and height */
+}
+
+/* -------------------------------------------------
+   11. FORMS & FOCUS
+   ------------------------------------------------- */
+
+.form-demo {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-demo label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Style inputs and selects */
+.form-demo input[type="text"],
+.form-demo select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-top: 4px;
+}
+
+/* Focus style to show when input is active */
+.form-demo input[type="text"]:focus,
+.form-demo select:focus {
+  outline: 2px solid #0044cc;
+  outline-offset: 1px;
+}
+
+/* Disabled input style */
+.form-demo input[disabled] {
+  background-color: #eee;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------
+   12. TABLE & LIST STYLING
+   ------------------------------------------------- */
+
+.demo-table {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto;
+  border-collapse: collapse;         /* Merge cell borders together */
+}
+
+.demo-table th,
+.demo-table td {
+  border: 1px solid #bbb;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.demo-table thead {
+  background-color: #c5cae9;
+}
+
+.demo-table tbody tr:nth-child(even) {
+  background-color: #e8eaf6;         /* Stripe effect */
+}
+
+/* Custom list styling */
+.demo-list {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto;
+  list-style-type: square;           /* Square bullets */
+  padding-left: 20px;
+}
+
+.demo-list li {
+  margin: 4px 0;
+}
+.demo-list li:nth-child(odd) {
+  color: #0044cc;                    /* Color every other item */
+}   
+.demo-list li:nth-child(even) {
+  color: #0066ff;
+}
+/* -------------------------------------------------
+   13. CSS TOOLTIPS
+   ------------------------------------------------- */
+.tooltip-demo {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.tooltip-btn {
+  position: relative;                 /* Needed so ::after is positioned relative to button */
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Tooltip bubble created with ::after */
+.tooltip-btn::after {
+  content: attr(data-tooltip);        /* Take text from data-tooltip attribute */
+  position: absolute;
+  left: 50%;
+  bottom: 130%;                       /* Place above the button */
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;                         /* Hidden by default */
+  pointer-events: none;               /* Don't block mouse */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Small arrow under the tooltip */
+.tooltip-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show tooltip on hover */
+.tooltip-btn:hover::after,
+.tooltip-btn:hover::before {
+  opacity: 1;
+}
+
+/* -------------------------------------------------
+   14. CUSTOM SHAPES WITH CLIP-PATH
+   ------------------------------------------------- */
+.shape-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.shape-box {
+  width: 120px;
+  height: 120px;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* Circle shape */
+.shape-circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* Diamond shape */
+.shape-diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Triangle shape */
+.shape-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Blob-ish shape */
+.shape-blob {
+  clip-path: path("M25,2 C40,-2 69,0 80,13 C93,27 98,53 88,70 C78,87 55,98 37,97 C20,96 5,82 1,66 C-3,50 9,6 25,2 Z");
+}
+
+/* -------------------------------------------------
+   15. IMAGE FILTERS
+   ------------------------------------------------- */
+.filter-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.filter-item {
+  text-align: center;
+}
+
+.filter-item img {
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+/* Different filters on the same image */
+.filter-grayscale img {
+  filter: grayscale(1);
+}
+
+.filter-blur img {
+  filter: blur(2px);
+}
+
+.filter-vivid img {
+  filter: brightness(1.1) contrast(1.1) saturate(1.4);
+}
+
+/* -------------------------------------------------
+   16. IMAGE OVERLAYS
+   ------------------------------------------------- */
+.overlay-row {
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-card {
+  position: relative;
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* Background image */
+.overlay-image {
+  height: 180px;
+  background-image: url("https://picsum.photos/seed/overlay/600/300");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);           /* Darken image */
+}
+
+/* Content sits on top */
+.overlay-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+/* -------------------------------------------------
+   17. GLASSMORPHISM
+   ------------------------------------------------- */
+.glass-bg {
+  /* Background with gradient to show through the glass card */
+  padding: 30px 0;
+  background-image: linear-gradient(120deg, #2196f3, #e91e63);
+}
+
+.glass-card {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  backdrop-filter: blur(8px);        /* Frosted glass effect */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------------------
+   18. NEUMORPHISM (SOFT UI)
+   ------------------------------------------------- */
+.neu-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.neu-btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background-color: #e0e4f0;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Raised (outer) shadows */
+.neu-out {
+  box-shadow:
+    6px 6px 10px rgba(0, 0, 0, 0.15),
+    -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* Inset (pressed) shadows */
+.neu-in {
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.18),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* -------------------------------------------------
+   19. TOGGLE SWITCH
+   ------------------------------------------------- */
+.toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Hide the real checkbox visually but keep it accessible */
+.toggle-input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* The visible slider */
+.toggle-slider {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}
+
+/* The circle knob */
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* When checkbox is checked, move knob and change color */
+.toggle-input:checked + .toggle-slider {
+  background-color: #4caf50;
+}
+
+.toggle-input:checked + .toggle-slider::before {
+  transform: translateX(24px);
+}
+
+.toggle-label {
+  font-size: 0.95rem;
+}
+
+/* -------------------------------------------------
+   20. ANIMATION TIMELINE (BOUNCING BALL)
+   ------------------------------------------------- */
+.bounce-stage {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  overflow: hidden;
+  background: linear-gradient(to top, #e0f7fa, #ffffff);
+}
+
+.bounce-ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.2s infinite;
+}
+
+/* Keyframes to simulate dropping and bouncing */
+@keyframes bounce {
+  0%   { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+  40%  { top: 80px; transform: translate(-50%, 0) scaleY(0.8); }
+  60%  { top: 20px; transform: translate(-50%, 0) scaleY(1.1); }
+  80%  { top: 60px; transform: translate(-50%, 0) scaleY(0.9); }
+  100% { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+}
+
+/* -------------------------------------------------
+   21. PARALLAX SCROLLING
+   ------------------------------------------------- */
+.parallax-box {
+  height: 200px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+  background-image: url("https://picsum.photos/seed/parallax/800/400");
+  background-attachment: fixed;      /* Parallax-style effect */
+  background-size: cover;
+  background-position: center;
+}
+
+/* -------------------------------------------------
+   22. BLEND MODES
+   ------------------------------------------------- */
+.blend-card {
+  position: relative;
+  width: 300px;
+  margin: 10px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.blend-img {
+  display: block;
+  width: 100%;
+}
+
+/* Colored layer that blends with the image */
+.blend-color {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 235, 59, 0.7), rgba(244, 67, 54, 0.8));
+  mix-blend-mode: multiply;          /* Blend mode like in Photoshop */
+}
+
+.blend-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------
+   23. MASONRY-STYLE GRID
+   ------------------------------------------------- */
+.masonry-grid {
+  column-count: 3;                   /* Number of columns */
+  column-gap: 10px;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* Items flow top-to-bottom within each column */
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  background-color: #e3f2fd;
+  margin: 0 0 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.masonry-item.tall {
+  background-color: #bbdefb;
+}
+
+.masonry-item.medium {
+  background-color: #90caf9;
+}
+
+/* -------------------------------------------------
+   24. ADVANCED BUTTON TRANSITIONS
+   ------------------------------------------------- */
+.fancy-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px auto;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+  /* Transition multiple properties at once */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.fancy-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover state: color, size, shadow, and icon rotate */
+.fancy-btn:hover {
+  background-color: #0066ff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.fancy-btn:hover .fancy-icon {
+  transform: translateX(3px) rotate(15deg);
+}
+
+/* -------------------------------------------------
+   25. SHAPE-OUTSIDE (TEXT WRAP)
+   ------------------------------------------------- */
+.shape-outside-wrapper {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* The floating circle */
+.wrap-circle {
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin: 0 15px 10px 0;
+  background: radial-gradient(circle at top, #64b5f6, #1e88e5);
+  border-radius: 50%;
+  shape-outside: circle();           /* Let text wrap around the circle shape */
+}
+
+/* -------------------------------------------------
+   26. CSS COUNTERS
+   ------------------------------------------------- */
+.counter-steps {
+  max-width: 600px;
+  margin: 10px auto;
+  list-style: none;                  /* Use our own counter instead of bullets */
+  counter-reset: step-counter;       /* Initialize counter */
+  padding-left: 0;
+}
+
+.counter-steps li {
+  counter-increment: step-counter;   /* Increase counter for each li */
+  margin: 8px 0;
+  padding: 8px 10px 8px 40px;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+  position: relative;
+}
+
+/* Number bubble before each item */
+.counter-steps li::before {
+  content: counter(step-counter);    /* Insert current counter value */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #1e88e5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* -------------------------------------------------
+   27. COLOR CYCLING ANIMATION
+   ------------------------------------------------- */
+.color-cycle-box {
+  max-width: 300px;
+  margin: 10px auto 30px auto;
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  animation: colorCycle 6s linear infinite;
+}
+
+/* Cycle smoothly through multiple colors */
+@keyframes colorCycle {
+  0%   { background-color: #42a5f5; }
+  25%  { background-color: #7e57c2; }
+  50%  { background-color: #ec407a; }
+  75%  { background-color: #ffb300; }
+  100% { background-color: #42a5f5; }
+}
+/* -------------------------------------------------
+   28. PAGE FOOTER
+   ------------------------------------------------- */
+
+.site-footer {
+  margin-top: 40px;                 /* Space above footer */
+  background-color: #0f172a;        /* Dark navy */
+  color: #e5e7eb;                   /* Light text */
+  padding: 20px 15px 10px 15px;
+}
+
+/* Inner content: 3 columns on desktop, stacked on mobile */
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Footer headings */
+.footer-column h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Footer body text */
+.footer-column p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+/* Footer links list */
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 4px 0;
+}
+
+.footer-links a {
+  color: #93c5fd;                   /* Soft blue */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons row */
+.footer-social a {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  filter: grayscale(1);             /* Start gray */
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  filter: grayscale(0);             /* Bring color back on hover */
+  transform: translateY(-2px);      /* Tiny lift */
+}
+
+/* Bottom strip: copyright + Back-to-top link */
+.footer-bottom {
+  max-width: 900px;
+  margin: 15px auto 0 auto;
+  padding-top: 10px;
+  border-top: 1px solid #1f2933;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.footer-top-link {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-top-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: stack footer columns on small screens */
+@media (max-width: 700px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* End of styles.css */
