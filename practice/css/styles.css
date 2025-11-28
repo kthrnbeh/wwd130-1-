@@ -2408,3 +2408,91 @@ h2 {
     gap: 6px;
   }
 }
+/* -------------------------------------------------
+   DEMO NAV BAR (RESPONSIVE)
+   ------------------------------------------------- */
+
+.demo-nav {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.3);
+}
+
+.demo-nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo / site title */
+.demo-nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Hide the raw checkbox */
+.demo-nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Horizontal links (desktop) */
+.demo-nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.demo-nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 4px 6px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.demo-nav-links a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Burger icon (hidden on desktop) */
+.demo-nav-burger {
+  display: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* --- MOBILE LAYOUT --- */
+@media (max-width: 640px) {
+  .demo-nav-inner {
+    align-items: center;
+  }
+
+  .demo-nav-burger {
+    display: block;
+  }
+
+  /* Stack menu vertically and hide by default */
+  .demo-nav-links {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #020617;
+    padding: 10px 14px 14px 14px;
+    gap: 8px;
+    display: none;
+  }
+
+  /* When checkbox is checked, show mobile menu */
+  .demo-nav-toggle:checked ~ .demo-nav-links {
+    display: flex;
+  }
+}
