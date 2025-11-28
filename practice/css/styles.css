@@ -1278,5 +1278,97 @@ h2 {
     gap: 6px;
   }
 }
+/* -------------------------------------------------
+   29. FOOTER DEMO (Labeled Breakdown)
+   ------------------------------------------------- */
+
+#footer-demo {
+  background-color: #eef4ff;
+  padding: 30px 0;
+  margin-top: 30px;
+  border-top: 3px solid #bcd0ff;
+}
+
+.footer-demo-box {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border: 2px dashed #99b4ff;         /* Outlined box so you can see the grid */
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.footer-demo-part {
+  border: 2px solid #c7d7ff;          /* Box per section */
+  background-color: #f7f9ff;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.footer-demo-part h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #003b95;
+}
+
+.footer-demo-part p,
+.footer-demo-part ul {
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+
+/* Navigation list demo */
+.footer-demo-part ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-demo-part ul li {
+  margin: 4px 0;
+}
+
+.footer-demo-part a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer-demo-part a:hover {
+  text-decoration: underline;
+}
+
+/* Social icon row */
+.footer-demo-icons span {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  margin-right: 6px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-demo-icons span:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Tiny label inside area */
+.demo-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* Responsive layout for demo */
+@media (max-width: 650px) {
+  .footer-demo-box {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* End of styles.css */
