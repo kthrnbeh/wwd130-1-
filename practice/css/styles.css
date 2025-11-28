@@ -1,22 +1,27 @@
 /* -------------------------------------------------
    BASIC PAGE STYLE
-   - Sets default font, background, and text color
    ------------------------------------------------- */
 body {
-  font-family: Arial, sans-serif;    /* Main font for the page */
-  background-color: #f0f4ff;         /* Light blue page background */
-  margin: 20px;                      /* Space around the entire page */
-  color: #333;                       /* Default text color (dark gray) */
+  font-family: Arial, sans-serif;
+  background-color: #f0f4ff;
+  margin: 20px;
+  color: #333;
+}
+
+/* Simple header wrapper */
+.page-header {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
 }
 
 /* Main heading and section headings */
 h1,
 h2 {
-  text-align: center;                /* Center the headings */
-  color: #0044cc;                    /* Dark blue heading color */
+  text-align: center;
+  color: #0044cc;
 }
 
-/* A small intro text under the main title */
+/* Intro under main title */
 .page-intro {
   text-align: center;
   max-width: 600px;
@@ -24,7 +29,7 @@ h2 {
   color: #555;
 }
 
-/* Small explanatory text under each section heading */
+/* Section explanatory text */
 .section-note {
   text-align: center;
   font-size: 0.95rem;
@@ -34,26 +39,21 @@ h2 {
 
 /* -------------------------------------------------
    1. COLORS & BACKGROUNDS
-   - Solid color, gradient, and background image
    ------------------------------------------------- */
 
 /* Solid background color */
 .color-box {
-  background-color: lightcoral;      /* Solid red-ish background */
-  color: white;                      /* White text so it's readable */
+  background-color: lightcoral;
+  color: white;
   padding: 15px;
   margin: 10px;
   text-align: center;
   border-radius: 8px;
 }
 
-/* Gradient background using linear-gradient */
+/* Gradient background */
 .gradient-box {
-  background-image: linear-gradient(
-    to right,
-    #ff9a9e,
-    #fad0c4
-  );                                 /* Smooth gradient left → right */
+  background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
   color: #333;
   padding: 15px;
   margin: 10px;
@@ -63,9 +63,9 @@ h2 {
 
 /* Background image with cover */
 .image-box {
-  background-image: url("https://picsum.photos/300/150"); /* Demo image */
-  background-size: cover;       /* Image covers the whole box */
-  background-position: center;  /* Center the image content */
+  background-image: url("https://picsum.photos/300/150");
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 20px;
   text-align: center;
@@ -74,18 +74,17 @@ h2 {
 
 /* -------------------------------------------------
    2. TEXT & FONTS
-   - Font family, size, weight, transform, spacing
    ------------------------------------------------- */
 
 .fancy-text {
-  font-family: "Georgia", serif;     /* Different font */
-  font-size: 20px;                   /* Bigger text */
-  font-style: italic;                /* Italic text */
-  font-weight: bold;                 /* Bold text */
-  color: #0066cc;                    /* Blue color */
-  text-align: center;                /* Center text */
-  text-decoration: underline;        /* Underline */
-  text-shadow: 2px 2px 5px #999;     /* Shadow behind the text */
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: #0066cc;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px #999;
 }
 
 .text-bold {
@@ -99,33 +98,30 @@ h2 {
 }
 
 .text-uppercase {
-  text-transform: uppercase;         /* Forces uppercase letters */
+  text-transform: uppercase;
   text-align: center;
 }
 
 .text-spaced {
-  letter-spacing: 2px;               /* Extra space between letters */
-  line-height: 1.8;                  /* Extra space between lines */
+  letter-spacing: 2px;
+  line-height: 1.8;
   text-align: center;
 }
 
 /* -------------------------------------------------
    3. BOX MODEL
-   - margin, padding, border, border-radius, overflow
    ------------------------------------------------- */
 
-/* Outer demo box showing margin, padding, and border */
 .box-model {
-  width: 260px;                      /* Content box width */
-  margin: 20px auto;                 /* Center horizontally with auto */
-  padding: 20px;                     /* Space inside the border */
-  border: 3px solid #0044cc;         /* Blue border */
-  border-radius: 10px;               /* Rounded corners */
-  background-color: #eaf1ff;         /* Light background */
+  width: 260px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #0044cc;
+  border-radius: 10px;
+  background-color: #eaf1ff;
   text-align: center;
 }
 
-/* Inner box to show content area inside padding */
 .box-inner {
   background-color: #ffffff;
   border-radius: 6px;
@@ -133,38 +129,34 @@ h2 {
   border: 1px dashed #0044cc;
 }
 
-/* Box to demonstrate overflow scrolling */
 .overflow-box {
   width: 80%;
   max-width: 400px;
-  height: 100px;                     /* Fixed height */
+  height: 100px;
   margin: 10px auto;
   padding: 10px;
   border: 2px solid #999;
   border-radius: 8px;
-  overflow: auto;                    /* Add a scrollbar if content is too tall */
+  overflow: auto;
   background-color: #ffffff;
 }
 
 /* -------------------------------------------------
    4. POSITIONING
-   - relative and absolute
    ------------------------------------------------- */
 
-/* Container row to place examples side by side */
 .position-row {
-  display: flex;                     /* Put children in a row */
+  display: flex;
   justify-content: center;
-  gap: 20px;                         /* Space between the two boxes */
-  flex-wrap: wrap;                   /* Allow wrapping on small screens */
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
-/* This box is moved relative to its normal position */
 .position-relative {
-  position: relative;                /* Turn on relative positioning */
-  left: 30px;                        /* Shift right 30px */
-  top: 10px;                         /* Shift down 10px */
+  position: relative;
+  left: 30px;
+  top: 10px;
   background-color: lightgreen;
   width: 220px;
   padding: 10px;
@@ -172,9 +164,8 @@ h2 {
   border-radius: 8px;
 }
 
-/* Parent container for an absolutely positioned element inside */
 .position-container {
-  position: relative;                /* Reference point for absolute child */
+  position: relative;
   background-color: #ffe0b2;
   width: 260px;
   padding: 20px;
@@ -182,50 +173,45 @@ h2 {
   text-align: center;
 }
 
-/* This box is placed absolutely inside position-container */
 .position-absolute {
-  position: absolute;                /* Remove from normal flow */
-  top: -15px;                        /* Move up from the top of parent */
-  right: -15px;                      /* Move to the right outside edge */
+  position: absolute;
+  top: -15px;
+  right: -15px;
   background-color: #ff7043;
   color: white;
   padding: 6px 10px;
-  border-radius: 999px;              /* Pill shape */
+  border-radius: 999px;
   font-size: 0.8rem;
 }
 
 /* -------------------------------------------------
    5. FLEXBOX
-   - Horizontal layout, spacing, and centering
    ------------------------------------------------- */
 
-/* Basic row of items using flexbox */
 .flex-container {
-  display: flex;                     /* Enables flex layout */
-  justify-content: space-around;     /* Space items evenly across the row */
+  display: flex;
+  justify-content: space-around;
   background-color: #d9e8ff;
   padding: 10px;
   margin: 10px auto;
   max-width: 500px;
 }
 
-/* Individual flex items */
 .flex-item {
   background-color: #4a90e2;
   color: white;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  flex: 1;                           /* Let items grow/shrink evenly */
+  flex: 1;
   margin: 0 5px;
 }
 
-/* Perfect centering with flex */
 .flex-center-demo {
-  display: flex;                     /* Use flexbox */
-  justify-content: center;           /* Center horizontally */
-  align-items: center;               /* Center vertically */
-  height: 120px;                     /* Fixed height so you can see centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
   background-color: #c8e6c9;
   margin: 10px auto;
   max-width: 400px;
@@ -234,14 +220,12 @@ h2 {
 
 /* -------------------------------------------------
    6. GRID LAYOUT
-   - Basic 2-column grid and auto-fit grid
    ------------------------------------------------- */
 
-/* Simple 2-column grid */
 .grid-container {
-  display: grid;                     /* Enable grid layout */
-  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
-  gap: 10px;                         /* Space between grid items */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin: 20px;
 }
 
@@ -252,7 +236,6 @@ h2 {
   border-radius: 5px;
 }
 
-/* Auto-fit grid: cards wrap and adjust based on screen size */
 .grid-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -269,7 +252,6 @@ h2 {
 
 /* -------------------------------------------------
    7. TRANSFORMS & ANIMATIONS
-   - transition, transform, keyframes
    ------------------------------------------------- */
 
 .animation-row {
@@ -279,7 +261,6 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* Basic animated box */
 .animated-box {
   background-color: orange;
   color: white;
@@ -288,25 +269,21 @@ h2 {
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
-  transition: transform 0.5s ease,  /* Smoothly animate the transform */
-              background-color 0.5s;/* Smoothly animate color change */
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
-/* On hover, scale and slightly rotate the box */
 .animated-box:hover {
-  transform: scale(1.2) rotate(5deg); /* Make the box grow & tilt */
+  transform: scale(1.2) rotate(5deg);
   background-color: darkorange;
 }
 
-/* A second box that continually pulses using keyframes */
 .pulse-box {
-  animation: pulse 1.5s infinite;      /* Use the custom keyframe animation below */
+  animation: pulse 1.5s infinite;
 }
 
-/* Define keyframes for the pulse animation */
 @keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.08); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
   100% { transform: scale(1); }
 }
 
@@ -314,7 +291,6 @@ h2 {
    8. PSEUDO-CLASSES & PSEUDO-ELEMENTS
    ------------------------------------------------- */
 
-/* Basic button styling */
 .pseudo-btn {
   display: block;
   margin: 10px auto;
@@ -323,21 +299,18 @@ h2 {
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;                   /* Show pointer cursor on hover */
+  cursor: pointer;
 }
 
-/* :hover pseudo-class for button */
 .pseudo-btn:hover {
   background-color: #0066ff;
 }
 
-/* ::after pseudo-element adds extra text when button is rendered */
 .pseudo-btn::after {
-  content: " ← cool hover!";         /* Extra text that is not in HTML */
+  content: " ← cool hover!";
   color: yellow;
 }
 
-/* Badge text with ::before and ::after */
 .badge-text {
   text-align: center;
 }
@@ -346,20 +319,17 @@ h2 {
   position: relative;
 }
 
-/* Add content before the badge text */
 .badge::before {
-  content: "★ ";                     /* Star icon before text */
+  content: "★ ";
   color: #ff9800;
 }
 
-/* Add content after the badge text */
 .badge::after {
-  content: "  (CSS ::after text)";   /* Extra explanation */
+  content: "  (CSS ::after text)";
   color: #666;
   font-size: 0.85rem;
 }
 
-/* Link demo: :hover, :active, and :focus */
 .link-demo {
   text-align: center;
   margin-top: 10px;
@@ -375,17 +345,16 @@ h2 {
 }
 
 .link-demo a:active {
-  color: red;                        /* Clicked state */
+  color: red;
 }
 
 .link-demo a:focus {
-  outline: 2px dashed #0044cc;       /* Keyboard focus outline */
+  outline: 2px dashed #0044cc;
   outline-offset: 2px;
 }
 
 /* -------------------------------------------------
-   9. MEDIA QUERY (Responsive)
-   - Change styles under a certain width
+   9. MEDIA QUERY (RESPONSIVE)
    ------------------------------------------------- */
 
 .responsive-box {
@@ -395,13 +364,11 @@ h2 {
   border-radius: 8px;
 }
 
-/* When screen width is 600px or smaller */
 @media (max-width: 600px) {
   .responsive-box {
-    background-color: lightpink;     /* Change background color on small screens */
+    background-color: lightpink;
   }
 
-  /* Optional: make sections more compact on very small screens */
   body {
     margin: 10px;
   }
@@ -431,18 +398,17 @@ h2 {
   border: 1px solid #ccc;
 }
 
-/* Each uses a different object-fit value */
 .image-cover img {
-  object-fit: cover;                 /* Fill the box, cropping if needed */
+  object-fit: cover;
 }
 
 .image-contain img {
-  object-fit: contain;               /* Fit entirely inside box, may leave gaps */
+  object-fit: contain;
   background-color: #eee;
 }
 
 .image-fill img {
-  object-fit: fill;                  /* Stretches to fill both width and height */
+  object-fit: fill;
 }
 
 /* -------------------------------------------------
@@ -464,7 +430,6 @@ h2 {
   color: #444;
 }
 
-/* Style inputs and selects */
 .form-demo input[type="text"],
 .form-demo select {
   padding: 8px 10px;
@@ -473,14 +438,12 @@ h2 {
   margin-top: 4px;
 }
 
-/* Focus style to show when input is active */
 .form-demo input[type="text"]:focus,
 .form-demo select:focus {
   outline: 2px solid #0044cc;
   outline-offset: 1px;
 }
 
-/* Disabled input style */
 .form-demo input[disabled] {
   background-color: #eee;
   color: #888;
@@ -488,14 +451,14 @@ h2 {
 }
 
 /* -------------------------------------------------
-   12. TABLE & LIST STYLING
+   12. TABLE & LIST
    ------------------------------------------------- */
 
 .demo-table {
   width: 90%;
   max-width: 500px;
   margin: 10px auto;
-  border-collapse: collapse;         /* Merge cell borders together */
+  border-collapse: collapse;
 }
 
 .demo-table th,
@@ -510,15 +473,14 @@ h2 {
 }
 
 .demo-table tbody tr:nth-child(even) {
-  background-color: #e8eaf6;         /* Stripe effect */
+  background-color: #e8eaf6;
 }
 
-/* Custom list styling */
 .demo-list {
   width: 90%;
   max-width: 500px;
   margin: 10px auto;
-  list-style-type: square;           /* Square bullets */
+  list-style-type: square;
   padding-left: 20px;
 }
 
@@ -527,7 +489,7 @@ h2 {
 }
 
 .demo-list li:nth-child(odd) {
-  color: #0044cc;                    /* Color every other item */
+  color: #0044cc;
 }
 
 .demo-list li:nth-child(even) {
@@ -535,15 +497,16 @@ h2 {
 }
 
 /* -------------------------------------------------
-   13. CSS TOOLTIPS
+   13. CSS TOOLTIPS (BUTTON VERSION)
    ------------------------------------------------- */
+
 .tooltip-demo {
   text-align: center;
   margin: 15px 0;
 }
 
 .tooltip-btn {
-  position: relative;                 /* Needed so ::after is positioned relative to button */
+  position: relative;
   padding: 10px 18px;
   border-radius: 8px;
   border: none;
@@ -552,12 +515,11 @@ h2 {
   cursor: pointer;
 }
 
-/* Tooltip bubble created with ::after */
 .tooltip-btn::after {
-  content: attr(data-tooltip);        /* Take text from data-tooltip attribute */
+  content: attr(data-tooltip);
   position: absolute;
   left: 50%;
-  bottom: 130%;                       /* Place above the button */
+  bottom: 130%;
   transform: translateX(-50%);
   background-color: #333;
   color: #fff;
@@ -565,12 +527,11 @@ h2 {
   border-radius: 6px;
   font-size: 0.8rem;
   white-space: nowrap;
-  opacity: 0;                         /* Hidden by default */
-  pointer-events: none;               /* Don't block mouse */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Small arrow under the tooltip */
 .tooltip-btn::before {
   content: "";
   position: absolute;
@@ -584,15 +545,15 @@ h2 {
   transition: opacity 0.2s ease;
 }
 
-/* Show tooltip on hover */
 .tooltip-btn:hover::after,
 .tooltip-btn:hover::before {
   opacity: 1;
 }
 
 /* -------------------------------------------------
-   14. CUSTOM SHAPES WITH CLIP-PATH
+   14. CUSTOM SHAPES
    ------------------------------------------------- */
+
 .shape-row {
   display: flex;
   justify-content: center;
@@ -612,22 +573,18 @@ h2 {
   font-size: 0.8rem;
 }
 
-/* Circle shape */
 .shape-circle {
   clip-path: circle(50% at 50% 50%);
 }
 
-/* Diamond shape */
 .shape-diamond {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-/* Triangle shape */
 .shape-triangle {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* Blob-ish shape */
 .shape-blob {
   clip-path: path("M25,2 C40,-2 69,0 80,13 C93,27 98,53 88,70 C78,87 55,98 37,97 C20,96 5,82 1,66 C-3,50 9,6 25,2 Z");
 }
@@ -635,6 +592,7 @@ h2 {
 /* -------------------------------------------------
    15. IMAGE FILTERS
    ------------------------------------------------- */
+
 .filter-row {
   display: flex;
   justify-content: center;
@@ -653,7 +611,6 @@ h2 {
   margin-bottom: 4px;
 }
 
-/* Different filters on the same image */
 .filter-grayscale img {
   filter: grayscale(1);
 }
@@ -667,8 +624,9 @@ h2 {
 }
 
 /* -------------------------------------------------
-   16. IMAGE OVERLAYS
+   16. IMAGE OVERLAYS (CARD)
    ------------------------------------------------- */
+
 .overlay-row {
   display: flex;
   justify-content: center;
@@ -683,16 +641,15 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Background image */
+/* background image version */
 .overlay-image {
   height: 180px;
   background-image: url("https://picsum.photos/seed/overlay/600/300");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7);           /* Darken image */
+  filter: brightness(0.7);
 }
 
-/* Content sits on top */
 .overlay-content {
   position: absolute;
   bottom: 10px;
@@ -700,11 +657,34 @@ h2 {
   right: 10px;
 }
 
+/* hover overlay version (second overlay-card in HTML) */
+.overlay-card img {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  opacity: 0;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.overlay-card:hover .overlay {
+  opacity: 1;
+}
+
 /* -------------------------------------------------
    17. GLASSMORPHISM
    ------------------------------------------------- */
+
 .glass-bg {
-  /* Background with gradient to show through the glass card */
   padding: 30px 0;
   background-image: linear-gradient(120deg, #2196f3, #e91e63);
 }
@@ -717,13 +697,14 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.18);
   color: #fff;
-  backdrop-filter: blur(8px);        /* Frosted glass effect */
+  backdrop-filter: blur(8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* -------------------------------------------------
-   18. NEUMORPHISM (SOFT UI)
+   18. NEUMORPHISM
    ------------------------------------------------- */
+
 .neu-row {
   display: flex;
   justify-content: center;
@@ -741,14 +722,12 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Raised (outer) shadows */
 .neu-out {
   box-shadow:
     6px 6px 10px rgba(0, 0, 0, 0.15),
     -4px -4px 8px rgba(255, 255, 255, 0.9);
 }
 
-/* Inset (pressed) shadows */
 .neu-in {
   box-shadow:
     inset 4px 4px 8px rgba(0, 0, 0, 0.18),
@@ -758,6 +737,7 @@ h2 {
 /* -------------------------------------------------
    19. TOGGLE SWITCH
    ------------------------------------------------- */
+
 .toggle-wrap {
   display: flex;
   align-items: center;
@@ -766,13 +746,11 @@ h2 {
   margin-top: 10px;
 }
 
-/* Hide the real checkbox visually but keep it accessible */
 .toggle-input {
   position: absolute;
   opacity: 0;
 }
 
-/* The visible slider */
 .toggle-slider {
   position: relative;
   width: 50px;
@@ -782,7 +760,6 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-/* The circle knob */
 .toggle-slider::before {
   content: "";
   position: absolute;
@@ -795,7 +772,6 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* When checkbox is checked, move knob and change color */
 .toggle-input:checked + .toggle-slider {
   background-color: #4caf50;
 }
@@ -809,8 +785,9 @@ h2 {
 }
 
 /* -------------------------------------------------
-   20. ANIMATION TIMELINE (BOUNCING BALL)
+   20. BOUNCING BALL TIMELINE
    ------------------------------------------------- */
+
 .bounce-stage {
   position: relative;
   width: 220px;
@@ -833,7 +810,6 @@ h2 {
   animation: bounce 1.2s infinite;
 }
 
-/* Keyframes to simulate dropping and bouncing */
 @keyframes bounce {
   0%   { top: 0;   transform: translate(-50%, 0) scaleY(1); }
   40%  { top: 80px; transform: translate(-50%, 0) scaleY(0.8); }
@@ -843,8 +819,9 @@ h2 {
 }
 
 /* -------------------------------------------------
-   21. PARALLAX SCROLLING
+   21. PARALLAX BOX
    ------------------------------------------------- */
+
 .parallax-box {
   height: 200px;
   border-radius: 8px;
@@ -852,7 +829,7 @@ h2 {
   text-align: center;
   padding-top: 60px;
   background-image: url("https://picsum.photos/seed/parallax/800/400");
-  background-attachment: fixed;      /* Parallax-style effect */
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
@@ -860,6 +837,7 @@ h2 {
 /* -------------------------------------------------
    22. BLEND MODES
    ------------------------------------------------- */
+
 .blend-card {
   position: relative;
   width: 300px;
@@ -875,12 +853,11 @@ h2 {
   width: 100%;
 }
 
-/* Colored layer that blends with the image */
 .blend-color {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at top, rgba(255, 235, 59, 0.7), rgba(244, 67, 54, 0.8));
-  mix-blend-mode: multiply;          /* Blend mode like in Photoshop */
+  mix-blend-mode: multiply;
 }
 
 .blend-text {
@@ -894,14 +871,14 @@ h2 {
 /* -------------------------------------------------
    23. MASONRY-STYLE GRID
    ------------------------------------------------- */
+
 .masonry-grid {
-  column-count: 3;                   /* Number of columns */
+  column-count: 3;
   column-gap: 10px;
   max-width: 700px;
   margin: 10px auto;
 }
 
-/* Items flow top-to-bottom within each column */
 .masonry-item {
   display: inline-block;
   width: 100%;
@@ -922,6 +899,7 @@ h2 {
 /* -------------------------------------------------
    24. ADVANCED BUTTON TRANSITIONS
    ------------------------------------------------- */
+
 .fancy-btn {
   display: flex;
   align-items: center;
@@ -933,7 +911,6 @@ h2 {
   background-color: #4a90e2;
   color: #fff;
   cursor: pointer;
-  /* Transition multiple properties at once */
   transition:
     background-color 0.3s ease,
     transform 0.3s ease,
@@ -946,7 +923,6 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* Hover state: color, size, shadow, and icon rotate */
 .fancy-btn:hover {
   background-color: #0066ff;
   transform: translateY(-2px) scale(1.03);
@@ -960,12 +936,12 @@ h2 {
 /* -------------------------------------------------
    25. SHAPE-OUTSIDE (TEXT WRAP)
    ------------------------------------------------- */
+
 .shape-outside-wrapper {
   max-width: 600px;
   margin: 10px auto;
 }
 
-/* The floating circle */
 .wrap-circle {
   width: 120px;
   height: 120px;
@@ -973,22 +949,23 @@ h2 {
   margin: 0 15px 10px 0;
   background: radial-gradient(circle at top, #64b5f6, #1e88e5);
   border-radius: 50%;
-  shape-outside: circle();           /* Let text wrap around the circle shape */
+  shape-outside: circle();
 }
 
 /* -------------------------------------------------
    26. CSS COUNTERS
    ------------------------------------------------- */
+
 .counter-steps {
   max-width: 600px;
   margin: 10px auto;
-  list-style: none;                  /* Use our own counter instead of bullets */
-  counter-reset: step-counter;       /* Initialize counter */
+  list-style: none;
+  counter-reset: step-counter;
   padding-left: 0;
 }
 
 .counter-steps li {
-  counter-increment: step-counter;   /* Increase counter for each li */
+  counter-increment: step-counter;
   margin: 8px 0;
   padding: 8px 10px 8px 40px;
   border-radius: 8px;
@@ -996,9 +973,8 @@ h2 {
   position: relative;
 }
 
-/* Number bubble before each item */
 .counter-steps li::before {
-  content: counter(step-counter);    /* Insert current counter value */
+  content: counter(step-counter);
   position: absolute;
   left: 10px;
   top: 50%;
@@ -1015,8 +991,9 @@ h2 {
 }
 
 /* -------------------------------------------------
-   27. COLOR CYCLING ANIMATION
+   27. COLOR CYCLING BOX
    ------------------------------------------------- */
+
 .color-cycle-box {
   max-width: 300px;
   margin: 10px auto 30px auto;
@@ -1027,7 +1004,6 @@ h2 {
   animation: colorCycle 6s linear infinite;
 }
 
-/* Cycle smoothly through multiple colors */
 @keyframes colorCycle {
   0%   { background-color: #42a5f5; }
   25%  { background-color: #7e57c2; }
@@ -1037,213 +1013,16 @@ h2 {
 }
 
 /* -------------------------------------------------
-   28. PAGE FOOTER
+   30. MODERN LAYOUT: CONTAINER QUERIES & COLUMNS
    ------------------------------------------------- */
 
-.site-footer {
-  margin-top: 40px;                 /* Space above footer */
-  background-color: #0f172a;        /* Dark navy */
-  color: #e5e7eb;                   /* Light text */
-  padding: 20px 15px 10px 15px;
-}
-
-/* Inner content: 3 columns on desktop, stacked on mobile */
-.footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-/* Footer headings */
-.footer-column h3 {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-/* Footer body text */
-.footer-column p {
-  margin: 4px 0;
-  font-size: 0.9rem;
-}
-
-/* Footer links list */
-.footer-links {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin: 4px 0;
-}
-
-.footer-links a {
-  color: #93c5fd;                   /* Soft blue */
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* Social icons row */
-.footer-social a {
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  filter: grayscale(1);             /* Start gray */
-  transition: filter 0.2s ease, transform 0.2s ease;
-}
-
-.footer-social a:hover {
-  filter: grayscale(0);             /* Bring color back on hover */
-  transform: translateY(-2px);      /* Tiny lift */
-}
-
-/* Bottom strip: copyright + Back-to-top link */
-.footer-bottom {
-  max-width: 900px;
-  margin: 15px auto 0 auto;
-  padding-top: 10px;
-  border-top: 1px solid #1f2933;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-}
-
-.footer-top-link {
-  color: #93c5fd;
-  text-decoration: none;
-}
-
-.footer-top-link:hover {
-  text-decoration: underline;
-}
-
-/* Responsive: stack footer columns on small screens */
-@media (max-width: 700px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 6px;
-  }
-}
-
-/* -------------------------------------------------
-   29. FOOTER DEMO (Labeled Breakdown)
-   ------------------------------------------------- */
-
-#footer-demo {
-  background-color: #eef4ff;
-  padding: 30px 0;
-  margin-top: 30px;
-  border-top: 3px solid #bcd0ff;
-}
-
-.footer-demo-box {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  border: 2px dashed #99b4ff;         /* Outlined box so you can see the grid */
-  border-radius: 12px;
-  background-color: #ffffff;
-}
-
-.footer-demo-part {
-  border: 2px solid #c7d7ff;          /* Box per section */
-  background-color: #f7f9ff;
-  padding: 15px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.footer-demo-part h3 {
-  margin-top: 0;
-  font-size: 1rem;
-  color: #003b95;
-}
-
-.footer-demo-part p,
-.footer-demo-part ul {
-  font-size: 0.9rem;
-  margin: 6px 0;
-}
-
-/* Navigation list demo */
-.footer-demo-part ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-demo-part ul li {
-  margin: 4px 0;
-}
-
-.footer-demo-part a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.footer-demo-part a:hover {
-  text-decoration: underline;
-}
-
-/* Social icon row */
-.footer-demo-icons span {
-  display: inline-block;
-  background-color: #fff;
-  border: 1px solid #cbd5e1;
-  padding: 6px;
-  border-radius: 8px;
-  font-size: 1.3rem;
-  margin-right: 6px;
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.footer-demo-icons span:hover {
-  transform: translateY(-4px);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-/* Tiny label inside area */
-.demo-label {
-  font-size: 0.75rem;
-  color: #64748b;
-  margin-top: 6px;
-}
-
-/* Responsive layout for demo */
-@media (max-width: 650px) {
-  .footer-demo-box {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* -------------------------------------------------
-   30. MODERN LAYOUT (CONTAINER QUERIES & COLUMNS)
-   ------------------------------------------------- */
-
-/* Define a "container" so we can query its width */
 .cq-container {
   max-width: 600px;
   margin: 10px auto;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #cbd5e1;
-  container-type: inline-size;       /* Enable container queries on this box */
+  container-type: inline-size;
 }
 
 .cq-card {
@@ -1253,20 +1032,18 @@ h2 {
   border: 1px solid #d1d5db;
 }
 
-/* Inside list default: stacked */
 .cq-list {
   list-style: disc;
   margin-left: 18px;
 }
 
-/* Turn the list into 2 columns when container gets wide enough */
 @container (min-width: 400px) {
   .cq-list {
-    columns: 2;                      /* Two columns inside the card */
+    columns: 2;
   }
 }
 
-/* Multi-column text (magazine style) */
+/* Multi-column text block */
 .multi-column-text {
   max-width: 700px;
   margin: 20px auto;
@@ -1277,1387 +1054,16 @@ h2 {
 }
 
 .multi-column-text p {
-  columns: 2 200px;                  /* Up to 2 columns, min width 200px */
-  column-gap: 20px;                  /* Space between columns */
+  columns: 2 200px;
+  column-gap: 20px;
 }
 
 /* -------------------------------------------------
-   31. ADVANCED SELECTORS (:has, :is, attribute)
+   MINI UI ELEMENTS UNDER MODERN LAYOUT
+   (modal, toast, tooltip span, side menu, badge, etc.)
    ------------------------------------------------- */
 
-.selector-demo {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.selector-card {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-  font-size: 0.95rem;
-}
-
-/* :has() — highlight card if it contains an input with class error-input */
-.selector-card:has(.error-input) {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
-}
-
-/* Style error input itself */
-.error-input {
-  border: 1px solid #ef4444;
-  padding: 6px 8px;
-  border-radius: 4px;
-}
-
-/* Attribute selectors for links */
-.selector-card a[href^="https"] {
-  color: #2563eb;
-}
-
-.selector-card a[href^="/"] {
-  color: #16a34a;
-}
-
-/* :is() to target multiple elements at once */
-.selector-text :is(span, em) {
-  color: #7c3aed;
-}
-
-/* Small note text */
-.selector-note {
-  margin-top: 6px;
-  font-size: 0.82rem;
-  color: #6b7280;
-}
-
-/* -------------------------------------------------
-   32. CSS VARIABLES & FUNCTIONS
-   ------------------------------------------------- */
-
-/* Add a brand variable if not already defined */
-:root {
-  --brand-color: #4a90e2;
-  --brand-soft: #e3f2fd;
-}
-
-.vars-row {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.vars-card {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-  font-size: 0.95rem;
-}
-
-/* Boxes using brand variables */
-.brand-swatch {
-  padding: 8px;
-  border-radius: 6px;
-  margin-top: 6px;
-  text-align: center;
-  color: #0f172a;
-}
-
-.brand-main {
-  background-color: var(--brand-color);
-  color: #ffffff;
-}
-
-.brand-soft {
-  background-color: var(--brand-soft);
-}
-
-/* Clamp font size for heading */
-.clamp-heading {
-  font-size: clamp(1.1rem, 2vw, 1.6rem); /* min, preferred, max */
-  font-weight: bold;
-}
-
-/* calc() demo box */
-.calc-demo-box {
-  width: calc(100% - 40px);         /* full width minus 40px */
-  margin: 10px auto 0 auto;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px dashed #9ca3af;
-  background-color: #f9fafb;
-}
-
-/* -------------------------------------------------
-   33. ADVANCED TYPOGRAPHY
-   ------------------------------------------------- */
-
-.type-grid {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.type-block {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-}
-
-/* Drop cap: big first letter */
-.dropcap-text::first-letter {
-  font-size: 3rem;
-  font-weight: bold;
-  float: left;
-  line-height: 0.9;
-  padding-right: 6px;
-  color: #4a90e2;
-}
-
-/* Gradient text using background-clip */
-.gradient-text {
-  font-size: 1.4rem;
-  font-weight: bold;
-  background-image: linear-gradient(90deg, #4f46e5, #ec4899);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-/* Outlined text */
-.outlined-text {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: white;
-  -webkit-text-stroke: 1px #111827; /* Stroke around letters */
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-}
-
-/* -------------------------------------------------
-   34. PURE CSS ACCORDION
-   ------------------------------------------------- */
-
-.accordion {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Hide the checkbox visually */
-.acc-input {
-  position: absolute;
-  opacity: 0;
-}
-
-/* Accordion header */
-.acc-label {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 8px;
-  background-color: #e5e7eb;
-  cursor: pointer;
-  margin-top: 8px;
-  position: relative;
-}
-
-/* Add a + icon using ::after */
-.acc-label::after {
-  content: "+";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Content panel (hidden by default) */
-.acc-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.25s ease;
-  background-color: #ffffff;
-  border-radius: 0 0 8px 8px;
-  padding: 0 12px;
-}
-
-/* When checkbox is checked, expand panel */
-.acc-input:checked + .acc-label + .acc-panel {
-  max-height: 200px;                 /* Enough height to show content */
-  padding-top: 8px;
-  padding-bottom: 10px;
-}
-
-/* Change + to - when open */
-.acc-input:checked + .acc-label::after {
-  content: "-";
-}
-
-/* -------------------------------------------------
-   35. PURE CSS TABS
-   ------------------------------------------------- */
-
-.tabs {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Hide the radio buttons */
-.tabs input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-}
-
-/* Tab labels */
-.tab-label {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 8px 8px 0 0;
-  background-color: #e5e7eb;
-  margin-right: 4px;
-  cursor: pointer;
-}
-
-/* Panels wrapper */
-.tab-panels {
-  border-radius: 0 8px 8px 8px;
-  border: 1px solid #d4d4d8;
-  background-color: #ffffff;
-  padding: 12px;
-  margin-top: -4px;
-}
-
-/* Hide all panels by default */
-.tab-panel {
-  display: none;
-}
-
-/* When tab1 is checked, show first panel, etc. */
-#tab1:checked ~ .tab-panels .tab-panel:nth-child(1),
-#tab2:checked ~ .tab-panels .tab-panel:nth-child(2),
-#tab3:checked ~ .tab-panels .tab-panel:nth-child(3) {
-  display: block;
-}
-
-/* Highlight the active tab label */
-#tab1:checked + .tab-label,
-#tab2:checked + .tab-label,
-#tab3:checked + .tab-label {
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-  border-bottom-color: #ffffff;
-}
-
-/* -------------------------------------------------
-   36. PREFERENCES: REDUCED MOTION & DARK MODE
-   ------------------------------------------------- */
-
-.pref-row {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.pref-card {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-  font-size: 0.95rem;
-}
-
-/* Spinning square (motion demo) */
-.motion-demo-square {
-  width: 40px;
-  height: 40px;
-  margin-top: 10px;
-  border-radius: 6px;
-  background-image: linear-gradient(135deg, #4f46e5, #ec4899);
-  animation: spinSlow 4s linear infinite;
-}
-
-@keyframes spinSlow {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Respect prefers-reduced-motion and stop animation */
-@media (prefers-reduced-motion: reduce) {
-  .motion-demo-square {
-    animation: none;
-  }
-}
-
-/* Dark mode preference demo */
-.darkmode-card {
-  background-color: #ffffff;
-  color: #111827;
-}
-
-/* When OS prefers dark mode */
-@media (prefers-color-scheme: dark) {
-  .darkmode-card {
-    background-color: #111827;
-    color: #e5e7eb;
-    border-color: #4b5563;
-  }
-}
-
-/* -------------------------------------------------
-   37. ADVANCED POSITIONING & Z-INDEX
-   ------------------------------------------------- */
-
-#positioning-advanced {
-  position: relative;                /* For sticky-note to stick within section */
-}
-
-/* Sticky header that sticks to top of this section while scrolling */
-.sticky-header-demo {
-  position: sticky;
-  top: 0;                            /* Sticks to top of viewport when reached */
-  background-color: #0f172a;
-  color: #e5e7eb;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  max-width: 700px;
-  margin: 0 auto 10px auto;
-}
-
-/* Row of overlapping cards */
-.zindex-row {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  padding: 40px 10px 80px 10px;
-}
-
-.z-card {
-  position: absolute;
-  width: 180px;
-  height: 120px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0f172a;
-  font-weight: bold;
-}
-
-/* Three different z-index layers */
-.z-back {
-  background-color: #e0f2fe;
-  top: 40px;
-  left: 20px;
-  z-index: 1;
-}
-
-.z-middle {
-  background-color: #bfdbfe;
-  top: 60px;
-  left: 80px;
-  z-index: 2;
-}
-
-.z-front {
-  background-color: #93c5fd;
-  top: 80px;
-  left: 140px;
-  z-index: 3;                        /* Highest sits on top */
-}
-
-/* Sticky note on the right side of this section */
-.sticky-note {
-  position: sticky;
-  top: 40px;                         /* Distance from top when stuck */
-  float: right;                      /* Let text / content flow around it */
-  width: 180px;
-  min-height: 80px;
-  padding: 10px;
-  margin-left: 10px;
-  border-radius: 10px;
-  background-color: #fef9c3;
-  border: 1px solid #facc15;
-  font-size: 0.85rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* -------------------------------------------------
-   38. FANCY BACKGROUNDS & PATTERNS
-   ------------------------------------------------- */
-
-.bg-row {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.bg-box {
-  height: 140px;
-  border-radius: 12px;
-  color: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-}
-
-/* Multiple backgrounds: gradient + decorative circles */
-.bg-multi {
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.5), transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.5), transparent 60%),
-    linear-gradient(135deg, #f9fafb, #e5e7eb);
-}
-
-/* Striped pattern using repeating-linear-gradient */
-.bg-stripes {
-  background-image: repeating-linear-gradient(
-    45deg,
-    #e0f2fe 0,
-    #e0f2fe 10px,
-    #bfdbfe 10px,
-    #bfdbfe 20px
-  );
-}
-
-/* Dot pattern (repeating radial gradient) */
-.bg-dots {
-  background-image:
-    radial-gradient(circle, #93c5fd 1px, transparent 1px);
-  background-size: 16px 16px;       /* Size of each dot “tile” */
-}
-
-/* -------------------------------------------------
-   39. ADVANCED HOVER TEXT EFFECTS
-   ------------------------------------------------- */
-
-.text-effects-row {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.text-effect-block {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-  text-align: center;
-}
-
-/* Underline that slides in from left */
-.underline-slide {
-  position: relative;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-.underline-slide::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background-color: #2563eb;
-  transition: width 0.25s ease;
-}
-
-.underline-slide:hover::after {
-  width: 100%;
-}
-
-/* Glow text using text-shadow */
-.glow-text {
-  font-size: 1.5rem;
-  color: #e5e7eb;
-  text-shadow:
-    0 0 4px #60a5fa,
-    0 0 10px #3b82f6,
-    0 0 16px #1d4ed8;
-}
-
-/* Sliding background highlight effect */
-.highlight-text {
-  position: relative;
-  padding: 4px 8px;
-  cursor: pointer;
-  z-index: 0;
-}
-
-.highlight-text::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #fde68a;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
-  z-index: -1;                       /* Behind the text */
-}
-
-.highlight-text:hover::before {
-  transform: scaleX(1);
-}
-
-/* -------------------------------------------------
-   40. SCROLL SNAP CAROUSEL
-   ------------------------------------------------- */
-
-.snap-container {
-  max-width: 100%;
-  margin: 10px auto;
-  padding: 10px 0;
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;                  /* Horizontal scrolling */
-  scroll-snap-type: x mandatory;     /* Enable scroll snap on the x-axis */
-  scroll-behavior: smooth;           /* Smooth scroll when user flicks */
-}
-
-.snap-item {
-  flex: 0 0 200px;                   /* Fixed width cards */
-  height: 120px;
-  border-radius: 12px;
-  background-color: #bfdbfe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center;         /* Snap this card to center of viewport */
-  font-weight: bold;
-}
-
-/* -------------------------------------------------
-   41. 3D FLIP CARD
-   ------------------------------------------------- */
-
-.flip-card-scene {
-  width: 220px;
-  height: 140px;
-  margin: 10px auto;
-  perspective: 800px;                /* Depth for 3D effect */
-}
-
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-/* Flip the inner card on hover */
-.flip-card-scene:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-face {
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  backface-visibility: hidden;       /* Hide the back side when facing away */
-}
-
-.flip-card-front {
-  background-color: #4f46e5;
-  color: white;
-}
-
-.flip-card-back {
-  background-color: #f97316;
-  color: #111827;
-  transform: rotateY(180deg);
-}
-
-/* -------------------------------------------------
-   42. CUSTOM CHECKBOXES & RADIO BUTTONS
-   ------------------------------------------------- */
-
-.custom-inputs-row {
-  max-width: 700px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.custom-group h3 {
-  margin-top: 0;
-}
-
-/* Hide actual input but keep it focusable */
-.pill-check input,
-.pill-radio input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Pill wrapper */
-.pill-check,
-.pill-radio {
-  display: inline-flex;
-  align-items: center;
-  margin: 4px 4px 4px 0;
-  cursor: pointer;
-}
-
-/* Visible pill */
-.pill-check span,
-.pill-radio span {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid #cbd5e1;
-  background-color: #f9fafb;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-/* Checked state for checkbox pills */
-.pill-check input:checked + span {
-  background-color: #4ade80;
-  border-color: #16a34a;
-  color: #0f172a;
-}
-
-/* Checked state for radio pills */
-.pill-radio input:checked + span {
-  background-color: #60a5fa;
-  border-color: #2563eb;
-  color: white;
-}
-
-/* -------------------------------------------------
-   43. CUSTOM SCROLLBAR DEMO
-   ------------------------------------------------- */
-
-.scrollbar-box {
-  max-width: 500px;
-  margin: 0 auto;
-  height: 120px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  background-color: #ffffff;
-  overflow: auto;
-  font-size: 0.9rem;
-
-  /* Firefox scrollbar styling */
-  scrollbar-width: thin;
-  scrollbar-color: #9ca3af #e5e7eb;
-}
-
-/* WebKit scrollbar styling (Chrome, Edge, Safari) */
-.scrollbar-box::-webkit-scrollbar {
-  width: 10px;                       /* Thickness of vertical scrollbar */
-}
-
-.scrollbar-box::-webkit-scrollbar-track {
-  background-color: #e5e7eb;
-  border-radius: 8px;
-}
-
-.scrollbar-box::-webkit-scrollbar-thumb {
-  background-color: #9ca3af;
-  border-radius: 8px;
-  border: 2px solid #e5e7eb;         /* Creates “inset” look */
-}
-
-.scrollbar-box::-webkit-scrollbar-thumb:hover {
-  background-color: #6b7280;
-}
-
-.scrollbar-box:hover {
-  scrollbar-color: #6b7280 #e5e7eb;
-}
-
-/* =================================================
-   44+. EXTRA PLAYGROUND STYLES (not tied to sections)
-   ================================================= */
-
-/* -------------------------------------------------
-   44. CUSTOM FILE INPUT
-   ------------------------------------------------- */
-.file-input-wrapper {
-  max-width: 400px;
-  margin: 10px auto;
-}
-.custom-file-input {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 40px;
-  border: 2px dashed #cbd5e1;
-  border-radius: 8px;
-  background-color: #f9fafb;
-  text-align: center;
-  line-height: 36px;
-  color: #6b7280;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-.custom-file-input:hover {
-  background-color: #e5e7eb;
-  border-color: #9ca3af;
-}
-.custom-file-input input[type="file"] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-.custom-file-input span {
-  pointer-events: none;              /* Let clicks pass through to input */
-  font-size: 0.9rem;
-}
-.custom-file-input.selected {
-  border-color: #4ade80;
-  background-color: #d1fae5;
-  color: #065f46;
-}
-.custom-file-input.selected:hover {
-  background-color: #a7f3d0;
-  border-color: #16a34a;
-}
-
-/* -------------------------------------------------
-   45. BOUNCING LOADER ANIMATION
-   (reuses .bounce-ball @keyframes bounce)
-   ------------------------------------------------- */ 
-.bounce-loader {
-  position: relative;
-  width: 100px;
-  height: 120px;
-  margin: 10px auto;
-}
-
-/* -------------------------------------------------
-   46. ALT MASONRY GRID LAYOUT (variation)
-   ------------------------------------------------- */
-.alt-masonry-grid {
-  max-width: 900px;
-  margin: 10px auto;
-  column-count: 3;                   /* Number of columns */
-  column-gap: 15px;                  /* Space between columns */
-}
-
-.alt-masonry-grid .masonry-item {
-  break-inside: avoid;               /* Prevent items from breaking across columns */
-  margin-bottom: 15px;
-  border-radius: 8px;
-  background-color: #e3f2fd;
-  padding: 10px;
-}
-
-/* -------------------------------------------------
-   47. ALT FANCY BUTTON WITH ICON ANIMATION
-   ------------------------------------------------- */   
-.alt-fancy-btn {
-  display: inline-flex;   
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}                 
-.alt-fancy-btn .fancy-icon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}     
-.alt-fancy-btn:hover {
-  background-color: #1c86ee;
-  transform: translateY(-2px);      
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-} 
-.alt-fancy-btn:hover .fancy-icon {
-  transform: rotate(20deg);         /* Rotate icon on hover */
-}
-
-/* -------------------------------------------------
-   48. TEXT WRAPPING AROUND A CIRCLE IMAGE
-   ------------------------------------------------- */
-.text-wrap-circle {
-  max-width: 700px; 
-  margin: 10px auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: justify;
-  position: relative;
-}
-.circle-image {
-  width: 150px;
-  height: 150px;
-  float: left;                       /* Let text flow around it */
-  margin: 0 15px 15px 0;
-}
-.circle-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;                /* Make image circular */
-  object-fit: cover;
-}
-.text-wrap-circle p {
-  margin: 0;
-}
-
-/* -------------------------------------------------
-   49. EXTRA VISUAL EFFECTS (GLASS, NEON, RAINBOW, ETC.)
-   ------------------------------------------------- */
-
-.extra-glass-card {
-  width: 250px;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.35);
-  backdrop-filter: blur(12px);
-  color: white;
-  text-align: center;
-}
-.extra-glass-card h2 {
-  margin-top: 0;
-}
-
-.neon-box {
-  color: #fff;
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow:
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 40px #0ff;
-}
-
-.rainbow-border {
-  padding: 15px 25px;
-  border-radius: 12px;
-  border: 4px solid transparent;
-  background:
-    linear-gradient(#fff,#fff) padding-box,
-    linear-gradient(90deg, red, orange, yellow, green, blue, purple) border-box;
-  animation: spin-border 4s linear infinite;
-}
-
-@keyframes spin-border {
-  from { filter: hue-rotate(0deg); }
-  to   { filter: hue-rotate(360deg); }
-}
-
-.ripple-btn {
-  position: relative;
-  overflow: hidden;
-  padding: 12px 20px;
-  border: none;
-  color: white;
-  background: #3b82f6;
-  border-radius: 8px;
-}
-
-.ripple-btn::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.6);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  left: var(--x);
-  top: var(--y);
-  transition: width 0.4s ease, height 0.4s ease, opacity 0.6s;
-}
-
-.ripple-btn:active::after {
-  width: 200px;
-  height: 200px;
-  opacity: 0;
-}
-
-.zoom-img {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.zoom-img img {
-  width: 100%;
-  transition: transform 0.5s ease;
-}
-
-.zoom-img:hover img {
-  transform: scale(1.2);
-}
-
-.moving-gradient {
-  padding: 20px;
-  color: white;
-  text-align: center;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
-  background-size: 300%;
-  animation: slidebg 6s linear infinite;
-}
-
-@keyframes slidebg {
-  0% { background-position: 0% }
-  100% { background-position: 300% }
-}
-
-.skeleton {
-  width: 100%;
-  height: 20px;
-  border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    #e5e7eb 0%,
-    #f3f4f6 50%,
-    #e5e7eb 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.float-box {
-  width: 120px;
-  padding: 15px;
-  text-align: center;
-  background: #fde68a;
-  border-radius: 8px;
-  animation: floaty 3s ease-in-out infinite;
-}
-
-@keyframes floaty {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-.shine-btn {
-  position: relative;
-  padding: 10px 20px;
-  background: #4f46e5;
-  border-radius: 10px;
-  color: white;
-  overflow: hidden;
-}
-
-.shine-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: rgba(255,255,255,0.5);
-  transform: skewX(-20deg);
-}
-
-.shine-btn:hover::before {
-  animation: shine 0.7s ease;
-}
-
-@keyframes shine {
-  100% { left: 150%; }
-}
-/* Hidden state */
-.modal-overlay,
-.modal-box {
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-}
-
-/* Buttons to toggle class (you’ll toggle with JS or manually in dev) */
-.open-modal.active + .modal-overlay,
-.open-modal.active + .modal-overlay + .modal-box {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Overlay */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-/* Modal */
-.modal-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  width: 260px;
-  border-radius: 12px;
-  text-align: center;
-}
-.toast {
-  position: fixed;
-  bottom: 20px;
-  right: -300px;
-  background: #16a34a;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  animation: slide-in 4s ease forwards;
-}
-
-@keyframes slide-in {
-  0% { right: -300px; opacity: 0; }
-  10% { right: 20px; opacity: 1; }
-  90% { right: 20px; opacity: 1; }
-  100% { right: -300px; opacity: 0; }
-}
-.tooltip {
-  position: relative;
-  cursor: pointer;
-  color: #2563eb;
-}
-
-.tooltip::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 6px 10px;
-  background: #111;
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.2s ease;
-  white-space: nowrap;
-}
-
-.tooltip:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
-}
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -240px;
-  width: 240px;
-  height: 100%;
-  background: #0f172a;
-  color: white;
-  padding: 20px;
-  transition: left 0.3s ease;
-}
-
-/* Add .active class to open */
-.side-menu.active {
-  left: 0;
-}
-.side-menu h2 {
-  margin-top: 0;
-}
-
-.icon-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.badge {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  background: red;
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 999px;
-}
-.faq summary {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.faq {
-  margin: 10px 0;
-}
-.faq p {
-  margin: 6px 0 0 0;
-}
-.rating-bar {
-  position: relative;
-  width: 200px;
-  height: 20px;
-  background: #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.rating-bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: attr(data-rating percentage); /* works in Chrome */
-  height: 100%;
-  background: #fbbf24;
-}
-.rating-bar::after {
-  content: attr(data-rating) "%";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  color: #111827;
-}
-.tag {
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: #e5e7eb;
-  font-size: 0.8rem;
-  margin-right: 6px;
-}
-
-.tag.success { background: #22c55e; color: white; }
-.tag.alert   { background: #ef4444; color: white; }
-.tag.info    { background: #3b82f6; color: white; }
-.tag.warning { background: #f59e0b; color: white; }
-/* Tooltip for tags */
-.tag:hover::after {
-  content: attr(data-info);
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 6px 10px;
-  background: #111;
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  white-space: nowrap;
-}
-/* -------------------------------------------------
-   30. CONTAINER QUERIES & MULTI-COLUMN LAYOUTS
-   ------------------------------------------------- */ 
-.container-demo {
-  max-width: 700px;     
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  background-color: #f9fafb;
-  container-type: inline-size;      /* Enable container queries based on width */
-}
-.progress {
-  width: 200px;
-  height: 14px;
-  background: #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: #3b82f6;
-}
-@container (min-width: 400px) {
-  .progress {
-    width: 300px;                   /* Wider progress bar on larger containers */
-  }
-}
-.search-bar {
-  width: 180px;
-  padding: 8px 12px;
-  border: 2px solid #d1d5db;
-  border-radius: 999px;
-  transition: 0.3s ease;
-}
-
-.search-bar:focus {
-  width: 260px;
-  border-color: #3b82f6;
-  outline: none;
-}
-/* Multi-column text layout */
-.multi-column-text {    
-  max-width: 700px;
-  margin: 10px auto;
-  column-count: 2;                   /* Number of columns */
-  column-gap: 20px;                  /* Space between columns */
-  column-rule: 1px solid #d1d5db;   /* Line between columns */
-}
-.multi-column-text p {
-  margin-bottom: 12px;
-}
-/* -------------------------------------------------
-   31. ADVANCED FORM STYLES & SELECTORS
-   ------------------------------------------------- */
-.form-grid {
-  max-width: 700px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-.form-card {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #d4d4d8;
-}
-.form-card h3 {
-  margin-top: 0;
-}
-.form-card label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-.form-card input[type="text"],
-.form-card input[type="email"],
-.form-card select,
-.form-card textarea {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0. ninerem;
-  transition: border-color 0.2s ease;
-}
-.form-card input[type="text"]:focus,
-.form-card input[type="email"]:focus,
-.form-card select:focus,
-.form-card textarea:focus {
-  border-color: #3b82f6;
-  outline: none;
-}
-.alert {
-  padding: 10px;
-  border-radius: 8px;
-  margin: 10px 0;
-  font-weight: 500;
-}
-
-.alert.success {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.alert.error {
-  background: #fee2e2;
-  color: #991b1b;
-}
-.alert.warning {
-  background: #fef3c7;
-  color: #92400e;
-}
-.hover-accordion .item {
-  overflow: hidden;
-  height: 40px;
-  transition: 0.3s ease;
-}
-
-.hover-accordion .item:hover {
-  height: 120px;
-}
-.hover-accordion .item h4 {
-  margin: 0;
-  padding: 10px;
-  background: #e5e7eb;
-  cursor: pointer;
-}
-.overlay-card {
-  position: relative;
-  width: 300px;
-}
-
-.overlay-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  opacity: 0;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
-.overlay-card:hover .overlay {
-  opacity: 1;
-}
-.spinner {
-  width: 30px;
-  height: 30px;
-  border: 4px solid #d1d5db;
-  border-top-color: #3b82f6;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-.pulse-dot {
-  width: 14px;
-  height: 14px;
-  background: #22c55e;
-  border-radius: 999px;
-  animation: pulseDot 1.5s ease-out infinite;
-}
-
-@keyframes pulseDot {
-  0%   { box-shadow: 0 0 0 0 rgba(34,197,94,.6); }
-  100% { box-shadow: 0 0 0 12px rgba(34,197,94,0); }
-}
-/* -------------------------------------------------
-   46. MINI UI COMPONENTS (MODAL, TOAST, SIDEMENU, TAGS, SPINNER, ETC.)
-   ------------------------------------------------- */
-
-/* Simple pill-style buttons for the modal controls */
+/* Buttons for modal */
 .open-modal,
 .close-modal {
   display: inline-block;
@@ -2665,17 +1071,17 @@ h2 {
   padding: 8px 14px;
   border-radius: 8px;
   border: none;
-  background-color: #4f46e5;       /* Indigo */
+  background-color: #4f46e5;
   color: #ffffff;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
 .close-modal {
-  background-color: #6b7280;       /* Gray close button */
+  background-color: #6b7280;
 }
 
-/* Light “overlay area” so you can see where the modal would sit */
+/* Simple “card” style modal preview (no JS logic yet) */
 .modal-overlay {
   max-width: 600px;
   margin: 20px auto 0 auto;
@@ -2685,7 +1091,6 @@ h2 {
   border: 1px dashed #9ca3af;
 }
 
-/* Modal box card */
 .modal-box {
   max-width: 360px;
   margin: 10px auto 30px auto;
@@ -2696,20 +1101,20 @@ h2 {
   text-align: left;
 }
 
-/* Toast notification chip */
+/* Toast chip */
 .toast {
   max-width: 260px;
   margin: 0 auto 20px auto;
   padding: 8px 12px;
   border-radius: 999px;
-  background-color: #22c55e;       /* Green */
+  background-color: #22c55e;
   color: #064e3b;
   font-size: 0.85rem;
   text-align: center;
   box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
 }
 
-/* Inline tooltip using data-tip attribute */
+/* Inline tooltip span (separate from .tooltip-btn) */
 .tooltip {
   position: relative;
   cursor: default;
@@ -2752,7 +1157,7 @@ h2 {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Side menu: slides in when the button or menu is hovered */
+/* Side menu (hover to show) */
 .open-side {
   display: inline-block;
   margin: 15px 0;
@@ -2778,13 +1183,12 @@ h2 {
   border-radius: 0 12px 12px 0;
 }
 
-/* Hover-only demo: slide the menu out */
 .open-side:hover + .side-menu,
 .side-menu:hover {
   transform: translateX(0);
 }
 
-/* Notification bell + badge */
+/* Notification bell */
 .icon-wrapper {
   position: relative;
   display: inline-block;
@@ -2795,24 +1199,18 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Separate from earlier .badge demo */
-.notif-badge {
+.badge {
   position: absolute;
   top: -6px;
-  right: -10px;
-  min-width: 20px;
-  height: 20px;
-  border-radius: 999px;
-  background-color: #ef4444;
-  color: #ffffff;
+  right: -6px;
+  background: red;
+  color: white;
   font-size: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #f9fafb;
+  padding: 2px 6px;
+  border-radius: 999px;
 }
 
-/* FAQ details element */
+/* FAQ <details> */
 .faq {
   max-width: 400px;
   margin: 20px auto;
@@ -2832,7 +1230,7 @@ h2 {
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
 }
 
-/* Rating bar – fixed to 70% to match your data-rating="70" */
+/* Rating bar (uses data-rating text only) */
 .rating-bar {
   position: relative;
   max-width: 300px;
@@ -2843,16 +1241,14 @@ h2 {
   overflow: hidden;
 }
 
-/* Filled portion */
 .rating-bar::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 70%;  /* Demo: 70% rating */
+  width: 70%;
   background-image: linear-gradient(to right, #22c55e, #a3e635);
 }
 
-/* Numeric label */
 .rating-bar::after {
   content: attr(data-rating) "%";
   position: absolute;
@@ -2937,7 +1333,7 @@ h2 {
   border: 1px solid #fecaca;
 }
 
-/* Hover accordion – text expands on hover */
+/* Hover accordion */
 .hover-accordion .item {
   padding: 10px 12px;
   border-radius: 8px;
@@ -2966,7 +1362,7 @@ h2 {
   max-height: 60px;
 }
 
-/* Spinner loader */
+/* Spinner */
 .spinner {
   width: 32px;
   height: 32px;
@@ -2974,10 +1370,14 @@ h2 {
   border-radius: 50%;
   border: 3px solid #e5e7eb;
   border-top-color: #3b82f6;
-  animation: spinSlow 0.8s linear infinite;  /* Re-uses spinSlow from earlier */
+  animation: spinSlow 0.8s linear infinite;
 }
 
-/* Pulsing status dot */
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulsing dot */
 .pulse-dot {
   width: 10px;
   height: 10px;
@@ -3002,6 +1402,996 @@ h2 {
     box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
   }
 }
+
 /* -------------------------------------------------
-   39. HIGHLIGHT TEXT ON HOVER
+   31. ADVANCED SELECTORS
    ------------------------------------------------- */
+
+.selector-demo {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.selector-card {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  font-size: 0.95rem;
+}
+
+.selector-card:has(.error-input) {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.error-input {
+  border: 1px solid #ef4444;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.selector-card a[href^="https"] {
+  color: #2563eb;
+}
+
+.selector-card a[href^="/"] {
+  color: #16a34a;
+}
+
+.selector-text :is(span, em) {
+  color: #7c3aed;
+}
+
+.selector-note {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+/* -------------------------------------------------
+   32. CSS VARIABLES & FUNCTIONS
+   ------------------------------------------------- */
+
+:root {
+  --brand-color: #4a90e2;
+  --brand-soft: #e3f2fd;
+}
+
+.vars-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.vars-card {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  font-size: 0.95rem;
+}
+
+.brand-swatch {
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 6px;
+  text-align: center;
+  color: #0f172a;
+}
+
+.brand-main {
+  background-color: var(--brand-color);
+  color: #ffffff;
+}
+
+.brand-soft {
+  background-color: var(--brand-soft);
+}
+
+.clamp-heading {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: bold;
+}
+
+.calc-demo-box {
+  width: calc(100% - 40px);
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px dashed #9ca3af;
+  background-color: #f9fafb;
+}
+
+/* -------------------------------------------------
+   33. ADVANCED TYPOGRAPHY
+   ------------------------------------------------- */
+
+.type-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.type-block {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+}
+
+.dropcap-text::first-letter {
+  font-size: 3rem;
+  font-weight: bold;
+  float: left;
+  line-height: 0.9;
+  padding-right: 6px;
+  color: #4a90e2;
+}
+
+.gradient-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #4f46e5, #ec4899);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.outlined-text {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: white;
+  -webkit-text-stroke: 1px #111827;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------------------------------------
+   34. PURE CSS ACCORDION
+   ------------------------------------------------- */
+
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.acc-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.acc-label {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  margin-top: 8px;
+  position: relative;
+}
+
+.acc-label::after {
+  content: "+";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  padding: 0 12px;
+}
+
+.acc-input:checked + .acc-label + .acc-panel {
+  max-height: 200px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.acc-input:checked + .acc-label::after {
+  content: "-";
+}
+
+/* -------------------------------------------------
+   35. PURE CSS TABS
+   ------------------------------------------------- */
+
+.tabs {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tabs input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.tab-label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px 8px 0 0;
+  background-color: #e5e7eb;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.tab-panels {
+  border-radius: 0 8px 8px 8px;
+  border: 1px solid #d4d4d8;
+  background-color: #ffffff;
+  padding: 12px;
+  margin-top: -4px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+#tab1:checked ~ .tab-panels .tab-panel:nth-child(1),
+#tab2:checked ~ .tab-panels .tab-panel:nth-child(2),
+#tab3:checked ~ .tab-panels .tab-panel:nth-child(3) {
+  display: block;
+}
+
+#tab1:checked + .tab-label,
+#tab2:checked + .tab-label,
+#tab3:checked + .tab-label {
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  border-bottom-color: #ffffff;
+}
+
+/* -------------------------------------------------
+   36. USER PREFERENCES
+   ------------------------------------------------- */
+
+.pref-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.pref-card {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  font-size: 0.95rem;
+}
+
+.motion-demo-square {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 6px;
+  background-image: linear-gradient(135deg, #4f46e5, #ec4899);
+  animation: spinSlow2 4s linear infinite;
+}
+
+@keyframes spinSlow2 {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-demo-square {
+    animation: none;
+  }
+}
+
+.darkmode-card {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+@media (prefers-color-scheme: dark) {
+  .darkmode-card {
+    background-color: #111827;
+    color: #e5e7eb;
+    border-color: #4b5563;
+  }
+}
+
+/* -------------------------------------------------
+   37. ADVANCED POSITIONING & Z-INDEX
+   ------------------------------------------------- */
+
+#positioning-advanced {
+  position: relative;
+}
+
+.sticky-header-demo {
+  position: sticky;
+  top: 0;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto 10px auto;
+}
+
+.zindex-row {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 10px 80px 10px;
+}
+
+.z-card {
+  position: absolute;
+  width: 180px;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.z-back {
+  background-color: #e0f2fe;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
+}
+
+.z-middle {
+  background-color: #bfdbfe;
+  top: 60px;
+  left: 80px;
+  z-index: 2;
+}
+
+.z-front {
+  background-color: #93c5fd;
+  top: 80px;
+  left: 140px;
+  z-index: 3;
+}
+
+.sticky-note {
+  position: sticky;
+  top: 40px;
+  float: right;
+  width: 180px;
+  min-height: 80px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #fef9c3;
+  border: 1px solid #facc15;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------------------------------------
+   38. FANCY BACKGROUNDS
+   ------------------------------------------------- */
+
+.bg-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.bg-box {
+  height: 140px;
+  border-radius: 12px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.bg-multi {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.5), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.5), transparent 60%),
+    linear-gradient(135deg, #f9fafb, #e5e7eb);
+}
+
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #e0f2fe 0,
+    #e0f2fe 10px,
+    #bfdbfe 10px,
+    #bfdbfe 20px
+  );
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, #93c5fd 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* -------------------------------------------------
+   39. ADVANCED TEXT HOVER EFFECTS
+   ------------------------------------------------- */
+
+.text-effects-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.text-effect-block {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  text-align: center;
+}
+
+.underline-slide {
+  position: relative;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.underline-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.underline-slide:hover::after {
+  width: 100%;
+}
+
+.glow-text {
+  font-size: 1.5rem;
+  color: #e5e7eb;
+  text-shadow:
+    0 0 4px #60a5fa,
+    0 0 10px #3b82f6,
+    0 0 16px #1d4ed8;
+}
+
+.highlight-text {
+  position: relative;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.highlight-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fde68a;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+
+.highlight-text:hover::before {
+  transform: scaleX(1);
+}
+
+/* -------------------------------------------------
+   40. SCROLL SNAP CAROUSEL
+   ------------------------------------------------- */
+
+.snap-container {
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-item {
+  flex: 0 0 200px;
+  height: 120px;
+  border-radius: 12px;
+  background-color: #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------
+   41. 3D FLIP CARD
+   ------------------------------------------------- */
+
+.flip-card-scene {
+  width: 220px;
+  height: 140px;
+  margin: 10px auto;
+  perspective: 800px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flip-card-scene:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.flip-card-back {
+  background-color: #f97316;
+  color: #111827;
+  transform: rotateY(180deg);
+}
+
+/* -------------------------------------------------
+   42. CUSTOM CHECKBOXES & RADIOS
+   ------------------------------------------------- */
+
+.custom-inputs-row {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.custom-group h3 {
+  margin-top: 0;
+}
+
+.pill-check input,
+.pill-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pill-check,
+.pill-radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+}
+
+.pill-check span,
+.pill-radio span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pill-check input:checked + span {
+  background-color: #4ade80;
+  border-color: #16a34a;
+  color: #0f172a;
+}
+
+.pill-radio input:checked + span {
+  background-color: #60a5fa;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* -------------------------------------------------
+   43. CUSTOM SCROLLBAR BOX
+   ------------------------------------------------- */
+
+.scrollbar-box {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  overflow: auto;
+  font-size: 0.9rem;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #e5e7eb;
+}
+
+.scrollbar-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-box::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+}
+
+.scrollbar-box::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+}
+
+.scrollbar-box::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+/* -------------------------------------------------
+   44. EXTRA VISUAL EFFECTS
+   ------------------------------------------------- */
+
+.neon-box {
+  color: #fff;
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
+
+.rainbow-border {
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 4px solid transparent;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(90deg, red, orange, yellow, green, blue, purple) border-box;
+  animation: spin-border 4s linear infinite;
+}
+
+@keyframes spin-border {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
+}
+
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  background: #3b82f6;
+  border-radius: 8px;
+}
+
+.ripple-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.6s;
+}
+
+.ripple-btn:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+.zoom-img {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.zoom-img img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.zoom-img:hover img {
+  transform: scale(1.2);
+}
+
+.moving-gradient {
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+  background-size: 300%;
+  animation: slidebg 6s linear infinite;
+}
+
+@keyframes slidebg {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+.skeleton {
+  width: 100%;
+  height: 20px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 0%,
+    #f3f4f6 50%,
+    #e5e7eb 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.float-box {
+  width: 120px;
+  padding: 15px;
+  text-align: center;
+  background: #fde68a;
+  border-radius: 8px;
+  animation: floaty 3s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.shine-btn {
+  position: relative;
+  padding: 10px 20px;
+  background: #4f46e5;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  transform: skewX(-20deg);
+}
+
+.shine-btn:hover::before {
+  animation: shine 0.7s ease;
+}
+
+@keyframes shine {
+  100% { left: 150%; }
+}
+
+/* -------------------------------------------------
+   29. FOOTER DEMO (LABELED)
+   ------------------------------------------------- */
+
+#footer-demo {
+  background-color: #eef4ff;
+  padding: 30px 0;
+  margin-top: 30px;
+  border-top: 3px solid #bcd0ff;
+}
+
+.footer-demo-box {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border: 2px dashed #99b4ff;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.footer-demo-part {
+  border: 2px solid #c7d7ff;
+  background-color: #f7f9ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.footer-demo-part h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #003b95;
+}
+
+.footer-demo-part p,
+.footer-demo-part ul {
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+
+.footer-demo-part ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-demo-part ul li {
+  margin: 4px 0;
+}
+
+.footer-demo-part a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer-demo-part a:hover {
+  text-decoration: underline;
+}
+
+.footer-demo-icons span {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  margin-right: 6px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-demo-icons span:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.demo-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+@media (max-width: 650px) {
+  .footer-demo-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------
+   REAL PAGE FOOTER
+   ------------------------------------------------- */
+
+.site-footer {
+  margin-top: 40px;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 20px 15px 10px 15px;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.footer-column h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.footer-column p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 4px 0;
+}
+
+.footer-links a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  filter: grayscale(1);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  filter: grayscale(0);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  max-width: 900px;
+  margin: 15px auto 0 auto;
+  padding-top: 10px;
+  border-top: 1px solid #1f2933;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.footer-top-link {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-top-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
