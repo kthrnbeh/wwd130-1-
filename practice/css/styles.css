@@ -2162,3 +2162,28 @@ h2 {
   margin: 0;
 }
                  
+.glass-card {
+  width: 250px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(12px);
+  color: white;
+  text-align: center;
+}
+.glass-card h2 {
+  margin-top: 0;
+}
+.neon-box {
+  color: #fff;
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
