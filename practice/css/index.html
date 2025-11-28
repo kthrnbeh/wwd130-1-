@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Syntax Demo</title>
-  <!-- This links to your external CSS file -->
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
-
 
   <h1>CSS Syntax Demo Page</h1>
   <p class="page-intro">
@@ -269,7 +268,8 @@
       <li>Custom bullet list item three</li>
     </ul>
   </section>
-    <!-- 13. CSS TOOLTIPS -->
+
+  <!-- 13. CSS TOOLTIPS -->
   <section id="tooltips">
     <h2>13. CSS Tooltips</h2>
     <p class="section-note">Hover over the button to see a tooltip made with ::after and position.</p>
@@ -467,56 +467,276 @@
       Color-cycling using keyframes.
     </div>
   </section>
-  <!-- 29. FOOTER DEMO SECTION -->
-<section id="footer-demo">
-  <h2>29. Footer Demo (Labeled)</h2>
-  <p class="section-note">This section breaks down a footer into visual parts so you can see how each area works.</p>
 
-  <div class="footer-demo-box">
+  <!-- 30. MODERN LAYOUT (CONTAINER QUERIES & COLUMNS) -->
+  <section id="modern-layout">
+    <h2>30. Modern Layout: Container Queries & Columns</h2>
+    <p class="section-note">
+      Container queries let the card layout change based on the card's own width.
+      Multi-column text flows like a magazine.
+    </p>
 
-    <!-- BRAND AREA -->
-    <div class="footer-demo-part brand-section">
-      <h3>Brand Area</h3>
-      <p>This is where your logo, website name, or a short description can go.</p>
+    <div class="cq-container">
+      <div class="cq-card">
+        <h3>Responsive Card</h3>
+        <p>
+          Resize the window so this card grows and shrinks. The layout inside
+          will change when the container becomes wide enough.
+        </p>
+        <ul class="cq-list">
+          <li>Item one</li>
+          <li>Item two</li>
+          <li>Item three</li>
+          <li>Item four</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- NAVIGATION AREA -->
-    <div class="footer-demo-part nav-section">
-      <h3>Navigation Links</h3>
-      <ul>
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#grid">Grid Layout</a></li>
-        <li><a href="#animation">Animations</a></li>
-      </ul>
-    </div>
-
-    <!-- SOCIAL ICON AREA -->
-    <div class="footer-demo-part social-section">
-      <h3>Social Icons</h3>
-      <p class="footer-demo-icons">
-        <span>📘</span>
-        <span>📸</span>
-        <span>🐙</span>
+    <div class="multi-column-text">
+      <h3>Multi-column Text Example</h3>
+      <p>
+        This paragraph flows into multiple columns using CSS columns. It behaves
+        more like a magazine or newspaper layout instead of one long line. You can
+        control the number of columns or the width of each column. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Integer dapibus sem sit amet lectus
+        ultricies, sed volutpat mi feugiat. Nullam euismod, elit sit amet vehicula
+        venenatis, lacus nibh cursus odio, at viverra lacus massa sed lorem.
       </p>
-      <p class="demo-label">Icons can be SVGs or images</p>
     </div>
+  </section>
 
-    <!-- CONTACT AREA -->
-    <div class="footer-demo-part contact-section">
-      <h3>Contact</h3>
-      <p>Email: contact@example.com</p>
-      <p>Phone: (555) 123-4567</p>
+  <!-- 31. ADVANCED SELECTORS -->
+  <section id="advanced-selectors">
+    <h2>31. Advanced Selectors</h2>
+    <p class="section-note">
+      :has(), :is(), and attribute selectors let you style elements based on states and patterns.
+    </p>
+
+    <div class="selector-demo">
+      <div class="selector-card has-error">
+        <h3>Form with Error (uses :has)</h3>
+        <form>
+          <label>
+            Email:
+            <input type="email" class="error-input" placeholder="missing @ makes this 'error'">
+          </label>
+        </form>
+        <p class="selector-note">The <strong>card</strong> gets a red border because it <em>has</em> an element with <code>.error-input</code>.</p>
+      </div>
+
+      <div class="selector-card">
+        <h3>Links (attribute selectors)</h3>
+        <p>
+          <a href="https://example.com">External Link (https)</a><br>
+          <a href="/local-page">Local Link (/local)</a>
+        </p>
+        <p class="selector-note">Different styles based on <code>href^="https"</code> or <code>href^="/"</code>.</p>
+      </div>
+
+      <div class="selector-card">
+        <h3>:is() Selector</h3>
+        <p class="selector-text">
+          This <span>paragraph</span> and its <em>children</em> are styled using a single
+          <code>:is(p, span, em)</code> selector group.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- COPYRIGHT AREA -->
-    <div class="footer-demo-part legal-section">
-      <h3>Legal / Copyright</h3>
-      <p>© 2025 Demo Site. All rights reserved.</p>
-      <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  <!-- 32. CSS VARIABLES & FUNCTIONS -->
+  <section id="variables-functions">
+    <h2>32. CSS Variables & Functions</h2>
+    <p class="section-note">
+      CSS variables store reusable values. Functions like clamp(), min(), and calc() make layouts responsive.
+    </p>
+
+    <div class="vars-row">
+      <div class="vars-card">
+        <h3>Brand Colors (Variables)</h3>
+        <p>These boxes all use <code>--brand-color</code> defined in :root.</p>
+        <div class="brand-swatch brand-main">Main Brand</div>
+        <div class="brand-swatch brand-soft">Soft Brand</div>
+      </div>
+
+      <div class="vars-card">
+        <h3>Clamp Font Size</h3>
+        <p class="clamp-heading">
+          This heading uses <code>clamp()</code> for responsive font-size.
+        </p>
+        <p>Resize the window to see it change size smoothly.</p>
+      </div>
+
+      <div class="vars-card">
+        <h3>calc() Width Box</h3>
+        <p>
+          The box below uses <code>calc(100% - 40px)</code> so it always has some
+          margin from the sides.
+        </p>
+        <div class="calc-demo-box">Width with calc(100% - 40px)</div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- 33. ADVANCED TYPOGRAPHY -->
+  <section id="typography-advanced">
+    <h2>33. Advanced Typography</h2>
+    <p class="section-note">
+      Drop caps, gradient text, and outlined text are all doable in pure CSS.
+    </p>
+
+    <div class="type-grid">
+      <div class="type-block">
+        <h3>Drop Cap</h3>
+        <p class="dropcap-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum
+          urna in pharetra bibendum. Nulla facilisi.
+        </p>
+      </div>
+
+      <div class="type-block">
+        <h3>Gradient Text</h3>
+        <p class="gradient-text">Colorful Gradient Text</p>
+      </div>
+
+      <div class="type-block">
+        <h3>Outlined Text</h3>
+        <p class="outlined-text">Outlined Letters</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 34. PURE CSS ACCORDION -->
+  <section id="accordion-demo">
+    <h2>34. Pure CSS Accordion</h2>
+    <p class="section-note">Click the titles to open and close. This uses :checked + labels, no JavaScript.</p>
+
+    <div class="accordion">
+      <input type="checkbox" id="acc-1" class="acc-input">
+      <label for="acc-1" class="acc-label">What is Flexbox?</label>
+      <div class="acc-panel">
+        <p>Flexbox is a layout mode designed for one-dimensional layouts — either a row or a column.</p>
+      </div>
+
+      <input type="checkbox" id="acc-2" class="acc-input">
+      <label for="acc-2" class="acc-label">What is Grid?</label>
+      <div class="acc-panel">
+        <p>Grid is used for two-dimensional layouts — rows and columns together.</p>
+      </div>
+
+      <input type="checkbox" id="acc-3" class="acc-input">
+      <label for="acc-3" class="acc-label">What are CSS Variables?</label>
+      <div class="acc-panel">
+        <p>CSS variables (custom properties) are reusable values defined with <code>--name</code> syntax.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 35. PURE CSS TABS -->
+  <section id="tabs-demo">
+    <h2>35. Pure CSS Tabs</h2>
+    <p class="section-note">Choose different tabs. Uses radio buttons to switch panels with CSS only.</p>
+
+    <div class="tabs">
+      <input type="radio" name="tabset" id="tab1" checked>
+      <label for="tab1" class="tab-label">Tab 1</label>
+
+      <input type="radio" name="tabset" id="tab2">
+      <label for="tab2" class="tab-label">Tab 2</label>
+
+      <input type="radio" name="tabset" id="tab3">
+      <label for="tab3" class="tab-label">Tab 3</label>
+
+      <div class="tab-panels">
+        <div class="tab-panel">
+          <p>This is tab one content. Nice for switching sections without JavaScript.</p>
+        </div>
+        <div class="tab-panel">
+          <p>This is tab two content. Each tab panel is controlled by :checked.</p>
+        </div>
+        <div class="tab-panel">
+          <p>This is tab three content. All logic done in CSS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 36. PREFERENCES: REDUCED MOTION & DARK MODE -->
+  <section id="preferences-demo">
+    <h2>36. User Preferences</h2>
+    <p class="section-note">
+      CSS can respect system preferences like reduced motion and dark mode.
+    </p>
+
+    <div class="pref-row">
+      <div class="pref-card motion-card">
+        <h3>Reduced Motion</h3>
+        <p>
+          This box spins gently, but if your system is set to “reduce motion”,
+          the animation will be disabled.
+        </p>
+        <div class="motion-demo-square"></div>
+      </div>
+
+      <div class="pref-card darkmode-card">
+        <h3>Prefers Dark Mode</h3>
+        <p>
+          This card changes style when the OS is in dark mode using
+          <code>@media (prefers-color-scheme: dark)</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 29. FOOTER DEMO SECTION -->
+  <section id="footer-demo">
+    <h2>29. Footer Demo (Labeled)</h2>
+    <p class="section-note">This section breaks down a footer into visual parts so you can see how each area works.</p>
+
+    <div class="footer-demo-box">
+
+      <!-- BRAND AREA -->
+      <div class="footer-demo-part brand-section">
+        <h3>Brand Area</h3>
+        <p>This is where your logo, website name, or a short description can go.</p>
+      </div>
+
+      <!-- NAVIGATION AREA -->
+      <div class="footer-demo-part nav-section">
+        <h3>Navigation Links</h3>
+        <ul>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#grid">Grid Layout</a></li>
+          <li><a href="#animation">Animations</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL ICON AREA -->
+      <div class="footer-demo-part social-section">
+        <h3>Social Icons</h3>
+        <p class="footer-demo-icons">
+          <span>📘</span>
+          <span>📸</span>
+          <span>🐙</span>
+        </p>
+        <p class="demo-label">Icons can be SVGs or images</p>
+      </div>
+
+      <!-- CONTACT AREA -->
+      <div class="footer-demo-part contact-section">
+        <h3>Contact</h3>
+        <p>Email: contact@example.com</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+
+      <!-- COPYRIGHT AREA -->
+      <div class="footer-demo-part legal-section">
+        <h3>Legal / Copyright</h3>
+        <p>© 2025 Demo Site. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+      </div>
+
+    </div>
+  </section>
 
   <!-- 28. PAGE FOOTER -->
   <footer class="site-footer">
@@ -553,9 +773,6 @@
       <a href="#top" class="footer-top-link">Back to top ↑</a>
     </div>
   </footer>
-</body>
-</html>
-
 
 </body>
 </html>
