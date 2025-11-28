@@ -1611,5 +1611,554 @@ h2 {
     border-color: #4b5563;
   }
 }
+/* -------------------------------------------------
+   37. ADVANCED POSITIONING & Z-INDEX
+   ------------------------------------------------- */
 
-/* End of styles.css */
+#positioning-advanced {
+  position: relative;                /* For sticky-note to stick within section */
+}
+
+/* Sticky header that sticks to top of this section while scrolling */
+.sticky-header-demo {
+  position: sticky;
+  top: 0;                            /* Sticks to top of viewport when reached */
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto 10px auto;
+}
+
+/* Row of overlapping cards */
+.zindex-row {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 10px 80px 10px;
+}
+
+.z-card {
+  position: absolute;
+  width: 180px;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+/* Three different z-index layers */
+.z-back {
+  background-color: #e0f2fe;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
+}
+
+.z-middle {
+  background-color: #bfdbfe;
+  top: 60px;
+  left: 80px;
+  z-index: 2;
+}
+
+.z-front {
+  background-color: #93c5fd;
+  top: 80px;
+  left: 140px;
+  z-index: 3;                        /* Highest sits on top */
+}
+
+/* Sticky note on the right side of this section */
+.sticky-note {
+  position: sticky;
+  top: 40px;                         /* Distance from top when stuck */
+  float: right;                      /* Let text / content flow around it */
+  width: 180px;
+  min-height: 80px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #fef9c3;
+  border: 1px solid #facc15;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------------------------------------
+   38. FANCY BACKGROUNDS & PATTERNS
+   ------------------------------------------------- */
+
+.bg-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.bg-box {
+  height: 140px;
+  border-radius: 12px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Multiple backgrounds: gradient + decorative circles */
+.bg-multi {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.5), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.5), transparent 60%),
+    linear-gradient(135deg, #f9fafb, #e5e7eb);
+}
+
+/* Striped pattern using repeating-linear-gradient */
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #e0f2fe 0,
+    #e0f2fe 10px,
+    #bfdbfe 10px,
+    #bfdbfe 20px
+  );
+}
+
+/* Dot pattern (repeating radial gradient) */
+.bg-dots {
+  background-image:
+    radial-gradient(circle, #93c5fd 1px, transparent 1px);
+  background-size: 16px 16px;       /* Size of each dot “tile” */
+}
+
+/* -------------------------------------------------
+   39. ADVANCED HOVER TEXT EFFECTS
+   ------------------------------------------------- */
+
+.text-effects-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.text-effect-block {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
+  text-align: center;
+}
+
+/* Underline that slides in from left */
+.underline-slide {
+  position: relative;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.underline-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.underline-slide:hover::after {
+  width: 100%;
+}
+
+/* Glow text using text-shadow */
+.glow-text {
+  font-size: 1.5rem;
+  color: #e5e7eb;
+  text-shadow:
+    0 0 4px #60a5fa,
+    0 0 10px #3b82f6,
+    0 0 16px #1d4ed8;
+}
+
+/* Sliding background highlight effect */
+.highlight-text {
+  position: relative;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.highlight-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fde68a;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  z-index: -1;                       /* Behind the text */
+}
+
+.highlight-text:hover::before {
+  transform: scaleX(1);
+}
+
+/* -------------------------------------------------
+   40. SCROLL SNAP CAROUSEL
+   ------------------------------------------------- */
+
+.snap-container {
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;                  /* Horizontal scrolling */
+  scroll-snap-type: x mandatory;     /* Enable scroll snap on the x-axis */
+  scroll-behavior: smooth;           /* Smooth scroll when user flicks */
+}
+
+.snap-item {
+  flex: 0 0 200px;                   /* Fixed width cards */
+  height: 120px;
+  border-radius: 12px;
+  background-color: #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;         /* Snap this card to center of viewport */
+  font-weight: bold;
+}
+
+/* -------------------------------------------------
+   41. 3D FLIP CARD
+   ------------------------------------------------- */
+
+.flip-card-scene {
+  width: 220px;
+  height: 140px;
+  margin: 10px auto;
+  perspective: 800px;                /* Depth for 3D effect */
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Flip the inner card on hover */
+.flip-card-scene:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  backface-visibility: hidden;       /* Hide the back side when facing away */
+}
+
+.flip-card-front {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.flip-card-back {
+  background-color: #f97316;
+  color: #111827;
+  transform: rotateY(180deg);
+}
+
+/* -------------------------------------------------
+   42. CUSTOM CHECKBOXES & RADIO BUTTONS
+   ------------------------------------------------- */
+
+.custom-inputs-row {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.custom-group h3 {
+  margin-top: 0;
+}
+
+/* Hide actual input but keep it focusable */
+.pill-check input,
+.pill-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pill wrapper */
+.pill-check,
+.pill-radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+}
+
+/* Visible pill */
+.pill-check span,
+.pill-radio span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Checked state for checkbox pills */
+.pill-check input:checked + span {
+  background-color: #4ade80;
+  border-color: #16a34a;
+  color: #0f172a;
+}
+
+/* Checked state for radio pills */
+.pill-radio input:checked + span {
+  background-color: #60a5fa;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* -------------------------------------------------
+   43. CUSTOM SCROLLBAR DEMO
+   ------------------------------------------------- */
+
+.scrollbar-box {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+/* WebKit scrollbar styling (Chrome, Edge, Safari) */
+.scrollbar-box::-webkit-scrollbar {
+  width: 10px;                       /* Thickness of vertical scrollbar */
+}
+
+.scrollbar-box::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+}
+
+.scrollbar-box::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;         /* Creates “inset” look */
+}
+
+.scrollbar-box::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+/* Firefox scrollbar styling */
+.scrollbar-box {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #e5e7eb;
+}
+.scrollbar-box:hover {
+  scrollbar-color: #6b7280 #e5e7eb;
+}
+/* -------------------------------------------------
+   44. CUSTOM FILE INPUT
+   ------------------------------------------------- */
+.file-input-wrapper {
+  max-width: 400px;
+  margin: 10px auto;
+}
+.custom-file-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  text-align: center;
+  line-height: 36px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.custom-file-input:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+.custom-file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.custom-file-input span {
+  pointer-events: none;              /* Let clicks pass through to input */
+  font-size: 0.9rem;
+}
+.custom-file-input.selected {
+  border-color: #4ade80;
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.custom-file-input.selected:hover {
+  background-color: #a7f3d0;
+  border-color: #16a34a;
+}
+.bounce-loader {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  margin: 10px auto;
+}
+.bounce-ball {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #4f46e5;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%   { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+  20%  { top: 60px; transform: translate(-50%, 0) scaleY(0.9); }
+  40%  { top: 20px; transform: translate(-50%, 0) scaleY(1.1); }
+  60%  { top: 60px; transform: translate(-50%, 0) scaleY(0.9); }
+  80%  { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+  100% { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+}
+/* -------------------------------------------------
+   45. BOUNCING LOADER ANIMATION
+   ------------------------------------------------- */ 
+.bounce-loader {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  margin: 10px auto;
+}
+.bounce-ball {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #4f46e5;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%   { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+  20%  { top: 60px; transform: translate(-50%, 0) scaleY(0.9); }
+  40%  { top: 20px; transform: translate(-50%, 0) scaleY(1.1); }
+  60%  { top: 60px; transform: translate(-50%, 0) scaleY(0.9); }
+  80%  { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+  100% { top: 0;   transform: translate(-50%, 0) scaleY(1); }
+}
+/* -------------------------------------------------
+   23. MASONRY GRID LAYOUT
+   ------------------------------------------------- */
+.masonry-grid {
+  max-width: 900px;
+  margin: 10px auto;
+  column-count: 3;                   /* Number of columns */
+  column-gap: 15px;                  /* Space between columns */
+}
+
+.masonry-item {
+  break-inside: avoid;               /* Prevent items from breaking across columns */
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+  padding: 10px;
+}
+/* -------------------------------------------------
+   24. FANCY BUTTON WITH ICON ANIMATION
+   ------------------------------------------------- */   
+.fancy-btn {
+  display: inline-flex;   
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}                 
+.fancy-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}     
+.fancy-btn:hover {
+  background-color: #1c86ee;
+  transform: translateY(-2px);      
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+} 
+.fancy-btn:hover .fancy-icon {
+  transform: rotate(20deg);         /* Rotate icon on hover */
+}
+/* -------------------------------------------------
+   25. TEXT WRAPPING AROUND A CIRCLE
+   ------------------------------------------------- */
+.text-wrap-circle {
+  max-width: 700px; 
+  margin: 10px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  position: relative;
+}
+.circle-image {
+  width: 150px;
+  height: 150px;
+  float: left;                       /* Let text flow around it */
+  margin: 0 15px 15px 0;
+}
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;                /* Make image circular */
+  object-fit: cover;
+}
+.text-wrap-circle p {
+  margin: 0;
+}
+                 
