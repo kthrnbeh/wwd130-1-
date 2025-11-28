@@ -1,929 +1,1173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Tells the browser this is an HTML5 document -->
   <meta charset="UTF-8">
+
+  <!-- Makes the layout scale nicely on phones & tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title that appears on the browser tab -->
   <title>CSS Syntax Demo</title>
-  <!-- Link to external CSS file -->
+
+  <!-- Link to your external CSS file (this is where ALL your styling lives) -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<!-- id="top" lets us link back here with “Back to top” in the footer -->
 <body id="top">
 
-  <h1>CSS Syntax Demo Page</h1>
-  <p class="page-intro">
-    This page is a playground to SEE what different CSS properties do.
-    Scroll through each section and watch how things change.
-  </p>
+  <!-- =========================
+       PAGE HEADER (Title + Intro)
+       ========================= -->
+  <header class="page-header">
+    <!-- Main page title -->
+    <h1>CSS Syntax Demo Page</h1>
 
-  <!-- 1. COLORS & BACKGROUNDS -->
-  <section id="colors">
-    <h2>1. Colors & Backgrounds</h2>
-    <p class="section-note">Solid color, gradient background, and a background image.</p>
-
-    <div class="color-box">Background Color Example (background-color)</div>
-
-    <div class="gradient-box">Gradient Background Example (linear-gradient)</div>
-
-    <div class="image-box">Background Image Example (background-image + cover)</div>
-  </section>
-
-  <!-- 2. TEXT & FONTS -->
-  <section id="text">
-    <h2>2. Text & Fonts</h2>
-    <p class="section-note">Different font styles, sizes, spacing, and text-transform.</p>
-
-    <p class="fancy-text">This is styled text with custom font, color, and shadow.</p>
-    <p class="text-bold">This text is bold (font-weight).</p>
-    <p class="text-italic">This text is italic (font-style).</p>
-    <p class="text-uppercase">this text is turned into uppercase (text-transform).</p>
-    <p class="text-spaced">Letter spacing and line-height give this more breathing room.</p>
-  </section>
-
-  <!-- 3. BOX MODEL -->
-  <section id="box">
-    <h2>3. Box Model</h2>
-    <p class="section-note">
-      The box model is: margin → border → padding → content.
-      The gray outer box has margin, padding, and a border.
+    <!-- Short intro that explains what this page is for -->
+    <p class="page-intro">
+      This page is a playground to SEE what different CSS properties do.
+      Scroll through each section and watch how things change.
     </p>
+  </header>
 
-    <div class="box-model">
-      <div class="box-inner">
-        Content area
-      </div>
-    </div>
+  <!-- =========================
+       MAIN CONTENT WRAPPER
+       (All demo sections live inside <main>)
+       ========================= -->
+  <main>
 
-    <p class="section-note">Overflow example: the box below has a fixed height and scrolls.</p>
-    <div class="overflow-box">
-      This box has more text than it can show at once, so it scrolls.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo,
-      arcu at dapibus porta, magna lacus eleifend est, eget aliquet ligula lacus quis neque.
-      Morbi sollicitudin, tellus et laoreet blandit, lacus risus interdum ex, non tincidunt
-      neque lorem sit amet mi. Curabitur ullamcorper, lacus sed aliquet viverra, ipsum justo
-      malesuada arcu, eget facilisis ipsum nibh ac metus.
-    </div>
-  </section>
+    <!-- =========================================
+         1. COLORS & BACKGROUNDS
+         - Shows solid color, gradient, and bg image
+         ========================================= -->
+    <section id="colors">
+      <!-- Section heading -->
+      <h2>1. Colors & Backgrounds</h2>
 
-  <!-- 4. POSITIONING -->
-  <section id="positioning">
-    <h2>4. Positioning</h2>
-    <p class="section-note">
-      Example of <code>position: relative</code> and <code>position: absolute</code>.
-    </p>
+      <!-- Small note under the heading explaining the section -->
+      <p class="section-note">Solid color, gradient background, and a background image.</p>
 
-    <div class="position-row">
-      <!-- Relative box: moves from its normal position -->
-      <div class="position-relative">
-        I am <strong>relative</strong> (shifted right & down).
-      </div>
+      <!-- Solid background-color example -->
+      <div class="color-box">Background Color Example (background-color)</div>
 
-      <!-- Container with absolute child inside -->
-      <div class="position-container">
-        This is the parent box (position: relative).
-        <div class="position-absolute">
-          I am absolutely positioned inside the parent.
+      <!-- Linear gradient background example -->
+      <div class="gradient-box">Gradient Background Example (linear-gradient)</div>
+
+      <!-- Background image with background-size: cover example -->
+      <div class="image-box">Background Image Example (background-image + cover)</div>
+    </section>
+
+    <!-- =========================================
+         2. TEXT & FONTS
+         - Font family, size, weight, transform, spacing
+         ========================================= -->
+    <section id="text">
+      <h2>2. Text & Fonts</h2>
+      <p class="section-note">Different font styles, sizes, spacing, and text-transform.</p>
+
+      <!-- Shows multiple font-related properties at once -->
+      <p class="fancy-text">This is styled text with custom font, color, and shadow.</p>
+
+      <!-- Bold text demo -->
+      <p class="text-bold">This text is bold (font-weight).</p>
+
+      <!-- Italic text demo -->
+      <p class="text-italic">This text is italic (font-style).</p>
+
+      <!-- Text transformed to uppercase by CSS, not typed in caps -->
+      <p class="text-uppercase">this text is turned into uppercase (text-transform).</p>
+
+      <!-- Letter-spacing + line-height demo -->
+      <p class="text-spaced">Letter spacing and line-height give this more breathing room.</p>
+    </section>
+
+    <!-- =========================================
+         3. BOX MODEL
+         - margin, border, padding, content, overflow
+         ========================================= -->
+    <section id="box">
+      <h2>3. Box Model</h2>
+      <p class="section-note">
+        The box model is: margin → border → padding → content.
+        The gray outer box has margin, padding, and a border.
+      </p>
+
+      <!-- Outer demo box (shows margin, border, padding) -->
+      <div class="box-model">
+        <!-- Inner box (represents the content area) -->
+        <div class="box-inner">
+          Content area
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 5. FLEXBOX -->
-  <section id="flex">
-    <h2>5. Flexbox</h2>
-    <p class="section-note">
-      Flexbox is used to align items in a row or column and control spacing.
-    </p>
+      <!-- Explanation of the overflow example -->
+      <p class="section-note">Overflow example: the box below has a fixed height and scrolls.</p>
 
-    <div class="flex-container">
-      <div class="flex-item">A</div>
-      <div class="flex-item">B</div>
-      <div class="flex-item">C</div>
-    </div>
+      <!-- Box with too much content, so scrollbars appear (overflow: auto) -->
+      <div class="overflow-box">
+        This box has more text than it can show at once, so it scrolls.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo,
+        arcu at dapibus porta, magna lacus eleifend est, eget aliquet ligula lacus quis neque.
+        Morbi sollicitudin, tellus et laoreet blandit, lacus risus interdum ex, non tincidunt
+        neque lorem sit amet mi. Curabitur ullamcorper, lacus sed aliquet viverra, ipsum justo
+        malesuada arcu, eget facilisis ipsum nibh ac metus.
+      </div>
+    </section>
 
-    <p class="section-note">Centered with Flexbox (justify-content + align-items):</p>
-    <div class="flex-center-demo">
-      <span>Perfectly centered box</span>
-    </div>
-  </section>
+    <!-- =========================================
+         4. POSITIONING
+         - position: relative / absolute
+         ========================================= -->
+    <section id="positioning">
+      <h2>4. Positioning</h2>
+      <p class="section-note">
+        Example of <code>position: relative</code> and <code>position: absolute</code>.
+      </p>
 
-  <!-- 6. GRID LAYOUT -->
-  <section id="grid">
-    <h2>6. Grid Layout</h2>
-    <p class="section-note">
-      CSS Grid helps create rows and columns. This is a 2-column grid.
-    </p>
+      <!-- Row that holds the two position demos side-by-side -->
+      <div class="position-row">
 
-    <div class="grid-container">
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">4</div>
-    </div>
+        <!-- Box moved slightly from its normal spot using relative positioning -->
+        <div class="position-relative">
+          I am <strong>relative</strong> (shifted right &amp; down).
+        </div>
 
-    <p class="section-note">
-      Auto-fit grid: cards automatically wrap and resize based on screen width.
-    </p>
-    <div class="grid-autofit">
-      <div class="grid-card">Card A</div>
-      <div class="grid-card">Card B</div>
-      <div class="grid-card">Card C</div>
-      <div class="grid-card">Card D</div>
-      <div class="grid-card">Card E</div>
-    </div>
-  </section>
+        <!-- Parent box that will act as the "positioning container" -->
+        <div class="position-container">
+          This is the parent box (position: relative).
 
-  <!-- 7. TRANSFORMATIONS & ANIMATIONS -->
-  <section id="animation">
-    <h2>7. Transformations & Animations</h2>
-    <p class="section-note">
-      Hover the boxes to see transitions and transforms. One also uses keyframes to pulse.
-    </p>
+          <!-- Absolutely positioned child inside the parent box -->
+          <div class="position-absolute">
+            I am absolutely positioned inside the parent.
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="animation-row">
-      <div class="animated-box">
-        Hover over me! (scale + rotate on hover)
+    <!-- =========================================
+         5. FLEXBOX
+         - Horizontal layout and centering
+         ========================================= -->
+    <section id="flex">
+      <h2>5. Flexbox</h2>
+      <p class="section-note">
+        Flexbox is used to align items in a row or column and control spacing.
+      </p>
+
+      <!-- Simple row of boxes laid out with flexbox -->
+      <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
       </div>
 
-      <div class="animated-box pulse-box">
-        I pulse using keyframes.
+      <!-- Second example showing perfect centering with flexbox -->
+      <p class="section-note">Centered with Flexbox (justify-content + align-items):</p>
+      <div class="flex-center-demo">
+        <span>Perfectly centered box</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 8. PSEUDO-CLASSES & ELEMENTS -->
-  <section id="pseudo">
-    <h2>8. Pseudo-classes & Pseudo-elements</h2>
-    <p class="section-note">
-      Hover, focus, and pseudo-elements like ::after to add extra content.
-    </p>
+    <!-- =========================================
+         6. GRID LAYOUT
+         - Basic grid + auto-fit cards
+         ========================================= -->
+    <section id="grid">
+      <h2>6. Grid Layout</h2>
+      <p class="section-note">
+        CSS Grid helps create rows and columns. This is a 2-column grid.
+      </p>
 
-    <button class="pseudo-btn">Hover Me</button>
+      <!-- Simple 2-column grid of numbered boxes -->
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+      </div>
 
-    <p class="badge-text">
-      <span class="badge">This text uses ::before and ::after</span>
-    </p>
+      <!-- Auto-fit grid: cards wrap differently as the screen changes -->
+      <p class="section-note">
+        Auto-fit grid: cards automatically wrap and resize based on screen width.
+      </p>
+      <div class="grid-autofit">
+        <div class="grid-card">Card A</div>
+        <div class="grid-card">Card B</div>
+        <div class="grid-card">Card C</div>
+        <div class="grid-card">Card D</div>
+        <div class="grid-card">Card E</div>
+      </div>
+    </section>
 
-    <p class="link-demo">
-      <a href="#">Hover and click this link</a> to see :hover and :active.
-    </p>
-  </section>
+    <!-- =========================================
+         7. TRANSFORMATIONS & ANIMATIONS
+         - Hover transitions + keyframe pulse
+         ========================================= -->
+    <section id="animation">
+      <h2>7. Transformations &amp; Animations</h2>
+      <p class="section-note">
+        Hover the boxes to see transitions and transforms. One also uses keyframes to pulse.
+      </p>
 
-  <!-- 9. MEDIA QUERY (RESPONSIVE DESIGN) -->
-  <section id="responsive">
-    <h2>9. Media Query Example</h2>
-    <p class="section-note">
-      Resize the browser window below 600px wide to see the color change.
-    </p>
+      <div class="animation-row">
+        <!-- Box that scales and rotates on hover -->
+        <div class="animated-box">
+          Hover over me! (scale + rotate on hover)
+        </div>
 
-    <div class="responsive-box">Resize the browser window</div>
-  </section>
+        <!-- Box that keeps pulsing using keyframes -->
+        <div class="animated-box pulse-box">
+          I pulse using keyframes.
+        </div>
+      </div>
+    </section>
 
-  <!-- 10. IMAGES & OBJECT-FIT -->
-  <section id="images">
-    <h2>10. Images & object-fit</h2>
-    <p class="section-note">
-      Same image, different <code>object-fit</code> values.
-    </p>
+    <!-- =========================================
+         8. PSEUDO-CLASSES & PSEUDO-ELEMENTS
+         ========================================= -->
+    <section id="pseudo">
+      <h2>8. Pseudo-classes &amp; Pseudo-elements</h2>
+      <p class="section-note">
+        Hover, focus, and pseudo-elements like ::after to add extra content.
+      </p>
 
-    <div class="image-row">
-      <figure class="image-demo image-cover">
-        <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo cover">
-        <figcaption>object-fit: cover</figcaption>
-      </figure>
+      <!-- Button that changes on :hover and uses ::after text -->
+      <button class="pseudo-btn">Hover Me</button>
 
-      <figure class="image-demo image-contain">
-        <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo contain">
-        <figcaption>object-fit: contain</figcaption>
-      </figure>
+      <!-- Text that gets extra content via ::before and ::after -->
+      <p class="badge-text">
+        <span class="badge">This text uses ::before and ::after</span>
+      </p>
 
-      <figure class="image-demo image-fill">
-        <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo fill">
-        <figcaption>object-fit: fill</figcaption>
-      </figure>
-    </div>
-  </section>
+      <!-- Link that shows :hover, :active, and :focus behaviors -->
+      <p class="link-demo">
+        <a href="#">Hover and click this link</a> to see :hover and :active.
+      </p>
+    </section>
 
-  <!-- 11. FORMS -->
-  <section id="forms">
-    <h2>11. Forms & Focus Styles</h2>
-    <p class="section-note">Inputs with placeholder, focus, and disabled styles.</p>
+    <!-- =========================================
+         9. MEDIA QUERY (RESPONSIVE DESIGN)
+         - Box changes color on small screens
+         ========================================= -->
+    <section id="responsive">
+      <h2>9. Media Query Example</h2>
+      <p class="section-note">
+        Resize the browser window below 600px wide to see the color change.
+      </p>
 
-    <form class="form-demo">
-      <label>
-        Name:
-        <input type="text" placeholder="Type and then click away to see focus border">
+      <!-- Box whose background color changes when the screen is small -->
+      <div class="responsive-box">Resize the browser window</div>
+    </section>
+
+    <!-- =========================================
+         10. IMAGES & object-fit
+         - cover / contain / fill
+         ========================================= -->
+    <section id="images">
+      <h2>10. Images &amp; object-fit</h2>
+      <p class="section-note">
+        Same image, different <code>object-fit</code> values.
+      </p>
+
+      <!-- Row of figures showing three different object-fit behaviors -->
+      <div class="image-row">
+        <figure class="image-demo image-cover">
+          <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo cover">
+          <figcaption>object-fit: cover</figcaption>
+        </figure>
+
+        <figure class="image-demo image-contain">
+          <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo contain">
+          <figcaption>object-fit: contain</figcaption>
+        </figure>
+
+        <figure class="image-demo image-fill">
+          <img src="https://picsum.photos/seed/pic1/300/150" alt="Demo fill">
+          <figcaption>object-fit: fill</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =========================================
+         11. FORMS & FOCUS STYLES
+         ========================================= -->
+    <section id="forms">
+      <h2>11. Forms &amp; Focus Styles</h2>
+      <p class="section-note">Inputs with placeholder, focus, and disabled styles.</p>
+
+      <!-- Demo form to show focus, placeholder, and disabled input styling -->
+      <form class="form-demo">
+        <label>
+          Name:
+          <input type="text" placeholder="Type and then click away to see focus border">
+        </label>
+
+        <label>
+          Disabled input:
+          <input type="text" disabled value="You cannot edit me">
+        </label>
+
+        <label>
+          Favorite color:
+          <select>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Purple</option>
+          </select>
+        </label>
+      </form>
+    </section>
+
+    <!-- =========================================
+         12. TABLE & LIST
+         ========================================= -->
+    <section id="table-list">
+      <h2>12. Tables &amp; Lists</h2>
+      <p class="section-note">Styled table and list examples.</p>
+
+      <!-- Demo table with header + body rows -->
+      <table class="demo-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Status</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alpha</td>
+            <td>Active</td>
+            <td>95</td>
+          </tr>
+          <tr>
+            <td>Beta</td>
+            <td>Paused</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>Gamma</td>
+            <td>Inactive</td>
+            <td>60</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Bullet list with custom styling -->
+      <ul class="demo-list">
+        <li>Custom bullet list item one</li>
+        <li>Custom bullet list item two</li>
+        <li>Custom bullet list item three</li>
+      </ul>
+    </section>
+
+    <!-- =========================================
+         13. CSS TOOLTIPS
+         ========================================= -->
+    <section id="tooltips">
+      <h2>13. CSS Tooltips</h2>
+      <p class="section-note">Hover over the button to see a tooltip made with ::after and position.</p>
+
+      <!-- Button that shows a tooltip bubble on hover using ::after -->
+      <div class="tooltip-demo">
+        <button class="tooltip-btn" data-tooltip="Hi! I'm a CSS-only tooltip.">
+          Hover over me
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================
+         14. CUSTOM SHAPES WITH CLIP-PATH
+         ========================================= -->
+    <section id="shapes">
+      <h2>14. Custom Shapes</h2>
+      <p class="section-note">These shapes are made with clip-path, not images.</p>
+
+      <!-- Row of boxes cut into different shapes with clip-path -->
+      <div class="shape-row">
+        <div class="shape-box shape-circle">Circle</div>
+        <div class="shape-box shape-diamond">Diamond</div>
+        <div class="shape-box shape-triangle">Triangle</div>
+        <div class="shape-box shape-blob">Blob</div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         15. IMAGE FILTERS
+         ========================================= -->
+    <section id="filters">
+      <h2>15. Image Filters</h2>
+      <p class="section-note">Same image, different CSS filter values.</p>
+
+      <!-- Same image with normal, grayscale, blur, and vivid filters -->
+      <div class="filter-row">
+        <figure class="filter-item">
+          <img src="https://picsum.photos/seed/f1/200/130" alt="normal">
+          <figcaption>Normal</figcaption>
+        </figure>
+        <figure class="filter-item filter-grayscale">
+          <img src="https://picsum.photos/seed/f1/200/130" alt="grayscale">
+          <figcaption>Grayscale</figcaption>
+        </figure>
+        <figure class="filter-item filter-blur">
+          <img src="https://picsum.photos/seed/f1/200/130" alt="blur">
+          <figcaption>Blur</figcaption>
+        </figure>
+        <figure class="filter-item filter-vivid">
+          <img src="https://picsum.photos/seed/f1/200/130" alt="vivid">
+          <figcaption>Vivid</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =========================================
+         16. IMAGE OVERLAY CARDS
+         ========================================= -->
+    <section id="overlays">
+      <h2>16. Image Overlays</h2>
+      <p class="section-note">Dark overlay + text on top (like Netflix / hero banners).</p>
+
+      <!-- Card with an image and dark overlay to keep text readable -->
+      <div class="overlay-row">
+        <article class="overlay-card">
+          <div class="overlay-image"></div>
+          <div class="overlay-content">
+            <h3>Overlay Title</h3>
+            <p>Text stays readable because of the dark overlay layer.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================
+         17. GLASSMORPHISM (FROSTED GLASS)
+         ========================================= -->
+    <section id="glass">
+      <h2>17. Glassmorphism</h2>
+      <p class="section-note">A “frosted glass” card using transparency + blur.</p>
+
+      <!-- Background gradient + frosted glass card -->
+      <div class="glass-bg">
+        <div class="glass-card">
+          <h3>Frosted Glass</h3>
+          <p>This card uses backdrop-filter: blur() and a transparent background.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         18. NEUMORPHISM (SOFT UI)
+         ========================================= -->
+    <section id="neumorphism">
+      <h2>18. Neumorphism</h2>
+      <p class="section-note">Soft shadows to make elements look “pushed in” or “popped out”.</p>
+
+      <!-- Two buttons showing raised vs inset neumorphism styles -->
+      <div class="neu-row">
+        <button class="neu-btn neu-out">Raised Button</button>
+        <button class="neu-btn neu-in">Inset Button</button>
+      </div>
+    </section>
+
+    <!-- =========================================
+         19. TOGGLE SWITCH
+         ========================================= -->
+    <section id="toggle">
+      <h2>19. Toggle Switch</h2>
+      <p class="section-note">A real checkbox styled to look like an iPhone-style switch.</p>
+
+      <!-- Label wraps checkbox + fake slider + label text -->
+      <label class="toggle-wrap">
+        <!-- Real checkbox that controls the switch state -->
+        <input type="checkbox" class="toggle-input">
+        <!-- Visual slider created with CSS -->
+        <span class="toggle-slider"></span>
+        <!-- Text shown next to the switch -->
+        <span class="toggle-label">Content Filter On/Off</span>
       </label>
+    </section>
 
-      <label>
-        Disabled input:
-        <input type="text" disabled value="You cannot edit me">
-      </label>
+    <!-- =========================================
+         20. ANIMATION TIMELINE (BOUNCING BALL)
+         ========================================= -->
+    <section id="timeline">
+      <h2>20. Animation Timeline</h2>
+      <p class="section-note">The ball drops, squashes, and bounces using keyframes.</p>
 
-      <label>
-        Favorite color:
-        <select>
-          <option>Blue</option>
-          <option>Green</option>
-          <option>Purple</option>
-        </select>
-      </label>
-    </form>
-  </section>
+      <!-- Stage box for the bouncing ball animation -->
+      <div class="bounce-stage">
+        <div class="bounce-ball"></div>
+      </div>
+    </section>
 
-  <!-- 12. TABLE & LIST -->
-  <section id="table-list">
-    <h2>12. Tables & Lists</h2>
-    <p class="section-note">Styled table and list examples.</p>
+    <!-- =========================================
+         21. PARALLAX SCROLLING
+         ========================================= -->
+    <section id="parallax">
+      <h2>21. Parallax Background</h2>
+      <p class="section-note">Scroll the page and watch the background move slower than the content.</p>
 
-    <table class="demo-table">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Status</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Alpha</td>
-          <td>Active</td>
-          <td>95</td>
-        </tr>
-        <tr>
-          <td>Beta</td>
-          <td>Paused</td>
-          <td>80</td>
-        </tr>
-        <tr>
-          <td>Gamma</td>
-          <td>Inactive</td>
-          <td>60</td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- Box with fixed background-image to mimic parallax -->
+      <div class="parallax-box">
+        <h3>Scroll me</h3>
+        <p>This area has a fixed background to mimic a parallax effect.</p>
+      </div>
+    </section>
 
-    <ul class="demo-list">
-      <li>Custom bullet list item one</li>
-      <li>Custom bullet list item two</li>
-      <li>Custom bullet list item three</li>
-    </ul>
-  </section>
+    <!-- =========================================
+         22. BLEND MODES
+         ========================================= -->
+    <section id="blend">
+      <h2>22. Blend Modes</h2>
+      <p class="section-note">Color + image using mix-blend-mode to get poster-style effects.</p>
 
-  <!-- 13. CSS TOOLTIPS -->
-  <section id="tooltips">
-    <h2>13. CSS Tooltips</h2>
-    <p class="section-note">Hover over the button to see a tooltip made with ::after and position.</p>
+      <!-- Image with colored overlay using mix-blend-mode -->
+      <div class="blend-card">
+        <img src="https://picsum.photos/seed/blend/300/180" alt="blend demo" class="blend-img">
+        <div class="blend-color"></div>
+        <p class="blend-text">Blend Mode Overlay</p>
+      </div>
+    </section>
 
-    <div class="tooltip-demo">
-      <button class="tooltip-btn" data-tooltip="Hi! I'm a CSS-only tooltip.">
-        Hover over me
+    <!-- =========================================
+         23. MASONRY-STYLE GRID
+         ========================================= -->
+    <section id="masonry">
+      <h2>23. Masonry-style Grid</h2>
+      <p class="section-note">Cards of different heights packed together like Pinterest.</p>
+
+      <!-- Column-based layout to mimic a masonry / Pinterest-style grid -->
+      <div class="masonry-grid">
+        <div class="masonry-item">Short card</div>
+        <div class="masonry-item tall">Taller card with more content.<br>Line 2.<br>Line 3.</div>
+        <div class="masonry-item">Medium card<br>Line 2.</div>
+        <div class="masonry-item tall">Tall card<br>Line 2.<br>Line 3.<br>Line 4.</div>
+        <div class="masonry-item">Short card</div>
+        <div class="masonry-item medium">Medium length content<br>Line 2.</div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         24. ADVANCED BUTTON TRANSITIONS
+         ========================================= -->
+    <section id="buttons-advanced">
+      <h2>24. Advanced Button Transitions</h2>
+      <p class="section-note">Multiple properties changing: color, size, shadow, and icon rotation.</p>
+
+      <!-- Button with text + icon that animates on hover -->
+      <button class="fancy-btn">
+        <span class="fancy-text-span">Hover Me</span>
+        <span class="fancy-icon">➜</span>
       </button>
-    </div>
-  </section>
+    </section>
 
-  <!-- 14. CUSTOM SHAPES WITH CLIP-PATH -->
-  <section id="shapes">
-    <h2>14. Custom Shapes</h2>
-    <p class="section-note">These shapes are made with clip-path, not images.</p>
+    <!-- =========================================
+         25. SHAPE-OUTSIDE (TEXT WRAPS AROUND SHAPE)
+         ========================================= -->
+    <section id="shape-outside">
+      <h2>25. Shape Outside</h2>
+      <p class="section-note">Text wraps around a circle instead of a normal rectangle.</p>
 
-    <div class="shape-row">
-      <div class="shape-box shape-circle">Circle</div>
-      <div class="shape-box shape-diamond">Diamond</div>
-      <div class="shape-box shape-triangle">Triangle</div>
-      <div class="shape-box shape-blob">Blob</div>
-    </div>
-  </section>
-
-  <!-- 15. FILTERS ON IMAGES -->
-  <section id="filters">
-    <h2>15. Image Filters</h2>
-    <p class="section-note">Same image, different CSS filter values.</p>
-
-    <div class="filter-row">
-      <figure class="filter-item">
-        <img src="https://picsum.photos/seed/f1/200/130" alt="normal">
-        <figcaption>Normal</figcaption>
-      </figure>
-      <figure class="filter-item filter-grayscale">
-        <img src="https://picsum.photos/seed/f1/200/130" alt="grayscale">
-        <figcaption>Grayscale</figcaption>
-      </figure>
-      <figure class="filter-item filter-blur">
-        <img src="https://picsum.photos/seed/f1/200/130" alt="blur">
-        <figcaption>Blur</figcaption>
-      </figure>
-      <figure class="filter-item filter-vivid">
-        <img src="https://picsum.photos/seed/f1/200/130" alt="vivid">
-        <figcaption>Vivid</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 16. IMAGE OVERLAY CARDS -->
-  <section id="overlays">
-    <h2>16. Image Overlays</h2>
-    <p class="section-note">Dark overlay + text on top (like Netflix / hero banners).</p>
-
-    <div class="overlay-row">
-      <article class="overlay-card">
-        <div class="overlay-image"></div>
-        <div class="overlay-content">
-          <h3>Overlay Title</h3>
-          <p>Text stays readable because of the dark overlay layer.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- 17. GLASSMORPHISM (FROSTED GLASS CARD) -->
-  <section id="glass">
-    <h2>17. Glassmorphism</h2>
-    <p class="section-note">A “frosted glass” card using transparency + blur.</p>
-
-    <div class="glass-bg">
-      <div class="glass-card">
-        <h3>Frosted Glass</h3>
-        <p>This card uses backdrop-filter: blur() and a transparent background.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 18. NEUMORPHISM (SOFT UI) -->
-  <section id="neumorphism">
-    <h2>18. Neumorphism</h2>
-    <p class="section-note">Soft shadows to make elements look “pushed in” or “popped out”.</p>
-
-    <div class="neu-row">
-      <button class="neu-btn neu-out">Raised Button</button>
-      <button class="neu-btn neu-in">Inset Button</button>
-    </div>
-  </section>
-
-  <!-- 19. TOGGLE SWITCH -->
-  <section id="toggle">
-    <h2>19. Toggle Switch</h2>
-    <p class="section-note">A real checkbox styled to look like an iPhone-style switch.</p>
-
-    <label class="toggle-wrap">
-      <input type="checkbox" class="toggle-input">
-      <span class="toggle-slider"></span>
-      <span class="toggle-label">Content Filter On/Off</span>
-    </label>
-  </section>
-
-  <!-- 20. ANIMATION TIMELINE (BOUNCING BALL) -->
-  <section id="timeline">
-    <h2>20. Animation Timeline</h2>
-    <p class="section-note">The ball drops, squashes, and bounces using keyframes.</p>
-
-    <div class="bounce-stage">
-      <div class="bounce-ball"></div>
-    </div>
-  </section>
-
-  <!-- 21. PARALLAX SCROLLING -->
-  <section id="parallax">
-    <h2>21. Parallax Background</h2>
-    <p class="section-note">Scroll the page and watch the background move slower than the content.</p>
-
-    <div class="parallax-box">
-      <h3>Scroll me</h3>
-      <p>This area has a fixed background to mimic a parallax effect.</p>
-    </div>
-  </section>
-
-  <!-- 22. BLEND MODES -->
-  <section id="blend">
-    <h2>22. Blend Modes</h2>
-    <p class="section-note">Color + image using mix-blend-mode to get poster-style effects.</p>
-
-    <div class="blend-card">
-      <img src="https://picsum.photos/seed/blend/300/180" alt="blend demo" class="blend-img">
-      <div class="blend-color"></div>
-      <p class="blend-text">Blend Mode Overlay</p>
-    </div>
-  </section>
-
-  <!-- 23. MASONRY-STYLE GRID -->
-  <section id="masonry">
-    <h2>23. Masonry-style Grid</h2>
-    <p class="section-note">Cards of different heights packed together like Pinterest.</p>
-
-    <div class="masonry-grid">
-      <div class="masonry-item">Short card</div>
-      <div class="masonry-item tall">Taller card with more content.<br>Line 2.<br>Line 3.</div>
-      <div class="masonry-item">Medium card<br>Line 2.</div>
-      <div class="masonry-item tall">Tall card<br>Line 2.<br>Line 3.<br>Line 4.</div>
-      <div class="masonry-item">Short card</div>
-      <div class="masonry-item medium">Medium length content<br>Line 2.</div>
-    </div>
-  </section>
-
-  <!-- 24. ADVANCED BUTTON TRANSITIONS -->
-  <section id="buttons-advanced">
-    <h2>24. Advanced Button Transitions</h2>
-    <p class="section-note">Multiple properties changing: color, size, shadow, and icon rotation.</p>
-
-    <button class="fancy-btn">
-      <span class="fancy-text-span">Hover Me</span>
-      <span class="fancy-icon">➜</span>
-    </button>
-  </section>
-
-  <!-- 25. SHAPE-OUTSIDE (TEXT WRAPS AROUND SHAPE) -->
-  <section id="shape-outside">
-    <h2>25. Shape Outside</h2>
-    <p class="section-note">Text wraps around a circle instead of a normal rectangle.</p>
-
-    <div class="shape-outside-wrapper">
-      <div class="wrap-circle"></div>
-      <p>
-        This paragraph wraps around the circular shape using <code>shape-outside</code>.
-        This is more like magazine-style layout. You can see how the text curves
-        around the left side instead of just forming a square block like normal.
-      </p>
-    </div>
-  </section>
-
-  <!-- 26. CSS COUNTERS (AUTO-NUMBERED STEPS) -->
-  <section id="counters">
-    <h2>26. CSS Counters</h2>
-    <p class="section-note">Steps are automatically numbered without typing 1, 2, 3 in HTML.</p>
-
-    <ol class="counter-steps">
-      <li>Choose your layout (flex, grid, or both).</li>
-      <li>Add colors, fonts, and spacing.</li>
-      <li>Animate key elements for user feedback.</li>
-      <li>Test on mobile and desktop.</li>
-    </ol>
-  </section>
-
-  <!-- 27. COLOR CYCLING ANIMATION -->
-  <section id="color-cycle">
-    <h2>27. Color Cycling Background</h2>
-    <p class="section-note">The box below gently cycles through different background colors.</p>
-
-    <div class="color-cycle-box">
-      Color-cycling using keyframes.
-    </div>
-  </section>
-
-  <!-- 30. MODERN LAYOUT (CONTAINER QUERIES & COLUMNS) -->
-  <section id="modern-layout">
-    <h2>30. Modern Layout: Container Queries & Columns</h2>
-    <p class="section-note">
-      Container queries let the card layout change based on the card's own width.
-      Multi-column text flows like a magazine.
-    </p>
-
-    <div class="cq-container">
-      <div class="cq-card">
-        <h3>Responsive Card</h3>
+      <!-- Wrapper with a floating circle that text wraps around -->
+      <div class="shape-outside-wrapper">
+        <div class="wrap-circle"></div>
         <p>
-          Resize the window so this card grows and shrinks. The layout inside
-          will change when the container becomes wide enough.
+          This paragraph wraps around the circular shape using <code>shape-outside</code>.
+          This is more like magazine-style layout. You can see how the text curves
+          around the left side instead of just forming a square block like normal.
         </p>
-        <ul class="cq-list">
-          <li>Item one</li>
-          <li>Item two</li>
-          <li>Item three</li>
-          <li>Item four</li>
-        </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="multi-column-text">
-      <h3>Multi-column Text Example</h3>
-      <p>
-        This paragraph flows into multiple columns using CSS columns. It behaves
-        more like a magazine or newspaper layout instead of one long line. You can
-        control the number of columns or the width of each column. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit. Integer dapibus sem sit amet lectus
-        ultricies, sed volutpat mi feugiat. Nullam euismod, elit sit amet vehicula
-        venenatis, lacus nibh cursus odio, at viverra lacus massa sed lorem.
+    <!-- =========================================
+         26. CSS COUNTERS (AUTO-NUMBERED STEPS)
+         ========================================= -->
+    <section id="counters">
+      <h2>26. CSS Counters</h2>
+      <p class="section-note">Steps are automatically numbered without typing 1, 2, 3 in HTML.</p>
+
+      <!-- Ordered list where numbers are created by CSS counters -->
+      <ol class="counter-steps">
+        <li>Choose your layout (flex, grid, or both).</li>
+        <li>Add colors, fonts, and spacing.</li>
+        <li>Animate key elements for user feedback.</li>
+        <li>Test on mobile and desktop.</li>
+      </ol>
+    </section>
+
+    <!-- =========================================
+         27. COLOR CYCLING ANIMATION
+         ========================================= -->
+    <section id="color-cycle">
+      <h2>27. Color Cycling Background</h2>
+      <p class="section-note">The box below gently cycles through different background colors.</p>
+
+      <!-- Box whose background color is animated via keyframes -->
+      <div class="color-cycle-box">
+        Color-cycling using keyframes.
+      </div>
+    </section>
+
+    <!-- =========================================
+         30. MODERN LAYOUT (CONTAINER QUERIES & COLUMNS)
+         ========================================= -->
+    <section id="modern-layout">
+      <h2>30. Modern Layout: Container Queries &amp; Columns</h2>
+      <p class="section-note">
+        Container queries let the card layout change based on the card's own width.
+        Multi-column text flows like a magazine.
       </p>
-    </div>
-  </section>
 
-  <!-- 31. ADVANCED SELECTORS -->
-  <section id="advanced-selectors">
-    <h2>31. Advanced Selectors</h2>
-    <p class="section-note">
-      :has(), :is(), and attribute selectors let you style elements based on states and patterns.
-    </p>
+      <!-- Container that uses container-type so CSS can react to this box's width -->
+      <div class="cq-container">
+        <div class="cq-card">
+          <h3>Responsive Card</h3>
+          <p>
+            Resize the window so this card grows and shrinks. The layout inside
+            will change when the container becomes wide enough.
+          </p>
+          <!-- List that turns into multiple columns based on container width -->
+          <ul class="cq-list">
+            <li>Item one</li>
+            <li>Item two</li>
+            <li>Item three</li>
+            <li>Item four</li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="selector-demo">
-      <div class="selector-card has-error">
-        <h3>Form with Error (uses :has)</h3>
-        <form>
-          <label>
-            Email:
-            <input type="email" class="error-input" placeholder="missing @ makes this 'error'">
+      <!-- Multi-column text block to mimic magazine layout -->
+      <div class="multi-column-text">
+        <h3>Multi-column Text Example</h3>
+        <p>
+          This paragraph flows into multiple columns using CSS columns. It behaves
+          more like a magazine or newspaper layout instead of one long line. You can
+          control the number of columns or the width of each column. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Integer dapibus sem sit amet lectus
+          ultricies, sed volutpat mi feugiat. Nullam euismod, elit sit amet vehicula
+          venenatis, lacus nibh cursus odio, at viverra lacus massa sed lorem.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================
+         31. ADVANCED SELECTORS
+         ========================================= -->
+    <section id="advanced-selectors">
+      <h2>31. Advanced Selectors</h2>
+      <p class="section-note">
+        :has(), :is(), and attribute selectors let you style elements based on states and patterns.
+      </p>
+
+      <!-- Three cards demonstrating :has, attribute selectors, and :is -->
+      <div class="selector-demo">
+
+        <!-- Card that lights up when it “has” an input.error-input -->
+        <div class="selector-card has-error">
+          <h3>Form with Error (uses :has)</h3>
+          <form>
+            <label>
+              Email:
+              <input type="email" class="error-input" placeholder="missing @ makes this 'error'">
+            </label>
+          </form>
+          <p class="selector-note">
+            The <strong>card</strong> gets a red border because it <em>has</em> an element with
+            <code>.error-input</code>.
+          </p>
+        </div>
+
+        <!-- Card that styles links based on their href attributes -->
+        <div class="selector-card">
+          <h3>Links (attribute selectors)</h3>
+          <p>
+            <a href="https://example.com">External Link (https)</a><br>
+            <a href="/local-page">Local Link (/local)</a>
+          </p>
+          <p class="selector-note">
+            Different styles based on <code>href^="https"</code> or <code>href^="/"</code>.
+          </p>
+        </div>
+
+        <!-- Card that uses :is() to style multiple elements at once -->
+        <div class="selector-card">
+          <h3>:is() Selector</h3>
+          <p class="selector-text">
+            This <span>paragraph</span> and its <em>children</em> are styled using a single
+            <code>:is(p, span, em)</code> selector group.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         32. CSS VARIABLES & FUNCTIONS
+         ========================================= -->
+    <section id="variables-functions">
+      <h2>32. CSS Variables &amp; Functions</h2>
+      <p class="section-note">
+        CSS variables store reusable values. Functions like clamp(), min(), and calc() make layouts responsive.
+      </p>
+
+      <!-- Row of 3 cards: variables, clamp, calc -->
+      <div class="vars-row">
+        <!-- Shows how brand color variables are reused -->
+        <div class="vars-card">
+          <h3>Brand Colors (Variables)</h3>
+          <p>These boxes all use <code>--brand-color</code> defined in :root.</p>
+          <div class="brand-swatch brand-main">Main Brand</div>
+          <div class="brand-swatch brand-soft">Soft Brand</div>
+        </div>
+
+        <!-- Shows responsive font size using clamp() -->
+        <div class="vars-card">
+          <h3>Clamp Font Size</h3>
+          <p class="clamp-heading">
+            This heading uses <code>clamp()</code> for responsive font-size.
+          </p>
+          <p>Resize the window to see it change size smoothly.</p>
+        </div>
+
+        <!-- Shows calc() controlling box width -->
+        <div class="vars-card">
+          <h3>calc() Width Box</h3>
+          <p>
+            The box below uses <code>calc(100% - 40px)</code> so it always has some
+            margin from the sides.
+          </p>
+          <div class="calc-demo-box">Width with calc(100% - 40px)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         33. ADVANCED TYPOGRAPHY
+         ========================================= -->
+    <section id="typography-advanced">
+      <h2>33. Advanced Typography</h2>
+      <p class="section-note">
+        Drop caps, gradient text, and outlined text are all doable in pure CSS.
+      </p>
+
+      <!-- Three typography demos: drop cap, gradient text, outlined text -->
+      <div class="type-grid">
+        <div class="type-block">
+          <h3>Drop Cap</h3>
+          <p class="dropcap-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum
+            urna in pharetra bibendum. Nulla facilisi.
+          </p>
+        </div>
+
+        <div class="type-block">
+          <h3>Gradient Text</h3>
+          <p class="gradient-text">Colorful Gradient Text</p>
+        </div>
+
+        <div class="type-block">
+          <h3>Outlined Text</h3>
+          <p class="outlined-text">Outlined Letters</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         34. PURE CSS ACCORDION
+         ========================================= -->
+    <section id="accordion-demo">
+      <h2>34. Pure CSS Accordion</h2>
+      <p class="section-note">Click the titles to open and close. This uses :checked + labels, no JavaScript.</p>
+
+      <!-- Accordion with 3 panels driven by hidden checkboxes -->
+      <div class="accordion">
+        <!-- Item 1 -->
+        <input type="checkbox" id="acc-1" class="acc-input">
+        <label for="acc-1" class="acc-label">What is Flexbox?</label>
+        <div class="acc-panel">
+          <p>Flexbox is a layout mode designed for one-dimensional layouts — either a row or a column.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <input type="checkbox" id="acc-2" class="acc-input">
+        <label for="acc-2" class="acc-label">What is Grid?</label>
+        <div class="acc-panel">
+          <p>Grid is used for two-dimensional layouts — rows and columns together.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <input type="checkbox" id="acc-3" class="acc-input">
+        <label for="acc-3" class="acc-label">What are CSS Variables?</label>
+        <div class="acc-panel">
+          <p>CSS variables (custom properties) are reusable values defined with <code>--name</code> syntax.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         35. PURE CSS TABS
+         ========================================= -->
+    <section id="tabs-demo">
+      <h2>35. Pure CSS Tabs</h2>
+      <p class="section-note">Choose different tabs. Uses radio buttons to switch panels with CSS only.</p>
+
+      <!-- Tabs built from radio inputs + labels + panels -->
+      <div class="tabs">
+        <!-- Tab buttons (radio inputs) -->
+        <input type="radio" name="tabset" id="tab1" checked>
+        <label for="tab1" class="tab-label">Tab 1</label>
+
+        <input type="radio" name="tabset" id="tab2">
+        <label for="tab2" class="tab-label">Tab 2</label>
+
+        <input type="radio" name="tabset" id="tab3">
+        <label for="tab3" class="tab-label">Tab 3</label>
+
+        <!-- Panels that show/hide based on which radio is checked -->
+        <div class="tab-panels">
+          <div class="tab-panel">
+            <p>This is tab one content. Nice for switching sections without JavaScript.</p>
+          </div>
+          <div class="tab-panel">
+            <p>This is tab two content. Each tab panel is controlled by :checked.</p>
+          </div>
+          <div class="tab-panel">
+            <p>This is tab three content. All logic done in CSS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         36. USER PREFERENCES (REDUCED MOTION & DARK MODE)
+         ========================================= -->
+    <section id="preferences-demo">
+      <h2>36. User Preferences</h2>
+      <p class="section-note">
+        CSS can respect system preferences like reduced motion and dark mode.
+      </p>
+
+      <!-- Two cards: one for prefers-reduced-motion, one for dark mode -->
+      <div class="pref-row">
+        <div class="pref-card motion-card">
+          <h3>Reduced Motion</h3>
+          <p>
+            This box spins gently, but if your system is set to “reduce motion”,
+            the animation will be disabled.
+          </p>
+          <div class="motion-demo-square"></div>
+        </div>
+
+        <div class="pref-card darkmode-card">
+          <h3>Prefers Dark Mode</h3>
+          <p>
+            This card changes style when the OS is in dark mode using
+            <code>@media (prefers-color-scheme: dark)</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         37. ADVANCED POSITIONING & Z-INDEX
+         ========================================= -->
+    <section id="positioning-advanced">
+      <h2>37. Advanced Positioning &amp; Z-Index</h2>
+      <p class="section-note">
+        Overlapping cards with z-index, a sticky header, and a sticky sidebar-style note.
+      </p>
+
+      <!-- Sticky mini-header that sticks to the top of this section -->
+      <div class="sticky-header-demo">
+        <p>This bar uses <code>position: sticky</code> and sticks to the top of this section.</p>
+      </div>
+
+      <!-- Overlapping cards + sticky note aside -->
+      <div class="zindex-row">
+        <div class="z-card z-back">Back Layer</div>
+        <div class="z-card z-middle">Middle Layer</div>
+        <div class="z-card z-front">Front Layer</div>
+
+        <aside class="sticky-note">
+          I’m a sticky note on the side.<br>
+          Scroll this section to see me stick.
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================
+         38. FANCY BACKGROUNDS & PATTERNS
+         ========================================= -->
+    <section id="backgrounds-advanced">
+      <h2>38. Fancy Backgrounds &amp; Patterns</h2>
+      <p class="section-note">
+        Multiple backgrounds, gradients, and repeating patterns made with pure CSS.
+      </p>
+
+      <!-- Three backgrounds: multiple layers, stripes, dot pattern -->
+      <div class="bg-row">
+        <div class="bg-box bg-multi">
+          <p>Multiple Backgrounds</p>
+        </div>
+        <div class="bg-box bg-stripes">
+          <p>Striped Pattern (repeating-linear-gradient)</p>
+        </div>
+        <div class="bg-box bg-dots">
+          <p>Dot Pattern</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         39. ADVANCED HOVER TEXT EFFECTS
+         ========================================= -->
+    <section id="text-effects">
+      <h2>39. Advanced Hover Text Effects</h2>
+      <p class="section-note">
+        Animated underlines, glow text, and a sliding highlight background.
+      </p>
+
+      <!-- Three text effects: underline slide, glow, sliding highlight -->
+      <div class="text-effects-row">
+        <div class="text-effect-block">
+          <h3>Underline Slide</h3>
+          <a href="#" class="underline-slide">Hover for animated underline</a>
+        </div>
+
+        <div class="text-effect-block">
+          <h3>Glow Text</h3>
+          <p class="glow-text">Glowing Heading</p>
+        </div>
+
+        <div class="text-effect-block">
+          <h3>Sliding Highlight</h3>
+          <span class="highlight-text">Hover to see the highlight slide in</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         40. SCROLL SNAP CAROUSEL
+         ========================================= -->
+    <section id="scroll-snap">
+      <h2>40. Scroll Snap Carousel</h2>
+      <p class="section-note">
+        Horizontal scroller that snaps to each card using <code>scroll-snap-type</code>.
+        Try scrolling sideways.
+      </p>
+
+      <!-- Horizontal scroll area with snap-to-card behavior -->
+      <div class="snap-container">
+        <article class="snap-item">Card 1</article>
+        <article class="snap-item">Card 2</article>
+        <article class="snap-item">Card 3</article>
+        <article class="snap-item">Card 4</article>
+        <article class="snap-item">Card 5</article>
+      </div>
+    </section>
+
+    <!-- =========================================
+         41. 3D FLIP CARD
+         ========================================= -->
+    <section id="flip-card">
+      <h2>41. 3D Flip Card</h2>
+      <p class="section-note">
+        Hover to flip the card. Uses 3D transforms and backface-visibility.
+      </p>
+
+      <!-- 3D card scene: inner div flips between front and back on hover -->
+      <div class="flip-card-scene">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            FRONT
+          </div>
+          <div class="flip-card-face flip-card-back">
+            BACK
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         42. CUSTOM CHECKBOXES & RADIO BUTTONS
+         ========================================= -->
+    <section id="custom-inputs">
+      <h2>42. Custom Checkboxes &amp; Radios</h2>
+      <p class="section-note">
+        Style inputs to look like pill buttons while still being real form controls.
+      </p>
+
+      <!-- Two groups: checkbox pills and radio pills -->
+      <div class="custom-inputs-row">
+        <div class="custom-group">
+          <h3>Checkbox Group</h3>
+          <label class="pill-check">
+            <input type="checkbox" checked>
+            <span>HTML</span>
           </label>
-        </form>
-        <p class="selector-note">The <strong>card</strong> gets a red border because it <em>has</em> an element with <code>.error-input</code>.</p>
-      </div>
-
-      <div class="selector-card">
-        <h3>Links (attribute selectors)</h3>
-        <p>
-          <a href="https://example.com">External Link (https)</a><br>
-          <a href="/local-page">Local Link (/local)</a>
-        </p>
-        <p class="selector-note">Different styles based on <code>href^="https"</code> or <code>href^="/"</code>.</p>
-      </div>
-
-      <div class="selector-card">
-        <h3>:is() Selector</h3>
-        <p class="selector-text">
-          This <span>paragraph</span> and its <em>children</em> are styled using a single
-          <code>:is(p, span, em)</code> selector group.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 32. CSS VARIABLES & FUNCTIONS -->
-  <section id="variables-functions">
-    <h2>32. CSS Variables & Functions</h2>
-    <p class="section-note">
-      CSS variables store reusable values. Functions like clamp(), min(), and calc() make layouts responsive.
-    </p>
-
-    <div class="vars-row">
-      <div class="vars-card">
-        <h3>Brand Colors (Variables)</h3>
-        <p>These boxes all use <code>--brand-color</code> defined in :root.</p>
-        <div class="brand-swatch brand-main">Main Brand</div>
-        <div class="brand-swatch brand-soft">Soft Brand</div>
-      </div>
-
-      <div class="vars-card">
-        <h3>Clamp Font Size</h3>
-        <p class="clamp-heading">
-          This heading uses <code>clamp()</code> for responsive font-size.
-        </p>
-        <p>Resize the window to see it change size smoothly.</p>
-      </div>
-
-      <div class="vars-card">
-        <h3>calc() Width Box</h3>
-        <p>
-          The box below uses <code>calc(100% - 40px)</code> so it always has some
-          margin from the sides.
-        </p>
-        <div class="calc-demo-box">Width with calc(100% - 40px)</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 33. ADVANCED TYPOGRAPHY -->
-  <section id="typography-advanced">
-    <h2>33. Advanced Typography</h2>
-    <p class="section-note">
-      Drop caps, gradient text, and outlined text are all doable in pure CSS.
-    </p>
-
-    <div class="type-grid">
-      <div class="type-block">
-        <h3>Drop Cap</h3>
-        <p class="dropcap-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum
-          urna in pharetra bibendum. Nulla facilisi.
-        </p>
-      </div>
-
-      <div class="type-block">
-        <h3>Gradient Text</h3>
-        <p class="gradient-text">Colorful Gradient Text</p>
-      </div>
-
-      <div class="type-block">
-        <h3>Outlined Text</h3>
-        <p class="outlined-text">Outlined Letters</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 34. PURE CSS ACCORDION -->
-  <section id="accordion-demo">
-    <h2>34. Pure CSS Accordion</h2>
-    <p class="section-note">Click the titles to open and close. This uses :checked + labels, no JavaScript.</p>
-
-    <div class="accordion">
-      <input type="checkbox" id="acc-1" class="acc-input">
-      <label for="acc-1" class="acc-label">What is Flexbox?</label>
-      <div class="acc-panel">
-        <p>Flexbox is a layout mode designed for one-dimensional layouts — either a row or a column.</p>
-      </div>
-
-      <input type="checkbox" id="acc-2" class="acc-input">
-      <label for="acc-2" class="acc-label">What is Grid?</label>
-      <div class="acc-panel">
-        <p>Grid is used for two-dimensional layouts — rows and columns together.</p>
-      </div>
-
-      <input type="checkbox" id="acc-3" class="acc-input">
-      <label for="acc-3" class="acc-label">What are CSS Variables?</label>
-      <div class="acc-panel">
-        <p>CSS variables (custom properties) are reusable values defined with <code>--name</code> syntax.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 35. PURE CSS TABS -->
-  <section id="tabs-demo">
-    <h2>35. Pure CSS Tabs</h2>
-    <p class="section-note">Choose different tabs. Uses radio buttons to switch panels with CSS only.</p>
-
-    <div class="tabs">
-      <input type="radio" name="tabset" id="tab1" checked>
-      <label for="tab1" class="tab-label">Tab 1</label>
-
-      <input type="radio" name="tabset" id="tab2">
-      <label for="tab2" class="tab-label">Tab 2</label>
-
-      <input type="radio" name="tabset" id="tab3">
-      <label for="tab3" class="tab-label">Tab 3</label>
-
-      <div class="tab-panels">
-        <div class="tab-panel">
-          <p>This is tab one content. Nice for switching sections without JavaScript.</p>
+          <label class="pill-check">
+            <input type="checkbox">
+            <span>CSS</span>
+          </label>
+          <label class="pill-check">
+            <input type="checkbox">
+            <span>JavaScript</span>
+          </label>
         </div>
-        <div class="tab-panel">
-          <p>This is tab two content. Each tab panel is controlled by :checked.</p>
-        </div>
-        <div class="tab-panel">
-          <p>This is tab three content. All logic done in CSS.</p>
+
+        <div class="custom-group">
+          <h3>Radio Group</h3>
+          <label class="pill-radio">
+            <input type="radio" name="level" checked>
+            <span>Beginner</span>
+          </label>
+          <label class="pill-radio">
+            <input type="radio" name="level">
+            <span>Intermediate</span>
+          </label>
+          <label class="pill-radio">
+            <input type="radio" name="level">
+            <span>Advanced</span>
+          </label>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 36. PREFERENCES: REDUCED MOTION & DARK MODE -->
-  <section id="preferences-demo">
-    <h2>36. User Preferences</h2>
-    <p class="section-note">
-      CSS can respect system preferences like reduced motion and dark mode.
-    </p>
-
-    <div class="pref-row">
-      <div class="pref-card motion-card">
-        <h3>Reduced Motion</h3>
-        <p>
-          This box spins gently, but if your system is set to “reduce motion”,
-          the animation will be disabled.
-        </p>
-        <div class="motion-demo-square"></div>
-      </div>
-
-      <div class="pref-card darkmode-card">
-        <h3>Prefers Dark Mode</h3>
-        <p>
-          This card changes style when the OS is in dark mode using
-          <code>@media (prefers-color-scheme: dark)</code>.
-        </p>
-      </div>
-    </div>
-  </section>
-    <!-- 37. POSITIONING & Z-INDEX PLAYGROUND -->
-  <section id="positioning-advanced">
-    <h2>37. Advanced Positioning & Z-Index</h2>
-    <p class="section-note">
-      Overlapping cards with z-index, a sticky header, and a sticky sidebar-style note.
-    </p>
-
-    <!-- Sticky header bar demo -->
-    <div class="sticky-header-demo">
-      <p>This bar uses <code>position: sticky</code> and sticks to the top of this section.</p>
-    </div>
-
-    <div class="zindex-row">
-      <div class="z-card z-back">Back Layer</div>
-      <div class="z-card z-middle">Middle Layer</div>
-      <div class="z-card z-front">Front Layer</div>
-
-      <aside class="sticky-note">
-        I’m a sticky note on the side.<br>
-        Scroll this section to see me stick.
-      </aside>
-    </div>
-  </section>
-
-  <!-- 38. FANCY BACKGROUNDS & PATTERNS -->
-  <section id="backgrounds-advanced">
-    <h2>38. Fancy Backgrounds & Patterns</h2>
-    <p class="section-note">
-      Multiple backgrounds, gradients, and repeating patterns made with pure CSS.
-    </p>
-
-    <div class="bg-row">
-      <div class="bg-box bg-multi">
-        <p>Multiple Backgrounds</p>
-      </div>
-      <div class="bg-box bg-stripes">
-        <p>Striped Pattern (repeating-linear-gradient)</p>
-      </div>
-      <div class="bg-box bg-dots">
-        <p>Dot Pattern</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 39. ADVANCED HOVER TEXT EFFECTS -->
-  <section id="text-effects">
-    <h2>39. Advanced Hover Text Effects</h2>
-    <p class="section-note">
-      Animated underlines, glow text, and a sliding highlight background.
-    </p>
-
-    <div class="text-effects-row">
-      <div class="text-effect-block">
-        <h3>Underline Slide</h3>
-        <a href="#" class="underline-slide">Hover for animated underline</a>
-      </div>
-
-      <div class="text-effect-block">
-        <h3>Glow Text</h3>
-        <p class="glow-text">Glowing Heading</p>
-      </div>
-
-      <div class="text-effect-block">
-        <h3>Sliding Highlight</h3>
-        <span class="highlight-text">Hover to see the highlight slide in</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 40. SCROLL SNAP CAROUSEL -->
-  <section id="scroll-snap">
-    <h2>40. Scroll Snap Carousel</h2>
-    <p class="section-note">
-      Horizontal scroller that snaps to each card using <code>scroll-snap-type</code>.
-      Try scrolling sideways.
-    </p>
-
-    <div class="snap-container">
-      <article class="snap-item">Card 1</article>
-      <article class="snap-item">Card 2</article>
-      <article class="snap-item">Card 3</article>
-      <article class="snap-item">Card 4</article>
-      <article class="snap-item">Card 5</article>
-    </div>
-  </section>
-
-  <!-- 41. 3D FLIP CARD -->
-  <section id="flip-card">
-    <h2>41. 3D Flip Card</h2>
-    <p class="section-note">
-      Hover to flip the card. Uses 3D transforms and backface-visibility.
-    </p>
-
-    <div class="flip-card-scene">
-      <div class="flip-card-inner">
-        <div class="flip-card-face flip-card-front">
-          FRONT
-        </div>
-        <div class="flip-card-face flip-card-back">
-          BACK
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 42. CUSTOM CHECKBOXES & RADIO BUTTONS -->
-  <section id="custom-inputs">
-    <h2>42. Custom Checkboxes & Radios</h2>
-    <p class="section-note">
-      Style inputs to look like pill buttons while still being real form controls.
-    </p>
-
-    <div class="custom-inputs-row">
-      <div class="custom-group">
-        <h3>Checkbox Group</h3>
-        <label class="pill-check">
-          <input type="checkbox" checked>
-          <span>HTML</span>
-        </label>
-        <label class="pill-check">
-          <input type="checkbox">
-          <span>CSS</span>
-        </label>
-        <label class="pill-check">
-          <input type="checkbox">
-          <span>JavaScript</span>
-        </label>
-      </div>
-
-      <div class="custom-group">
-        <h3>Radio Group</h3>
-        <label class="pill-radio">
-          <input type="radio" name="level" checked>
-          <span>Beginner</span>
-        </label>
-        <label class="pill-radio">
-          <input type="radio" name="level">
-          <span>Intermediate</span>
-        </label>
-        <label class="pill-radio">
-          <input type="radio" name="level">
-          <span>Advanced</span>
-        </label>
-      </div>
-    </div>
-  </section>
-
-  <!-- 43. CUSTOM SCROLLBAR -->
-  <section id="scrollbar-demo">
-    <h2>43. Custom Scrollbar</h2>
-    <p class="section-note">
-      This box has a custom-styled scrollbar (WebKit browsers like Chrome / Edge).
-    </p>
-
-    <div class="scrollbar-box">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-        Vestibulum viverra semper mi, at cursus nisl aliquam vel. Integer ut
-        condimentum lectus. Donec sodales consequat nisl sit amet suscipit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-        Vestibulum viverra semper mi, at cursus nisl aliquam vel. Integer ut
-        condimentum lectus. Donec sodales consequat nisl sit amet suscipit.
+    <!-- =========================================
+         43. CUSTOM SCROLLBAR
+         ========================================= -->
+    <section id="scrollbar-demo">
+      <h2>43. Custom Scrollbar</h2>
+      <p class="section-note">
+        This box has a custom-styled scrollbar (WebKit browsers like Chrome / Edge).
       </p>
-    </div>
-  </section>
-  <div class="glass-card">
-  Frosted Glass Effect
-</div>
-<div class="neon-box">Neon Glow</div>
-<div class="rainbow-border">Animated Border</div>
-<button class="ripple-btn">Click Me</button>
-<div class="zoom-img">
-  <img src="https://picsum.photos/300">
-</div>
-<div class="moving-gradient">Shiny Gradient</div>
-<div class="skeleton"></div>
-<div class="float-box">Floating</div>
-<button class="shine-btn">Shiny Button</button>
 
-  <!-- 29. FOOTER DEMO SECTION -->
-  <section id="footer-demo">
-    <h2>29. Footer Demo (Labeled)</h2>
-    <p class="section-note">This section breaks down a footer into visual parts so you can see how each area works.</p>
-
-    <div class="footer-demo-box">
-
-      <!-- BRAND AREA -->
-      <div class="footer-demo-part brand-section">
-        <h3>Brand Area</h3>
-        <p>This is where your logo, website name, or a short description can go.</p>
-      </div>
-
-      <!-- NAVIGATION AREA -->
-      <div class="footer-demo-part nav-section">
-        <h3>Navigation Links</h3>
-        <ul>
-          <li><a href="#colors">Colors</a></li>
-          <li><a href="#grid">Grid Layout</a></li>
-          <li><a href="#animation">Animations</a></li>
-        </ul>
-      </div>
-
-      <!-- SOCIAL ICON AREA -->
-      <div class="footer-demo-part social-section">
-        <h3>Social Icons</h3>
-        <p class="footer-demo-icons">
-          <span>📘</span>
-          <span>📸</span>
-          <span>🐙</span>
+      <!-- Scrollable box that shows custom scrollbar styling -->
+      <div class="scrollbar-box">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+          Vestibulum viverra semper mi, at cursus nisl aliquam vel. Integer ut
+          condimentum lectus. Donec sodales consequat nisl sit amet suscipit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+          Vestibulum viverra semper mi, at cursus nisl aliquam vel. Integer ut
+          condimentum lectus. Donec sodales consequat nisl sit amet suscipit.
         </p>
-        <p class="demo-label">Icons can be SVGs or images</p>
+      </div>
+    </section>
+
+    <!-- =========================================
+         44. EXTRA MINI EFFECTS (GLASS, NEON, RAINBOW, ETC.)
+         - These were loose <div>s; now grouped nicely
+         ========================================= -->
+    <section id="extra-effects">
+      <h2>44. Extra Effects</h2>
+      <p class="section-note">
+        A few standalone visual effects that don’t need their own full section.
+      </p>
+
+      <!-- Re-usable glass card block -->
+      <div class="glass-card">
+        Frosted Glass Effect
       </div>
 
-      <!-- CONTACT AREA -->
-      <div class="footer-demo-part contact-section">
-        <h3>Contact</h3>
-        <p>Email: contact@example.com</p>
-        <p>Phone: (555) 123-4567</p>
+      <!-- Neon glow block -->
+      <div class="neon-box">Neon Glow</div>
+
+      <!-- Rainbow animated border -->
+      <div class="rainbow-border">Animated Border</div>
+
+      <!-- Button with ripple click effect (handled in CSS, JS optional) -->
+      <button class="ripple-btn">Click Me</button>
+
+      <!-- Image that zooms in on hover -->
+      <div class="zoom-img">
+        <img src="https://picsum.photos/300" alt="Zoom example">
       </div>
 
-      <!-- COPYRIGHT AREA -->
-      <div class="footer-demo-part legal-section">
-        <h3>Legal / Copyright</h3>
-        <p>© 2025 Demo Site. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+      <!-- Moving gradient background -->
+      <div class="moving-gradient">Shiny Gradient</div>
+
+      <!-- Skeleton loading bar -->
+      <div class="skeleton"></div>
+
+      <!-- Floating box animation -->
+      <div class="float-box">Floating</div>
+
+      <!-- Button with shine animation on hover -->
+      <button class="shine-btn">Shiny Button</button>
+    </section>
+
+    <!-- =========================================
+         29. FOOTER DEMO SECTION (LABELED BREAKDOWN)
+         ========================================= -->
+    <section id="footer-demo">
+      <h2>29. Footer Demo (Labeled)</h2>
+      <p class="section-note">
+        This section breaks down a footer into visual parts so you can see how each area works.
+      </p>
+
+      <!-- Outer box with dotted border showing the whole footer “grid” -->
+      <div class="footer-demo-box">
+
+        <!-- Brand / logo area -->
+        <div class="footer-demo-part brand-section">
+          <h3>Brand Area</h3>
+          <p>This is where your logo, website name, or a short description can go.</p>
+        </div>
+
+        <!-- Simple nav links area -->
+        <div class="footer-demo-part nav-section">
+          <h3>Navigation Links</h3>
+          <ul>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#grid">Grid Layout</a></li>
+            <li><a href="#animation">Animations</a></li>
+          </ul>
+        </div>
+
+        <!-- Social icon placeholders -->
+        <div class="footer-demo-part social-section">
+          <h3>Social Icons</h3>
+          <p class="footer-demo-icons">
+            <span>📘</span>
+            <span>📸</span>
+            <span>🐙</span>
+          </p>
+          <p class="demo-label">Icons can be SVGs or images</p>
+        </div>
+
+        <!-- Contact info area -->
+        <div class="footer-demo-part contact-section">
+          <h3>Contact</h3>
+          <p>Email: contact@example.com</p>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+
+        <!-- Legal / copyright links -->
+        <div class="footer-demo-part legal-section">
+          <h3>Legal / Copyright</h3>
+          <p>© 2025 Demo Site. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+  </main>
 
-  <!-- 28. PAGE FOOTER -->
+  <!-- =========================================
+       PAGE FOOTER (REAL SITE FOOTER)
+       ========================================= -->
   <footer class="site-footer">
+    <!-- Top part of the footer: three columns -->
     <div class="footer-inner">
+      <!-- Column 1: about text -->
       <div class="footer-column">
         <h3>About This Page</h3>
         <p>This is your CSS playground. Each section shows a different feature.</p>
       </div>
 
+      <!-- Column 2: quick internal links that jump to sections above -->
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul class="footer-links">
@@ -934,11 +1178,13 @@
         </ul>
       </div>
 
+      <!-- Column 3: contact + fake social icons -->
       <div class="footer-column">
         <h3>Contact</h3>
+        <!-- mailto: opens the user's email app to this address -->
         <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
         <p class="footer-social">
-          <!-- These are “fake” icons using emoji, but you could swap for real SVGs -->
+          <!-- Emoji used as placeholder icons; swap with real SVG icons later -->
           <a href="#" aria-label="Visit our Facebook">📘</a>
           <a href="#" aria-label="Visit our Instagram">📸</a>
           <a href="#" aria-label="Visit our GitHub">🐙</a>
@@ -946,8 +1192,10 @@
       </div>
     </div>
 
+    <!-- Bottom strip: copyright + link back to top of page -->
     <div class="footer-bottom">
       <span>© 2025 CSS Demo Playground</span>
+      <!-- Scrolls back to <body id="top"> at the very top -->
       <a href="#top" class="footer-top-link">Back to top ↑</a>
     </div>
   </footer>
