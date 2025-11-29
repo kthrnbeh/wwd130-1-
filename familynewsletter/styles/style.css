@@ -417,18 +417,11 @@ main.photo-gallery {
 }
 
 
-/* image inside the square */
-.square-frame img {
-  width: 100%;
-  height: auto;              /* keep proportions */
-  object-fit: contain;
-  display: block;
-}
 
 .adam-bat, .gym, .color-super, .super-kids {
   display: block;              /* it's just an <img>, block is fine */
   width: 100px;                /* size of the image */
-  aspect-ratio: 1 / 1;         /* square box */
+  aspect-ratio: 6 / 6;         /* square box */
   height: auto;                /* let aspect-ratio control height */
   object-fit: cover;           /* fill the square, crop instead of stretch */
   margin: 0 0 0 3rem;
