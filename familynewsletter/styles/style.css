@@ -465,12 +465,13 @@ main.photo-gallery {
 
 .family-row img.special-moment {
   width: 140px;
-  height: 140px;
   aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   background-color: #d3d3d3;
   border: 1px solid #ccc;
 }
+
 
 .family-row p {
   margin: 0;
