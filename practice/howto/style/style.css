@@ -1,35 +1,60 @@
-/* ========== Reset bits for clarity ========== */
-* { box-sizing: border-box; }
-body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 16px; }
-button { cursor: pointer; }
+/* ========== BASIC RESET ========== */
+/* Make padding & border count into width/height for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Default font + small padding around page */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+/* All buttons should show pointer on hover */
+button {
+  cursor: pointer;
+}
 
 /* =========================================================
    SIDENAV
    - Hidden by default (width: 0)
    - When .is-open is added via JS, width expands to 250px
 ========================================================= */
+
+/* Off-canvas sidebar menu */
 .sidenav {
-  position: fixed;          /* stays fixed on screen */
-  left: 0; top: 0;          /* anchor to left edge */
+  position: fixed;          /* stays fixed even when page scrolls */
+  left: 0;
+  top: 0;                   /* stick to top-left corner */
   height: 100vh;            /* full viewport height */
   width: 0;                 /* collapsed (hidden) */
   overflow-x: hidden;       /* hide content when collapsed */
-  background: #111;         /* dark panel */
-  padding-top: 60px;        /* push links below close button */
-  transition: width .3s ease; /* smooth slide */
-  z-index: 1000;            /* above page content */
+  background: #111;         /* dark background */
+  padding-top: 60px;        /* push links down below close button */
+  transition: width 0.3s ease; /* smooth slide animation */
+  z-index: 1000;            /* above regular page content */
 }
 
-.sidenav.is-open { width: 250px; } /* expanded state */
+/* When JS adds .is-open, width becomes 250px */
+.sidenav.is-open {
+  width: 250px;
+}
 
+/* Links inside the sidenav */
 .sidenav a {
   display: block;
   color: #f1f1f1;
   padding: 8px 24px;
   text-decoration: none;
 }
-.sidenav a:hover { background: #222; }
 
+/* Slight highlight when hovering links */
+.sidenav a:hover {
+  background: #222;
+}
+
+/* “X” close button inside sidenav */
 .sidenav__close {
   position: absolute;
   right: 14px;
@@ -41,7 +66,7 @@ button { cursor: pointer; }
   border: 0;
 }
 
-/* trigger button in page content */
+/* Button on the page that opens the sidenav */
 .sidenav__open {
   font-size: 18px;
   padding: 8px 12px;
@@ -51,31 +76,38 @@ button { cursor: pointer; }
 }
 
 /* =========================================================
-   IMAGE MODAL
-   - Modal overlay covers the whole screen (display: none)
-   - When .is-open is added via JS, it becomes visible flex box
+   SIMPLE IMAGE MODAL (top “Snow” image)
+   - Uses .modal as full-screen overlay
+   - Uses .modal__img, .modal__caption, .modal__close
 ========================================================= */
+
+/* Overlay for the simple image modal */
 .modal {
   position: fixed;          /* cover entire screen */
-  inset: 0;                 /* shorthand for top/right/bottom/left: 0 */
+  inset: 0;                 /* top/right/bottom/left: 0 */
   display: none;            /* hidden by default */
   align-items: center;      /* center image vertically */
   justify-content: center;  /* center image horizontally */
-  background: rgba(0,0,0,.8); /* dark overlay */
+  background: rgba(0, 0, 0, 0.8); /* dark overlay */
   padding: 24px;            /* breathing room on small screens */
   z-index: 1100;            /* above sidenav */
 }
 
-.modal.is-open { display: flex; } /* visible state */
+/* When JS adds .is-open, show modal as flex */
+.modal.is-open {
+  display: flex;
+}
 
+/* The big image inside simple modal */
 .modal__img {
-  max-width: 90vw;          /* never exceed viewport width */
-  max-height: 80vh;         /* never exceed viewport height */
+  max-width: 90vw;          /* do not exceed viewport width */
+  max-height: 80vh;         /* do not exceed viewport height */
   border-radius: 8px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   background: #fff;
 }
 
+/* Caption text under the simple modal image */
 .modal__caption {
   margin-top: 10px;
   color: #f9fafb;
@@ -83,6 +115,7 @@ button { cursor: pointer; }
   font-size: 14px;
 }
 
+/* Close button (X) for the simple modal */
 .modal__close {
   position: absolute;
   right: 16px;
@@ -94,60 +127,68 @@ button { cursor: pointer; }
   border: 0;
 }
 
-/* Thumbnail styling just for the demo */
+/* Thumbnail preview for simple modal */
 .thumb {
   display: block;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.15);
-}
-.thumb:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,.25);
-}
-* {
-  box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* Stronger shadow when hovering the thumbnail */
+.thumb:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   LIGHTBOX GALLERY (bottom section)
+   - Uses .lightbox-modal as overlay (NOT .modal)
+   - Uses .mySlides, .prev/.next, .demo, etc.
+========================================================= */
+
+/* Container that holds the 4 small thumbnails in a row */
 .row > .column {
   padding: 0 8px;
 }
 
-.row:after {
+/* Clear floats so .row wraps its columns correctly */
+.row::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Each thumbnail column takes 25% width (4 per row) */
 .column {
   float: left;
   width: 25%;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
+/* FULL-SCREEN OVERLAY for the LIGHTBOX (gallery) */
+.lightbox-modal {
+  display: none;              /* hidden until openModal() runs */
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  z-index: 2000;              /* above rest of page */
+  padding-top: 100px;         /* space above the large image */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: black;
+  overflow: auto;             /* scroll if content taller than viewport */
+  background-color: rgba(0, 0, 0, 0.9);  /* dark overlay */
 }
 
-/* Modal Content */
-.modal-content {
+/* Inner white box that holds slides + thumbnails */
+.lightbox-modal .modal-content {
   position: relative;
-  background-color: #fefefe;
   margin: auto;
+  background-color: #fefefe;
   padding: 0;
   width: 90%;
   max-width: 1200px;
 }
 
-/* The Close Button */
-.close {
+/* Close button for the lightbox (uses .close class in HTML) */
+.lightbox-modal .close {
   color: white;
   position: absolute;
   top: 10px;
@@ -156,22 +197,25 @@ button { cursor: pointer; }
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+/* Hover/focus effect for the lightbox close button */
+.lightbox-modal .close:hover,
+.lightbox-modal .close:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
 }
 
+/* Each slide (big image); JS shows one at a time */
 .mySlides {
   display: none;
 }
 
+/* Utility class to show pointer cursor */
 .cursor {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* Next & previous arrow buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -185,23 +229,23 @@ button { cursor: pointer; }
   font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  user-select: none;          /* prevent text selection */
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Position the "next" arrow on the right side */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Darken arrow background slightly on hover */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
+/* Number text (e.g., "1 / 4") shown at top-left of slide */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -210,10 +254,12 @@ button { cursor: pointer; }
   top: 0;
 }
 
-img {
+/* Remove bottom gap under images inside lightbox */
+.lightbox-modal img {
   margin-bottom: -4px;
 }
 
+/* Caption area under big image in lightbox */
 .caption-container {
   text-align: center;
   background-color: black;
@@ -221,57 +267,31 @@ img {
   color: white;
 }
 
+/* Small thumbnail images under the main image */
 .demo {
-  opacity: 0.6;
+  opacity: 0.6;               /* slightly faded by default */
 }
 
+/* Current (active) thumbnail, or hover state, is fully opaque */
 .active,
 .demo:hover {
   opacity: 1;
 }
 
+/* Add a shadow when hovering images with .hover-shadow class */
 img.hover-shadow {
   transition: 0.3s;
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-/* FULL-SCREEN OVERLAY for the lightbox modal */
-.lightbox-modal {
-  display: none;              /* hidden until openModal() runs */
-  position: fixed;
-  z-index: 2000;              /* above the rest of the page */
-  padding-top: 100px;         /* space above the image area */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;             /* scroll if content taller than viewport */
-  background-color: rgba(0,0,0,0.9);  /* dark overlay */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* inner box that holds slides + thumbs */
-.lightbox-modal .modal-content {
-  position: relative;
-  margin: auto;
-  max-width: 1200px;
-}
-
-/* caption text below the big image */
+/* Caption text below the big image in the lightbox.
+   This is the <p class="lightbox-caption"> element. */
 .lightbox-caption {
   text-align: center;
   color: #f1f1f1;
   padding: 8px 16px;
 }
-
-/* close button */
-.lightbox-modal .close {
-  position: absolute;
-  top: 30px;
-  right: 45px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: color .3s ease;
-} 

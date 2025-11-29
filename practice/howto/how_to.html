@@ -150,85 +150,98 @@
 /* ---------------------------------------
    LIGHTBOX: show image in modal with navigation
 ----------------------------------------*/
+<!-- LIGHTBOX: big image + next/prev inside an overlay -->
 <div class="lightbox-modal">
+  <!-- X button to close the lightbox -->
   <span class="close cursor" onclick="closeModal()">&times;</span>
+
+  <!-- White box that holds big slides + thumbnails -->
   <div class="modal-content">
 
+    <!-- Big slides (only one is shown at a time) -->
     <div class="mySlides">
       <div class="numbertext">1 / 4</div>
-      <img src="img_nature_wide.jpg" style="width:100%">
+      <img src="images/img_nature_wide.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="img_snow_wide.jpg" style="width:100%">
+      <img src="images/img_snow_wide.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      <img src="img_mountains_wide.jpg" style="width:100%">
+      <img src="images/img_mountains_wide.jpg" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="img_lights_wide.jpg" style="width:100%">
+      <img src="images/img_lights_wide.jpg" style="width:100%">
     </div>
     
+    <!-- Arrows for next / previous -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+    <!-- Caption below the big image -->
     <div class="caption-container">
       <p class="lightbox-caption"></p>
     </div>
 
-    <div class="column">
-      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
+    <div class="row">
+  <div class="column">
+    <img src="images/img_nature.jpg" style="width:100%"
+         onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
+  <div class="column">
+    <img src="images/img_snow.jpg" style="width:100%"
+         onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/img_mountains.jpg" style="width:100%"
+         onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/img_lights.jpg" style="width:100%"
+         onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
 </div>
 <script>
 function openModal() {
-  // grab the element with class "lightbox-modal"
+  // show the lightbox overlay
   document.querySelector(".lightbox-modal").style.display = "block";
 }
 
 function closeModal() {
+  // hide the lightbox overlay
   document.querySelector(".lightbox-modal").style.display = "none";
 }
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
+// move +1 or -1 slides
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+// jump to specific slide
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// core function that shows one slide and one thumbnail at a time
 function showSlides(n) {
   var i;
-  // all slide panels
-  var slides = document.getElementsByClassName("mySlides");
-  // all thumbnail dots
-  var dots = document.getElementsByClassName("demo");
-  // the lightbox caption element
+  var slides = document.getElementsByClassName("mySlides"); // big images
+  var dots = document.getElementsByClassName("demo");       // thumbnails
   var captionText = document.querySelector(".lightbox-caption");
 
   if (n > slides.length) { slideIndex = 1; }
   if (n < 1) { slideIndex = slides.length; }
 
-  // hide all slides
+  // hide all big images
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -238,14 +251,15 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // show the current slide
+  // show current big image
   slides[slideIndex-1].style.display = "block";
-  // mark the current thumbnail as active
+  // mark corresponding thumb as active
   dots[slideIndex-1].className += " active";
-  // update caption with alt text of current thumb
+  // set caption text using thumb alt text
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
+
 
 </body>
 </html>
