@@ -420,8 +420,8 @@ main.photo-gallery {
 
 .adam-bat, .gym, .color-super, .super-kids {
   display: block;              /* it's just an <img>, block is fine */
-  width: 100px;                /* size of the image */
-  aspect-ratio: 6 / 6;         /* square box */
+  width: 200px;                /* size of the image */
+  aspect-ratio:   1 / 1;         /* square box */
   height: auto;                /* let aspect-ratio control height */
   object-fit: cover;           /* fill the square, crop instead of stretch */
   margin: 0 0 0 3rem;
