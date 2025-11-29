@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How To – Sidenav + Image Modal</title>
+  <title>How To – Sidenav + Image Modal + Lightbox</title>
+  <!-- your external CSS -->
   <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
-  <!-- Off-canvas side navigation -->
+  <!-- ===================== SIDENAV ===================== -->
   <nav class="sidenav" aria-hidden="true">
     <button class="sidenav__close" aria-label="Close navigation">&times;</button>
     <a href="#">About</a>
@@ -23,19 +24,21 @@
 
   <hr>
 
+  <!-- =============== SIMPLE SINGLE IMAGE MODAL =============== -->
   <h2>Image Modal</h2>
   <p>Click the image to open it in a modal dialog.</p>
 
-  <!-- NOTE: your folder shows practice/howto/images/img_snow.jpg -->
+  <!-- small “Snow” image -->
   <img class="thumb" src="images/img_snow.jpg" alt="Snow" width="300">
 
-  <!-- Modal dialog -->
+  <!-- overlay for the simple modal -->
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption">
     <button class="modal__close" aria-label="Close image">&times;</button>
     <img class="modal__img" alt="">
     <div class="modal__caption" id="modal-caption"></div>
   </div>
 
+  <!-- JS for sidenav + simple modal -->
   <script>
     /* ---------------------------------------
        SIDENAV: open/close by toggling a class
@@ -45,31 +48,33 @@
     const closeBtn = document.querySelector('.sidenav__close');
 
     function openNav() {
-      sidenav.classList.add('is-open');     // triggers CSS to slide in
+      sidenav.classList.add('is-open');     // slide in
       openBtn.setAttribute('aria-expanded', 'true');
       sidenav.setAttribute('aria-hidden', 'false');
     }
+
     function closeNav() {
       sidenav.classList.remove('is-open');  // slide out
       openBtn.setAttribute('aria-expanded', 'false');
       sidenav.setAttribute('aria-hidden', 'true');
     }
+
     openBtn.addEventListener('click', openNav);
     closeBtn.addEventListener('click', closeNav);
 
     /* ---------------------------------------
-       MODAL: show image & caption on click
+       SIMPLE MODAL: show image & caption
     ----------------------------------------*/
-    const modal     = document.querySelector('.modal');
-    const modalImg  = document.querySelector('.modal__img');
-    const captionEl = document.querySelector('.modal__caption');
-    const thumb     = document.querySelector('.thumb');
-    const modalClose= document.querySelector('.modal__close');
+    const modal      = document.querySelector('.modal');
+    const modalImg   = document.querySelector('.modal__img');
+    const captionEl  = document.querySelector('.modal__caption');
+    const thumb      = document.querySelector('.thumb');
+    const modalClose = document.querySelector('.modal__close');
 
     thumb.addEventListener('click', () => {
-      modal.classList.add('is-open');        // display the modal
-      modalImg.src = thumb.src;              // same image as thumbnail
-      captionEl.textContent = thumb.alt;     // use alt text as caption
+      modal.classList.add('is-open');     // show overlay (CSS makes .is-open visible)
+      modalImg.src = thumb.src;          // same image as thumbnail
+      captionEl.textContent = thumb.alt; // use alt text as caption
     });
 
     modalClose.addEventListener('click', () => {
@@ -78,13 +83,17 @@
       captionEl.textContent = '';
     });
 
-    // Optional: click outside image to close
+    // Optional: click outside the image to close
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.remove('is-open');
+      if (e.target === modal) {
+        modal.classList.remove('is-open');
+        modalImg.src = '';
+        captionEl.textContent = '';
+      }
     });
   </script>
-  /* lightbox*/
-    <!-- =========== LIGHTBOX GALLERY =========== -->
+
+  <!-- ===================== LIGHTBOX GALLERY ===================== -->
   <h2 style="text-align:center">Lightbox</h2>
 
   <!-- 4 small thumbnails on the page -->
@@ -157,7 +166,7 @@
         <p id="lightbox-caption" class="lightbox-caption"></p>
       </div>
 
-      <!-- Thumbnails inside the lightbox (used for caption + active state) -->
+      <!-- Thumbnails INSIDE the lightbox -->
       <div class="column">
         <img class="demo cursor"
              src="images/img_nature_wide.jpg"
@@ -189,7 +198,7 @@
     </div>
   </div>
 
-  <!-- LIGHTBOX SCRIPT -->
+  <!-- JS for the lightbox gallery -->
   <script>
     // open the full-screen lightbox overlay
     function openModal() {
@@ -239,13 +248,15 @@
       slides[slideIndex - 1].style.display = "block";
 
       // mark the matching thumb as active
-      dots[slideIndex - 1].className += " active";
-
-      // use the active thumb's alt text as caption
-      captionText.textContent = dots[slideIndex - 1].alt;
+      if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].className += " active";
+        // use the active thumb's alt text as caption
+        captionText.textContent = dots[slideIndex - 1].alt;
+      } else {
+        captionText.textContent = "";
+      }
     }
   </script>
+
 </body>
 </html>
-
-  
