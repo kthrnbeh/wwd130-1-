@@ -1,68 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style/style.css">
-<title>How To - Side Navigation</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How To – Sidenav + Image Modal</title>
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <!-- Off-canvas side navigation -->
+  <nav class="sidenav" aria-hidden="true">
+    <button class="sidenav__close" aria-label="Close navigation">&times;</button>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h2>Animated Sidenav Example</h2>
+  <p>Click the icon to open the side navigation menu.</p>
+  <button class="sidenav__open" aria-controls="sidenav" aria-expanded="false">☰ open</button>
+
+  <hr>
+
+  <h2>Image Modal</h2>
+  <p>Click the image to open it in a modal dialog.</p>
+
+  <!-- NOTE: your folder shows practice/howto/images/img_snow.jpg -->
+  <img class="thumb" src="images/img_snow.jpg" alt="Snow" width="300">
+
+  <!-- Modal dialog -->
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption">
+    <button class="modal__close" aria-label="Close image">&times;</button>
+    <img class="modal__img" alt="">
+    <div class="modal__caption" id="modal-caption"></div>
+  </div>
+
+  <script>
+    /* ---------------------------------------
+       SIDENAV: open/close by toggling a class
+    ----------------------------------------*/
+    const sidenav = document.querySelector('.sidenav');
+    const openBtn = document.querySelector('.sidenav__open');
+    const closeBtn = document.querySelector('.sidenav__close');
+
+    function openNav() {
+      sidenav.classList.add('is-open');     // triggers CSS to slide in
+      openBtn.setAttribute('aria-expanded', 'true');
+      sidenav.setAttribute('aria-hidden', 'false');
+    }
+    function closeNav() {
+      sidenav.classList.remove('is-open');  // slide out
+      openBtn.setAttribute('aria-expanded', 'false');
+      sidenav.setAttribute('aria-hidden', 'true');
+    }
+    openBtn.addEventListener('click', openNav);
+    closeBtn.addEventListener('click', closeNav);
+
+    /* ---------------------------------------
+       MODAL: show image & caption on click
+    ----------------------------------------*/
+    const modal     = document.querySelector('.modal');
+    const modalImg  = document.querySelector('.modal__img');
+    const captionEl = document.querySelector('.modal__caption');
+    const thumb     = document.querySelector('.thumb');
+    const modalClose= document.querySelector('.modal__close');
+
+    thumb.addEventListener('click', () => {
+      modal.classList.add('is-open');        // display the modal
+      modalImg.src = thumb.src;              // same image as thumbnail
+      captionEl.textContent = thumb.alt;     // use alt text as caption
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+      modalImg.src = '';
+      captionEl.textContent = '';
+    });
+
+    // Optional: click outside image to close
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('is-open');
+    });
+  </script>
+  <h2 style="text-align:center">Lightbox</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
 </div>
 
-<h2>Animated Sidenav Example</h2>
-<p>Click on the element below to open the side navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-<h2>Image Modal</h2>
-<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
-<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
-
-<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-<!-- The Modal -->
 <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
 </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+/* ---------------------------------------
+   LIGHTBOX: show image in modal with navigation
+----------------------------------------*/
+<div class="lightbox-modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+<script>
+function openModal() {
+  // grab the element with class "lightbox-modal"
+  document.querySelector(".lightbox-modal").style.display = "block";
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function closeModal() {
+  document.querySelector(".lightbox-modal").style.display = "none";
+}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  // all slide panels
+  var slides = document.getElementsByClassName("mySlides");
+  // all thumbnail dots
+  var dots = document.getElementsByClassName("demo");
+  // the lightbox caption element
+  var captionText = document.querySelector(".lightbox-caption");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  // hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // remove "active" from all thumbs
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // show the current slide
+  slides[slideIndex-1].style.display = "block";
+  // mark the current thumbnail as active
+  dots[slideIndex-1].className += " active";
+  // update caption with alt text of current thumb
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-   
+
 </body>
-</html> 
+</html>
