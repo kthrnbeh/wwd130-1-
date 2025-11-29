@@ -249,14 +249,14 @@ h3{
   padding: 0;
 }
 .birthday, .maggie, .adam, .grayson, .allister {
-  display: block;
-  width: 300px;            /* size of the birthday image */
-  max-width: 200%;
-  height: auto;
-  margin: 0rem 0 0 3rem;   /* aligns with text */
+  width: 300px;
+  aspect-ratio: 1 / 1;   /* makes the box a square */
+  object-fit: cover;     /* prevents distortion, crops nicely */
   border-radius: 8px;
-  padding: rem;
+  margin: 0 0 0 3rem;
+  display: block;
 }
+
 .birthday-info {
   font-family: Arial, Helvetica, sans-serif;
   color: #0f172a;
